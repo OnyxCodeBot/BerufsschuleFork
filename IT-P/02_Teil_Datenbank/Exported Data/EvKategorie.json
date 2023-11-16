@@ -1,0 +1,34 @@
+﻿[
+  {
+    "ek_EvKategorieID": 1,
+    "ek_KatBezeichnung": "FunSports"
+  },
+  {
+    "ek_EvKategorieID": 2,
+    "ek_KatBezeichnung": "AdventureSports"
+  },
+  {
+    "ek_EvKategorieID": 3,
+    "ek_KatBezeichnung": "ExtremeSports"
+  },
+  {
+    "ek_EvKategorieID": 4,
+    "ek_KatBezeichnung": "Diving"
+  },
+  {
+    "ek_EvKategorieID": 5,
+    "ek_KatBezeichnung": "Skiing"
+  },
+  {
+    "ek_EvKategorieID": 6,
+    "ek_KatBezeichnung": "FutureSports"
+  },
+  {
+    "ek_EvKategorieID": 7,
+    "ek_KatBezeichnung": "TrendSports"
+  },
+  {
+    "ek_EvKategorieID": 8,
+    "ek_KatBezeichnung": "FamilySports"
+  }
+]

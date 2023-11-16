@@ -1,0 +1,7 @@
+﻿namespace ManageEvents
+{
+}
+
+namespace ManageEvents
+{
+}

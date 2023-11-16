@@ -1,0 +1,57 @@
+﻿<tbl_Kunden kd_KundenID="1" kd_Namen="Meier" kd_Vorname="Karin" kd_Strasse="Hertwegen" kd_HNummer="77" kd_PLZ="87767" kd_Ort="Herthausen" kd_Telefon="05564/432656" />
+<tbl_Kunden kd_KundenID="2" kd_Namen="Huber" kd_Vorname="Martin" kd_Strasse="Hauptstraße" kd_HNummer="34" kd_PLZ="87786" kd_Ort="Hausham" kd_Telefon="07887/652" kd_EMail="HM@letsgo.net" />
+<tbl_Kunden kd_KundenID="3" kd_Namen="Müller" kd_Vorname="Theodor" kd_Strasse="Himmelsjoch" kd_HNummer="77" kd_PLZ="87766" kd_Ort="Jolling" kd_Telefon="098878/546" />
+<tbl_Kunden kd_KundenID="4" kd_Namen="Maderer" kd_Vorname="Hans" kd_Strasse="Leinstrasse" kd_HNummer="23" kd_PLZ="87767" kd_Ort="Leinen" />
+<tbl_Kunden kd_KundenID="5" kd_Namen="Hammer" kd_Vorname="Jürgen" kd_Strasse="Wanderweg" kd_HNummer="23" kd_PLZ="98823" kd_Ort="Valstadt" kd_Telefon="08274/66456" kd_EMail="HJ@Hotmail.com" />
+<tbl_Kunden kd_KundenID="6" kd_Namen="Huber" kd_Vorname="Joachim" kd_Strasse="Gartenweg" kd_HNummer="78" kd_PLZ="77656" kd_Ort="Folstadt" kd_Telefon="07723/536253" />
+<tbl_Kunden kd_KundenID="7" kd_Namen="Wallner" kd_Vorname="Hannes" kd_Strasse="Kolpingweg" kd_HNummer="23" kd_PLZ="87747" kd_Ort="Pfaffenhausen" kd_Telefon="05563/53672" kd_EMail="Wallner-h@t-onnline.de" />
+<tbl_Kunden kd_KundenID="8" kd_Namen="Martini" kd_Vorname="Johann" kd_Strasse="Klopfbergstraße" kd_HNummer="1b" kd_PLZ="66836" kd_Ort="Petersdorf" kd_EMail="J.Martini@t-online.de" />
+<tbl_Kunden kd_KundenID="9" kd_Namen="Hansen" kd_Vorname="Claudia" kd_Strasse="Fellbergstraße" kd_HNummer="97" kd_PLZ="88767" kd_Ort="Weng" />
+<tbl_Kunden kd_KundenID="10" kd_Namen="Kaiser" kd_Vorname="Monika" kd_Strasse="Vilstalweg" kd_HNummer="29" kd_PLZ="94474" kd_Ort="Vilshofen" kd_Telefon="08541/56637554" />
+<tbl_Kunden kd_KundenID="11" kd_Namen="Herrhausen" kd_Vorname="Alfons" kd_Strasse="Westring" kd_HNummer="388" kd_PLZ="66477" kd_Ort="Essen" kd_Telefon="064783/53653447" kd_EMail="AliHerr@t-onnline.de" />
+<tbl_Kunden kd_KundenID="12" kd_Namen="Thomas" kd_Vorname="Gregor" kd_Strasse="Fassenstraße" kd_HNummer="88" kd_PLZ="74673" kd_Ort="Reutingen" kd_Telefon="06647/44225" kd_EMail="TGreg@t-onnline.de" />
+<tbl_Kunden kd_KundenID="13" kd_Namen="Hellinger" kd_Vorname="Antonia" kd_Strasse="Hansestraße" kd_HNummer="29b" kd_PLZ="95543" kd_Ort="Hansestadt" kd_Telefon="064782/5536422" />
+<tbl_Kunden kd_KundenID="14" kd_Namen="Tanner" kd_Vorname="Jochen" kd_Strasse="Himmelsweg" kd_HNummer="66" kd_PLZ="53662" kd_Ort="Karstadt" kd_Telefon="06647/53664" />
+<tbl_Kunden kd_KundenID="15" kd_Namen="Petermann" kd_Vorname="Claudia" kd_Strasse="Herrenstraße" kd_HNummer="23" kd_PLZ="63782" kd_Ort="Jogen an der Alz" kd_Telefon="063565/ 45637" />
+<tbl_Kunden kd_KundenID="16" kd_Namen="Wallinger" kd_Vorname="Johann" kd_Strasse="Witzelsbergerweg" kd_HNummer="34" kd_PLZ="97746" kd_Ort="Unterwalching" kd_Telefon="06647/ 534563" />
+<tbl_Kunden kd_KundenID="17" kd_Namen="Maler" kd_Vorname="Gustav" kd_Strasse="Hornweg" kd_HNummer="45" kd_PLZ="74463" kd_Ort="Hammelsberg" kd_Telefon="03886/534577" />
+<tbl_Kunden kd_KundenID="18" kd_Namen="Meier" kd_Vorname="Hubert" kd_Strasse="Hans-Walcher-Strasse" kd_HNummer="23" kd_PLZ="86447" kd_Ort="Fortheim" kd_Telefon="06647/67448" />
+<tbl_Kunden kd_KundenID="19" kd_Namen="Meier" kd_Vorname="Ralf" kd_Strasse="Hochstrasse" kd_HNummer="16" kd_PLZ="86654" kd_Ort="Goding" />
+<tbl_Kunden kd_KundenID="20" kd_Namen="Hessel" kd_Vorname="Robert" kd_Strasse="Am Walchensee" kd_HNummer="3" kd_PLZ="87767" kd_Ort="Mellingen" />
+<tbl_Kunden kd_KundenID="21" kd_Namen="Martini" kd_Vorname="Walter" kd_Strasse="Herbststrasse" kd_HNummer="228" kd_PLZ="76647" kd_Ort="Mannhof" />
+<tbl_Kunden kd_KundenID="22" kd_Namen="Huber" kd_Vorname="Karl" kd_Strasse="Weng" kd_HNummer="23" kd_PLZ="86647" kd_Ort="Weng" />
+<tbl_Kunden kd_KundenID="23" kd_Namen="Huber" kd_Vorname="Anton" kd_Strasse="Wengenbergstraße" kd_HNummer="22" kd_PLZ="96675" kd_Ort="Vilshochheim" />
+<tbl_Kunden kd_KundenID="24" kd_Namen="Hermalser" kd_Vorname="Josef" kd_Strasse="Briganserstraße" kd_HNummer="33a" kd_PLZ="84463" kd_Ort="Borching" kd_Telefon="06647-54663" kd_EMail="hj@t-online.de" />
+<tbl_Kunden kd_KundenID="25" kd_Namen="Walser" kd_Vorname="Hermine" kd_Strasse="Am Graut" kd_HNummer="3" kd_PLZ="75536" kd_Ort="Rannacker" kd_Telefon="06635/53672" />
+<tbl_Kunden kd_KundenID="26" kd_Namen="Maler" kd_Vorname="Hans" kd_Strasse="Geringstraße" kd_HNummer="95" kd_PLZ="73383" kd_Ort="Ranzing" kd_Telefon="04425/ 536662" />
+<tbl_Kunden kd_KundenID="27" kd_Namen="Müller" kd_Vorname="Fritz" kd_Strasse="Hahnenweg" kd_HNummer="3" kd_PLZ="98765" kd_Ort="Friedrichshain" kd_Telefon="09456/63262" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="28" kd_Namen="Andres" kd_Vorname="Gernot" kd_Strasse="Stresemannallee" kd_HNummer="23" kd_PLZ="76543" kd_Ort="Oberpleichfeld" kd_Telefon="09876/5252" kd_EMail="abqwc@123.com" />
+<tbl_Kunden kd_KundenID="29" kd_Namen="Bohlen" kd_Vorname="Dieter" kd_Strasse="Hugenottenweg" kd_HNummer="7a" kd_PLZ="12345" kd_Ort="Berlin" kd_Telefon="01234/62363" kd_EMail="abdsfc@123.com" />
+<tbl_Kunden kd_KundenID="30" kd_Namen="Feldweg" kd_Vorname="Verona" kd_Strasse="Blümchenstrasse" kd_HNummer="2" kd_PLZ="87654" kd_Ort="München" kd_Telefon="0876/62652" kd_EMail="abcdsfsdf@123.com" />
+<tbl_Kunden kd_KundenID="31" kd_Namen="Schröder" kd_Vorname="German" kd_Strasse="Kohlrabenfurt" kd_HNummer="54" kd_PLZ="42526" kd_Ort="Kehl" kd_Telefon="03562/5252" kd_EMail="dsfsabc@123.com" />
+<tbl_Kunden kd_KundenID="32" kd_Namen="Ehrhard" kd_Vorname="Heinz" kd_Strasse="Kennedyallee" kd_HNummer="54" kd_PLZ="87227" kd_Ort="Bonn" kd_Telefon="095/6262" kd_EMail="abcsfsf@123.com" />
+<tbl_Kunden kd_KundenID="33" kd_Namen="Lübke" kd_Vorname="Heinz" kd_Strasse="Präsidentenstrasse" kd_HNummer="3" kd_PLZ="52212" kd_Ort="Stuttgart" kd_Telefon="0715/6262" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="34" kd_Namen="Bau" kd_Vorname="Johannes" kd_Strasse="Platz des Friedens" kd_HNummer="34" kd_PLZ="97941" kd_Ort="Tauberbischofsheim" kd_Telefon="09341/6543" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="35" kd_Namen="Grün" kd_Vorname="Norbert" kd_Strasse="Automatenhalle" kd_HNummer="126a" kd_PLZ="87654" kd_Ort="Lübeck" kd_Telefon="08765/6262" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="36" kd_Namen="Hilfmir" kd_Vorname="Doch" kd_Strasse="Mäuerlein" kd_HNummer="2" kd_PLZ="54378" kd_Ort="Unterthulba" kd_Telefon="05227/6262" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="37" kd_Namen="Lorenz" kd_Vorname="Jens" kd_Strasse="Entenweg" kd_HNummer="7" kd_PLZ="76362" kd_Ort="Wangenblum" kd_Telefon="07373/63636" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="38" kd_Namen="Wiesmann" kd_Vorname="Simon" kd_Strasse="St. Peter-Str." kd_HNummer="15" kd_PLZ="97274" kd_Ort="Leinach" kd_Telefon="08383/773" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="39" kd_Namen="Beran" kd_Vorname="Andreas" kd_Strasse="Geschister-Scholl-Ring" kd_HNummer="16" kd_PLZ="97828" kd_Ort="Marktheidenfeld" kd_Telefon="0525/7373" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="40" kd_Namen="Müllender" kd_Vorname="Jörg" kd_Strasse="Neue Anlage" kd_HNummer="22" kd_PLZ="97342" kd_Ort="Obernbreit" kd_Telefon="0125/555" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="41" kd_Namen="Meyer" kd_Vorname="Christoph" kd_Strasse="Alter Weg" kd_HNummer="34" kd_PLZ="72728" kd_Ort="Schwesterndorf" kd_Telefon="03698/4478" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="42" kd_Namen="Lamprecht" kd_Vorname="Stefan" kd_Strasse="Schweinfurterstr." kd_HNummer="13" kd_PLZ="97464" kd_Ort="Niederwerrn" kd_Telefon="0879/563" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="43" kd_Namen="Willerding" kd_Vorname="Armin" kd_Strasse="Bismarckstr" kd_HNummer="12c" kd_PLZ="97080" kd_Ort="Würzburg" kd_Telefon="01458/563" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="44" kd_Namen="Neubauer" kd_Vorname="Yvonne" kd_Strasse="Gartenstr." kd_HNummer="9" kd_PLZ="97279" kd_Ort="Prosselsheim" kd_Telefon="03698/852" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="45" kd_Namen="Joswig" kd_Vorname="Björn-Olaf" kd_Strasse="Laubweg" kd_HNummer="87" kd_PLZ="87654" kd_Ort="Günthersleben" kd_Telefon="02569/445" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="46" kd_Namen="Röhm" kd_Vorname="Simon" kd_Strasse="Sandgrubenstr." kd_HNummer="13" kd_PLZ="97291" kd_Ort="Thüngersheim" kd_Telefon="0145/8523" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="47" kd_Namen="Vieler" kd_Vorname="Jan" kd_Strasse="Annastr." kd_HNummer="10" kd_PLZ="97072" kd_Ort="Würzburg" kd_Telefon="03698/8963" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="48" kd_Namen="Zeller" kd_Vorname="Christian" kd_Strasse="BetaWeg" kd_HNummer="13" kd_PLZ="87643" kd_Ort="Blaurettersheim" kd_Telefon="0874/552" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="49" kd_Namen="Wagner" kd_Vorname="Christian" kd_Strasse="Breslauer Str." kd_HNummer="62" kd_PLZ="97877" kd_Ort="Wertheim" kd_Telefon="0236/598" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="50" kd_Namen="Trinkenschuh" kd_Vorname="Vitalij" kd_Strasse="Bayernstr." kd_HNummer="6" kd_PLZ="97078" kd_Ort="Würzburg" kd_Telefon="02369/852" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="51" kd_Namen="Reinhart" kd_Vorname="Lukas" kd_Strasse="Rathausstr." kd_HNummer="28" kd_PLZ="97900" kd_Ort="Külsheim" kd_Telefon="01489/5632" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="52" kd_Namen="Schmidt" kd_Vorname="Daniel" kd_Strasse="Lärchenstraße" kd_HNummer="10" kd_PLZ="97839" kd_Ort="Esselbach" kd_Telefon="03698/8952" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="53" kd_Namen="Steinle" kd_Vorname="Falk" kd_Strasse="Nikolaushöhe" kd_HNummer="15c" kd_PLZ="97218" kd_Ort="Gerbrunn" kd_Telefon="03652/5874" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="54" kd_Namen="Wirth" kd_Vorname="Martin" kd_Strasse="Saumstraße" kd_HNummer="32" kd_PLZ="97816" kd_Ort="Eisleben" kd_Telefon="05698/5214" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="55" kd_Namen="Kürbitz" kd_Vorname="Sebastian" kd_Strasse="Austraße" kd_HNummer="73" kd_PLZ="97222" kd_Ort="Rimpar" kd_Telefon="02369/8521" kd_EMail="abc@123.com" />
+<tbl_Kunden kd_KundenID="56" kd_Namen="Sonnenschein" kd_Vorname="Kurt" kd_Strasse="Blumenweg" kd_HNummer="18" kd_PLZ="98765" kd_Ort="Obertupfing" kd_Telefon="09423/63636" />
+<tbl_Kunden kd_KundenID="57" kd_Namen="Koller" kd_Vorname="Herbert" kd_Strasse="Hanseweg" kd_HNummer="23" kd_PLZ="74485" kd_Ort="Hannig-Ost" kd_Telefon="03374/473883" />

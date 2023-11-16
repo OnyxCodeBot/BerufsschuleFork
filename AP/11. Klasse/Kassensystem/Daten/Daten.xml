@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<Preisliste>
+<Artikel>
+<Artikelnummer>100000</Artikelnummer>
+<Bezeichnung>Super E10</Bezeichnung>
+<Preis>1.40</Preis>
+<Handelsspanne>30</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>100001</Artikelnummer>
+<Bezeichnung>Super</Bezeichnung>
+<Preis>1.45</Preis>
+<Handelsspanne>30</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>100002</Artikelnummer>
+<Bezeichnung>Super Plus</Bezeichnung>
+<Preis>1.55</Preis>
+<Handelsspanne>30</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>100003</Artikelnummer>
+<Bezeichnung>Diesel</Bezeichnung>
+<Preis>1.40</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200100</Artikelnummer>
+<Bezeichnung>Wrigleys Extra</Bezeichnung>
+<Preis>0.29</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200101</Artikelnummer>
+<Bezeichnung>Wrigleys Minze</Bezeichnung>
+<Preis>0.30</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200102</Artikelnummer>
+<Bezeichnung>Fructi Gum</Bezeichnung>
+<Preis>0.17</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200103</Artikelnummer>
+<Bezeichnung>Maoam</Bezeichnung>
+<Preis>0.45</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200104</Artikelnummer>
+<Bezeichnung>Buble Gum</Bezeichnung>
+<Preis>0.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200105</Artikelnummer>
+<Bezeichnung>Orbit</Bezeichnung>
+<Preis>0.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200106</Artikelnummer>
+<Bezeichnung>Haribo Cola</Bezeichnung>
+<Preis>0.69</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200107</Artikelnummer>
+<Bezeichnung>Haribo Gold</Bezeichnung>
+<Preis>0.69</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200108</Artikelnummer>
+<Bezeichnung>Haribo Frucht</Bezeichnung>
+<Preis>0.79</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200109</Artikelnummer>
+<Bezeichnung>Haribo Lakritz</Bezeichnung>
+<Preis>0.66</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200110</Artikelnummer>
+<Bezeichnung>Mars</Bezeichnung>
+<Preis>0.61</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200111</Artikelnummer>
+<Bezeichnung>Milky Way</Bezeichnung>
+<Preis>0.49</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200112</Artikelnummer>
+<Bezeichnung>Twix</Bezeichnung>
+<Preis>0.55</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200113</Artikelnummer>
+<Bezeichnung>Dupplo</Bezeichnung>
+<Preis>0.64</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200114</Artikelnummer>
+<Bezeichnung>Lions</Bezeichnung>
+<Preis>0.55</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200115</Artikelnummer>
+<Bezeichnung>Nugget</Bezeichnung>
+<Preis>0.40</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200116</Artikelnummer>
+<Bezeichnung>Snickers</Bezeichnung>
+<Preis>0.64</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200117</Artikelnummer>
+<Bezeichnung>Mash</Bezeichnung>
+<Preis>0.33</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200118</Artikelnummer>
+<Bezeichnung>Bounty</Bezeichnung>
+<Preis>0.55</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200119</Artikelnummer>
+<Bezeichnung>Hanuta</Bezeichnung>
+<Preis>0.40</Preis>
+<Handelsspanne>40</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200120</Artikelnummer>
+<Bezeichnung>Coca Cola 033l</Bezeichnung>
+<Preis>0.80</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200121</Artikelnummer>
+<Bezeichnung>Coca Cola 050l</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200122</Artikelnummer>
+<Bezeichnung>Coca Cola 1l</Bezeichnung>
+<Preis>1.50</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200123</Artikelnummer>
+<Bezeichnung>Coca Cola 1.5l</Bezeichnung>
+<Preis>2.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200124</Artikelnummer>
+<Bezeichnung>Pepsi 033l</Bezeichnung>
+<Preis>0.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200125</Artikelnummer>
+<Bezeichnung>Pepsi 050l</Bezeichnung>
+<Preis>0.95</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200126</Artikelnummer>
+<Bezeichnung>Pepsi 1l</Bezeichnung>
+<Preis>1.45</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200127</Artikelnummer>
+<Bezeichnung>Pepsi 1.5l</Bezeichnung>
+<Preis>1.90</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200128</Artikelnummer>
+<Bezeichnung>Mezzo Mix 033l</Bezeichnung>
+<Preis>0.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200129</Artikelnummer>
+<Bezeichnung>Mezzo Mix 050</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200130</Artikelnummer>
+<Bezeichnung>Mezzo Mix 1l</Bezeichnung>
+<Preis>1.50</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200131</Artikelnummer>
+<Bezeichnung>Red Bull</Bezeichnung>
+<Preis>1.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200132</Artikelnummer>
+<Bezeichnung>Flying Horse</Bezeichnung>
+<Preis>1.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200133</Artikelnummer>
+<Bezeichnung>Energy</Bezeichnung>
+<Preis>1.20</Preis>
+<Handelsspanne>1.20,50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200134</Artikelnummer>
+<Bezeichnung>Blue Max</Bezeichnung>
+<Preis>1.10</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200135</Artikelnummer>
+<Bezeichnung>Hohes C</Bezeichnung>
+<Preis>2.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200136</Artikelnummer>
+<Bezeichnung>Capri Sonne</Bezeichnung>
+<Preis>0.38</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200137</Artikelnummer>
+<Bezeichnung>Sunkist</Bezeichnung>
+<Preis>0.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200138</Artikelnummer>
+<Bezeichnung>Tropical</Bezeichnung>
+<Preis>0.33</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200139</Artikelnummer>
+<Bezeichnung>Quensch</Bezeichnung>
+<Preis>0.20</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200140</Artikelnummer>
+<Bezeichnung>Becks 033l</Bezeichnung>
+<Preis>0.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200141</Artikelnummer>
+<Bezeichnung>Becks 050l</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200142</Artikelnummer>
+<Bezeichnung>Becks alkfrei</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200143</Artikelnummer>
+<Bezeichnung>Becks light</Bezeichnung>
+<Preis>1.10</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200144</Artikelnummer>
+<Bezeichnung>Jever 033l</Bezeichnung>
+<Preis>0.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200145</Artikelnummer>
+<Bezeichnung>Jever 050l</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200146</Artikelnummer>
+<Bezeichnung>Jever alkfrei</Bezeichnung>
+<Preis>1.10</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200147</Artikelnummer>
+<Bezeichnung>Jever light</Bezeichnung>
+<Preis>1.10</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200148</Artikelnummer>
+<Bezeichnung>Loe_braeu 033l</Bezeichnung>
+<Preis>0.90</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200149</Artikelnummer>
+<Bezeichnung>Loe_braeu 050l</Bezeichnung>
+<Preis>1.00</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200150</Artikelnummer>
+<Bezeichnung>Jim Beam</Bezeichnung>
+<Preis>20.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200151</Artikelnummer>
+<Bezeichnung>Jonny Walker</Bezeichnung>
+<Preis>20.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200152</Artikelnummer>
+<Bezeichnung>Jack Daniels</Bezeichnung>
+<Preis>30.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200153</Artikelnummer>
+<Bezeichnung>Bacardy white</Bezeichnung>
+<Preis>20.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200154</Artikelnummer>
+<Bezeichnung>Bacardy black</Bezeichnung>
+<Preis>21.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200155</Artikelnummer>
+<Bezeichnung>Dry Gin</Bezeichnung>
+<Preis>19.50</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200156</Artikelnummer>
+<Bezeichnung>Eckes</Bezeichnung>
+<Preis>15.5</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200157</Artikelnummer>
+<Bezeichnung>Feigling</Bezeichnung>
+<Preis>22.40</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200158</Artikelnummer>
+<Bezeichnung>Martini rosso</Bezeichnung>
+<Preis>11.00</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200159</Artikelnummer>
+<Bezeichnung>Martini bianco</Bezeichnung>
+<Preis>10.90</Preis>
+<Handelsspanne>60</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200160</Artikelnummer>
+<Bezeichnung>Ferrero Kuess</Bezeichnung>
+<Preis>4.30</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200161</Artikelnummer>
+<Bezeichnung>Mon Chery</Bezeichnung>
+<Preis>4.50</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200162</Artikelnummer>
+<Bezeichnung>Merci</Bezeichnung>
+<Preis>4.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200163</Artikelnummer>
+<Bezeichnung>Edle Tropfen</Bezeichnung>
+<Preis>3.60</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200164</Artikelnummer>
+<Bezeichnung>Pralinos</Bezeichnung>
+<Preis>2.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200165</Artikelnummer>
+<Bezeichnung>after eight</Bezeichnung>
+<Preis>4.50</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200166</Artikelnummer>
+<Bezeichnung>Sarotti</Bezeichnung>
+<Preis>3.60</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200167</Artikelnummer>
+<Bezeichnung>Ferrero Ro</Bezeichnung>
+<Preis>4.70</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200168</Artikelnummer>
+<Bezeichnung>Rumkugeln</Bezeichnung>
+<Preis>3.98</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+<Artikel>
+<Artikelnummer>200169</Artikelnummer>
+<Bezeichnung>Eisschokis</Bezeichnung>
+<Preis>2.40</Preis>
+<Handelsspanne>50</Handelsspanne>
+</Artikel>
+</Preisliste>

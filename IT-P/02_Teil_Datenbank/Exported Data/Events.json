@@ -1,0 +1,184 @@
+﻿[
+  {
+    "et_EventID": 1,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Skydiving ",
+    "et_Beschreibung": "Skydiving am Flugplatz Remmscheid. Hoch über Deutschland taucht sichs am besten."
+  },
+  {
+    "et_EventID": 2,
+    "ev_EvVeranstalterID": 2,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Tracking durch Afrika",
+    "et_Beschreibung": "Geführte Trackingtour durch Afrika. Durch die glühenden Wüstenlandschaften des heißen Kontinents."
+  },
+  {
+    "et_EventID": 3,
+    "ev_EvVeranstalterID": 3,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Downhill Race",
+    "et_Beschreibung": "Downhill Radrennen am Wilden Kaiser. Rennen um das goldene Mountainbike."
+  },
+  {
+    "et_EventID": 4,
+    "ev_EvVeranstalterID": 4,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Free Climbing am Matterhorn",
+    "et_Beschreibung": "Free Climbing in schwindelnder Höhe in den schweizer Alpen. Extrem aber wirklich gut."
+  },
+  {
+    "et_EventID": 5,
+    "ev_EvVeranstalterID": 7,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Adria Cup",
+    "et_Beschreibung": "Radrennen von den Alpen zur Adria. Verpflegung und Übernachtung inclusive. "
+  },
+  {
+    "et_EventID": 6,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 4,
+    "et_Bezeichnung": "Deep Blue Meeting",
+    "et_Beschreibung": "Tauchertreffen am Attasee. Campingplatz ist reserviert."
+  },
+  {
+    "et_EventID": 7,
+    "ev_EvVeranstalterID": 2,
+    "ek_EvKategorieID": 3,
+    "et_Bezeichnung": "Expedition zum Südpol",
+    "et_Beschreibung": "Mit dem Hubschrauber zum Südpol. Die letzten 20 km werden zu Fuß zurückgelegt. Incl Flug und Übernachtungen."
+  },
+  {
+    "et_EventID": 8,
+    "ev_EvVeranstalterID": 4,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Klettern am Wilden Kaiser",
+    "et_Beschreibung": "Leichte Klettertour für Einsteiger. sehr einfach..."
+  },
+  {
+    "et_EventID": 9,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Unterhachinger Stadtmarathon",
+    "et_Beschreibung": "Rennen um die Stadtmeisterschaft"
+  },
+  {
+    "et_EventID": 10,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Tandemspringen am Flughafen Remmscheid",
+    "et_Beschreibung": "Erste Versuche für Anfänger."
+  },
+  {
+    "et_EventID": 11,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 4,
+    "et_Bezeichnung": "Tauchen auf den Malediven",
+    "et_Beschreibung": "Einmaliges Taucherlebnis im sonnigen Süden. Incl. Flug, Übernachtung und Verpflegung."
+  },
+  {
+    "et_EventID": 12,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Paragliding über Remmscheid",
+    "et_Beschreibung": "Paragliding über dem Flughafen Remmscheid"
+  },
+  {
+    "et_EventID": 13,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Balonfahren über Remmscheid",
+    "et_Beschreibung": "Kleine Balonfahrt"
+  },
+  {
+    "et_EventID": 14,
+    "ev_EvVeranstalterID": 2,
+    "ek_EvKategorieID": 3,
+    "et_Bezeichnung": "Himalaya Expedition",
+    "et_Beschreibung": "14 tägige Expedition durch das Himalaya Gebirge. Übernachtung im Zelt. Träger und Yaks incl."
+  },
+  {
+    "et_EventID": 15,
+    "ev_EvVeranstalterID": 2,
+    "ek_EvKategorieID": 3,
+    "et_Bezeichnung": "Überleben im Amazonas Becken",
+    "et_Beschreibung": "Überlebenstraining im Dschungel Südamerikas. Inclusive Flug und Verpflegung."
+  },
+  {
+    "et_EventID": 16,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Rafting auf der Isar",
+    "et_Beschreibung": "Raftingtour vor den Toren Münchens"
+  },
+  {
+    "et_EventID": 17,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 1,
+    "et_Bezeichnung": "Bunjee Jumping an der Remmscheider Brücke",
+    "et_Beschreibung": "Bunjee Jumping an der Remmscheider Brücke. Kopfüber in den Himmel."
+  },
+  {
+    "et_EventID": 18,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 4,
+    "et_Bezeichnung": "Tiefseetauchen im Marianegraben",
+    "et_Beschreibung": "Tiefseetauchen im Marianegraben. Beeindruckende Erlebnisse in der Tiefe des Meeres. Flug, Schiff, Übernachtung und Kost inclusive..."
+  },
+  {
+    "et_EventID": 19,
+    "ev_EvVeranstalterID": 1,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Drachenfliegen in den Dolomiten",
+    "et_Beschreibung": "Drachenfliegen hoch über den Dolomiten. Anfängerkurs. Ausrüstung ist nicht erforderlich"
+  },
+  {
+    "et_EventID": 20,
+    "ev_EvVeranstalterID": 6,
+    "ek_EvKategorieID": 8,
+    "et_Bezeichnung": "Familienwanderung auf den Großen Arber",
+    "et_Beschreibung": "Einfacher Tagesausflug für Familien mit Kindern ab 4 Jahren. Festes Schuhwerk ist gefragt! Gemütliche Brotzeit am Gipfel incl."
+  },
+  {
+    "et_EventID": 21,
+    "ev_EvVeranstalterID": 7,
+    "ek_EvKategorieID": 5,
+    "et_Bezeichnung": "Heli Skiing am Mount Mc Kinley",
+    "et_Beschreibung": "Mit dem Hubschrauber ins reine Wintervergnügen. Flug, Unterkunft und Verpflegung incl."
+  },
+  {
+    "et_EventID": 22,
+    "ev_EvVeranstalterID": 5,
+    "ek_EvKategorieID": 4,
+    "et_Bezeichnung": "Tauchen am Südpol",
+    "et_Beschreibung": "Kreuzfahrt zum Südpol mit Tauchgängen in der eisigen See."
+  },
+  {
+    "et_EventID": 23,
+    "ev_EvVeranstalterID": 4,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Rafting am Fölser Lech",
+    "et_Beschreibung": "Durch die eisigen Fluten der Föls"
+  },
+  {
+    "et_EventID": 24,
+    "ev_EvVeranstalterID": 8,
+    "ek_EvKategorieID": 7,
+    "et_Bezeichnung": "Blade Night in Zwiesel",
+    "et_Beschreibung": "Bladen bis in den frühen Morgen"
+  },
+  {
+    "et_EventID": 25,
+    "ev_EvVeranstalterID": 9,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Bunjee Jumping",
+    "et_Beschreibung": "Sprung in die Tiefe der Brücke von Verona"
+  },
+  {
+    "et_EventID": 26,
+    "ev_EvVeranstalterID": 4,
+    "ek_EvKategorieID": 2,
+    "et_Bezeichnung": "Tracking durch die Rocky Mountains",
+    "et_Beschreibung": "Wunderbare Bergtour durch die Wildniss der Rockies. Eigenständige Anreise."
+  }
+]

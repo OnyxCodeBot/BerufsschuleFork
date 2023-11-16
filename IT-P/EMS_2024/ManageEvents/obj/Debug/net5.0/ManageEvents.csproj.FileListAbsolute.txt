@@ -1,0 +1,11 @@
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\bin\Debug\net5.0\ManageEvents.deps.json
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\bin\Debug\net5.0\ManageEvents.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\bin\Debug\net5.0\ref\ManageEvents.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\bin\Debug\net5.0\ManageEvents.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.GeneratedMSBuildEditorConfig.editorconfig
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.AssemblyInfoInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.AssemblyInfo.cs
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ref\ManageEvents.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.pdb
