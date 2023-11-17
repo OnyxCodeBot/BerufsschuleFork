@@ -67,13 +67,13 @@ select sum(gehalt) as gehaltssumme
 from personal
 
 --2.3
-select pr.projnr, count(pe.persnr) as anzahl
-from personal as pe join projekt as pr on pe.projnr = pr.projnr
-group by pr.projnr
+select projnr, count(persnr) as anzahl
+from Personal
+group by projnr
 order by anzahl desc
 
 --2.4
-select cast(count(projnr) as decimal(5,2)) / cast(count(distinct abtnr) as decimal(5,2)) as mittl_projzahl
+select cast(count(projnr) as decimal) / cast(count(distinct abtnr) as decimal) as mittl_projzahl
 from Projekt
 
 --2.5
@@ -90,7 +90,7 @@ group by proj.abtnr
 order by proj.abtnr
 
 --2.7
-select cast(count(persnr) as decimal(5,2)) / cast(count(distinct projnr) as decimal(5,2)) as m_pro_proj
+select cast(count(persnr) as decimal) / cast(count(distinct projnr) as decimal) as m_pro_proj
 from Personal
 
 --2.8
