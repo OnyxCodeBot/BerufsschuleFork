@@ -38,5 +38,5 @@ left join Selektionsmerkmal as s on s.Sel_ID = k_s.Sel_ID
 --e)
 select k.Kd_ID, k.Name, count(distinct k_s.Sel_ID)
 from Kunde as k
-inner join Kunde_Selektionmerkmal as k_s on k_s.Kd_ID = k.Kd_ID
+left join Kunde_Selektionmerkmal as k_s on k_s.Kd_ID = k.Kd_ID
 group by k.Kd_ID, k.Name
