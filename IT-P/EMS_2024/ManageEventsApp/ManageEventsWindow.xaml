@@ -39,7 +39,7 @@
             <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}"/>
         </Grid>
         
-        <Grid x:Name="masterTablesGrid" Height="220" Width="180">
+        <Grid x:Name="masterTablesGrid" Height="220" Width="180" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -77,8 +77,30 @@
             <Label Content="Termin:" Grid.Column="0" Grid.Row="0"/>
             <ComboBox x:Name="ed_BeginnComboBox" Grid.Column="0" Grid.Row="1"/>
             <CheckBox x:Name="ed_FreigegebenCheckBox" Grid.Column="1" Grid.Row="1" Content="freigegeben" IsChecked="True"/>
-            <Label Content="Beginn:" Grid.Column="0" Grid.Row="2"/>
             
+            <Label Content="Beginn:" Grid.Column="0" Grid.Row="2"/>
+            <TextBox x:Name="ed_BeginnTextBox" Grid.Column="0" Grid.Row="3"/>
+            
+            <Label Content="Ende:" Grid.Column="0" Grid.Row="4"/>
+            <TextBox x:Name="ed_EndeTextBox" Grid.Column="0" Grid.Row="5"/>
+            
+            <Label Content="Startort:" Grid.Column="1" Grid.Row="2"/>
+            <TextBox x:Name="ed_StartOrtTextBox" Grid.Column="1" Grid.Row="3"/>
+
+            <Label Content="Zielort:" Grid.Column="1" Grid.Row="4"/>
+            <TextBox x:Name="ed_ZielOrtTextBox" Grid.Column="1" Grid.Row="5"/>
+
+            <Label Content="Vermittlungssatz:" Grid.Column="2" Grid.Row="2"/>
+            <TextBox x:Name="ed_RabattTextBox" Grid.Column="2" Grid.Row="3"/>
+
+            <Label Content="Preis:" Grid.Column="2" Grid.Row="4"/>
+            <TextBox x:Name="ed_PreisTextBox" Grid.Column="2" Grid.Row="5"/>
+
+            <Label Content="Max. Teilnehmerzahl" Grid.Column="3" Grid.Row="2"/>
+            <TextBox x:Name="ed_MaxTeilnehmerTextBox" Grid.Column="3" Grid.Row="3"/>
+
+            <Label Content="Akt. Teilnehmerzahl:" Grid.Column="3" Grid.Row="4"/>
+            <TextBox x:Name="ed_AktTeilnehmerTextBox" Grid.Column="3" Grid.Row="5" IsReadOnly="True"/>
         </Grid>
     </Grid>
 </Window>
