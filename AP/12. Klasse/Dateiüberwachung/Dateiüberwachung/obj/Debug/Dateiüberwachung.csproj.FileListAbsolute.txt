@@ -1,0 +1,10 @@
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\bin\Debug\Dateiüberwachung.exe.config
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\bin\Debug\Dateiüberwachung.exe
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\bin\Debug\Dateiüberwachung.pdb
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.csproj.AssemblyReference.cache
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.FileWatcherForm.resources
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.Properties.Resources.resources
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.csproj.GenerateResource.cache
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.exe
+\\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Dateiüberwachung\Dateiüberwachung\obj\Debug\Dateiüberwachung.pdb
