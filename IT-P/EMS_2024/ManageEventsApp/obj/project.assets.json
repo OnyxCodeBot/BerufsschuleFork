@@ -678,6 +678,19 @@
         "runtime": {
           "bin/placeholder/ManageEvents.dll": {}
         }
+      },
+      "NavBar/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/NavBar.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NavBar.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       }
     }
   },
@@ -2330,11 +2343,17 @@
       "type": "project",
       "path": "../ManageEvents/ManageEvents.csproj",
       "msbuildProject": "../ManageEvents/ManageEvents.csproj"
+    },
+    "NavBar/1.0.0": {
+      "type": "project",
+      "path": "../NavBar/NavBar.csproj",
+      "msbuildProject": "../NavBar/NavBar.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "ManageEvents >= 1.0.0"
+      "ManageEvents >= 1.0.0",
+      "NavBar >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2371,6 +2390,9 @@
           "projectReferences": {
             "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj": {
               "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj"
+            },
+            "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {
+              "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj"
             }
           }
         }

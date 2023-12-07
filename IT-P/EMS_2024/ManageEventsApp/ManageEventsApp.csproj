@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ManageEvents\ManageEvents.csproj" />
+    <ProjectReference Include="..\NavBar\NavBar.csproj" />
   </ItemGroup>
 
 </Project>

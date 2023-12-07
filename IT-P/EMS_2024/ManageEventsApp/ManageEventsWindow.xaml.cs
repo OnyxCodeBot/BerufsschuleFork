@@ -53,6 +53,86 @@ namespace ManageEventsApp
             cboVeranstalter.ItemsSource = dsEvents.tbl_EvVeranstalter;
             cboVeranstalter.DisplayMemberPath = "ev_Firma";
             cboVeranstalter.SelectedValuePath = "ev_EvVeranstalterID";
+            cboVeranstalter.SetBinding(ComboBox.SelectedValueProperty, vBinding);
+            cboVeranstalter.IsSynchronizedWithCurrentItem = true;
+
+            Binding kBinding = new Binding();
+            kBinding.Source = eventView;
+            kBinding.Path = new PropertyPath("ek_EvKategorieID");
+
+            cboKategorie.ItemsSource = dsEvents.tbl_EvKategorie;
+            cboKategorie.DisplayMemberPath = "ek_KatBezeichnung";
+            cboKategorie.SelectedValuePath = "ek_EvKategorieID";
+            cboKategorie.SetBinding(ComboBox.SelectedValueProperty, kBinding);
+            cboKategorie.IsSynchronizedWithCurrentItem = true;
+
+            //NavBar
+            eventNavBar.NavSourceView = (CollectionView)eventView;
+            eventDatenView = ((CollectionViewSource)this.FindResource("tbl_Events_tbl_EventDatenViewSource")).View;
+            eventDatenNavBar.NavSourceView = (CollectionView)eventDatenView;
+            eventView.CurrentChanged += EventView_CurrentChanged;
+        }
+
+        private void EventView_CurrentChanged(object sender, EventArgs e)
+        {
+            eventDatenView = ((CollectionViewSource)FindResource("tbl_Events_tbl_EventDatenViewSource")).View;
+            if(eventDatenView != null)
+            {
+                eventDatenNavBar.NavSourceView = (CollectionView)eventDatenView;
+            }
+        }
+
+        private void ladenAusDatenbankMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Objeckt für Zugriff auf die Mittelschicht erzeugen
+                ManageEvents.ManageEventsModule m = new ManageEvents.ManageEventsModule();
+
+                if(MessageBox.Show(
+                    "Achtung. Die Änderungen in der lokalen Datei werden durch die Daten aus der Datenbank überschrieben! Sollen die Daten aus der Datenbank wirklich übertragen werden?", 
+                    "Warnung! Möglicher Datenverlust...", 
+                    MessageBoxButton.YesNo, 
+                    MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                {
+                    this.Cursor = Cursors.Wait;
+
+                    m.LoadData(dsEvents);
+                    RefreshBindings();
+                }
+            }
+            catch(Microsoft.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(
+                    ex.ToString(),
+                    "SQL Fehler",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(
+                    ex.ToString(), 
+                    "Fehler", 
+                    MessageBoxButton.OK, 
+                    MessageBoxImage.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Arrow;
+            }
+        }
+
+        private void speichernInDateiMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dsEvents.WriteXml("Buchungen.xml", System.Data.XmlWriteMode.DiffGram);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -45,6 +45,8 @@ namespace ManageEvents
                 //Füllen der Tabellen in der richtigen Reihenfolge
                 this.taKategorie.Fill(tempEventsDs.tbl_EvKategorie);
                 this.taVeranstalter.Fill(tempEventsDs.tbl_EvVeranstalter);
+                this.taEvents.Fill(tempEventsDs.tbl_Events);
+                this.taEvDaten.Fill(tempEventsDs.tbl_EventDaten);
 
                 //Aenderungen in Dataset uebernehen
                 tempEventsDs.AcceptChanges();

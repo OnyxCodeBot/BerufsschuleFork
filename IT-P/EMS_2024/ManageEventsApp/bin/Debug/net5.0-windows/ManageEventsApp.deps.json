@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "ManageEventsApp/1.0.0": {
         "dependencies": {
-          "ManageEvents": "1.0.0"
+          "ManageEvents": "1.0.0",
+          "NavBar": "1.0.0"
         },
         "runtime": {
           "ManageEventsApp.dll": {}
@@ -505,6 +506,11 @@
         "runtime": {
           "ManageEvents.dll": {}
         }
+      },
+      "NavBar/1.0.0": {
+        "runtime": {
+          "NavBar.dll": {}
+        }
       }
     }
   },
@@ -837,6 +843,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "ManageEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NavBar/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

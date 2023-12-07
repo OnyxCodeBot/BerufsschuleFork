@@ -1,24 +1,27 @@
-﻿<Window x:Class="ManageEventsApp.ManageEventsWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManageEventsApp"
         xmlns:ManageEvents="clr-namespace:ManageEvents;assembly=ManageEvents"
+        xmlns:NavBar="clr-namespace:NavBar;assembly=NavBar" x:Class="ManageEventsApp.ManageEventsWindow"
+        xmlns:CustomConverter="clr-namespace:CustomConverter"
         mc:Ignorable="d"
         Title="Event Management System" Height="500" Width="800" MinHeight="600" MinWidth="700">
     <Window.Resources>
         <ManageEvents:ManageEventsDataset x:Key="manageEventsDataset"/>
         <CollectionViewSource x:Key="tbl_EventsViewSource" Source="{Binding tbl_Events, Source={StaticResource manageEventsDataset}}"/>
-        <CollectionViewSource x:Key="tbl_Events_tbl_EventDatenViewSource" Source="{Binding FK_tbl_EvDaten_tbl_Events, Source={StaticResource tbl_EventsViewSource}}"/>
+        <CollectionViewSource x:Key="tbl_Events_tbl_EventDatenViewSource" Source="{Binding FK_tbl_EventDaten_tbl_Events, Source={StaticResource tbl_EventsViewSource}}"/>
+        <CustomConverter:MoneyConverter x:Key="moneyConverter"/>
     </Window.Resources>
     <Grid>
         <Menu x:Name="hauptMenue" Height="26" VerticalAlignment="Top">
             <MenuItem x:Name="dateiMenueItem" Header="_Datei">
                 <MenuItem x:Name="ladenAusDateiMenuItem" Header="_Laden aus Datei"/>
-                <MenuItem x:Name="speichernInDateiMenuItem" Header="_Speichern in Datei"/>
+                <MenuItem x:Name="speichernInDateiMenuItem" Header="_Speichern in Datei" Click="speichernInDateiMenuItem_Click"/>
                 <Separator/>
-                <MenuItem x:Name="ladenAusDatenbankMenuItem" Header="_Laden aus Datenbank"/>
+                <MenuItem x:Name="ladenAusDatenbankMenuItem" Header="_Laden aus Datenbank" Click="ladenAusDatenbankMenuItem_Click"/>
                 <Separator/>
                 <MenuItem x:Name="beendenMenueItem" Header="_Beenden" Click="beendenMenueItem_Click"/>
             </MenuItem>
@@ -33,13 +36,13 @@
             </Grid.RowDefinitions>
 
             <Label Content="Eventbezeichnung:" Grid.Row="0" Margin="2"/>
-            <TextBox x:Name="et_BezeichnungTextBox" Margin="5" Grid.Row="1" Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox x:Name="et_BezeichnungTextBox" Margin="5" Grid.Row="1" Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}"/>
             <ListBox x:Name="et_BezeichnungListBox" DisplayMemberPath="et_Bezeichnung" ItemsSource="{Binding}" Margin="5" Grid.Row="2" IsSynchronizedWithCurrentItem="True"/>
             <Label Content="Eventbeschreibung:" Grid.Row="3" Margin="2"/>
-            <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}"/>
+            <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}"/>
         </Grid>
-        
-        <Grid x:Name="masterTablesGrid" Height="220" Width="180" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,20,0">
+
+        <Grid x:Name="masterTablesGrid" Height="220" Width="180" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,20,0" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -48,7 +51,7 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            
+
             <Label Content="Veranstalter:" Grid.Row="0" Margin="5"/>
             <ComboBox x:Name="cboVeranstalter" Grid.Row="1" Margin="5"/>
             <Button x:Name="btnVeranstalter" Content="_Veranstalter bearbeiten" Grid.Row="2" Margin="5"/>
@@ -58,7 +61,7 @@
             <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5"/>
         </Grid>
 
-        <Grid x:Name="eventDatenGrid" Margin="10,0,10,44" VerticalAlignment="Bottom">
+        <Grid x:Name="eventDatenGrid" Margin="10,0,10,44" VerticalAlignment="Bottom" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
@@ -75,32 +78,34 @@
             </Grid.RowDefinitions>
 
             <Label Content="Termin:" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox x:Name="ed_BeginnComboBox" Grid.Column="0" Grid.Row="1"/>
-            <CheckBox x:Name="ed_FreigegebenCheckBox" Grid.Column="1" Grid.Row="1" Content="freigegeben" IsChecked="True"/>
-            
+            <ComboBox x:Name="ed_BeginnComboBox" Grid.Column="0" Grid.Row="1" DisplayMemberPath="ed_Beginn" ItemsSource="{Binding}"/>
+            <CheckBox x:Name="ed_FreigegebenCheckBox" Grid.Column="1" Grid.Row="1" Content="freigegeben" IsChecked="{Binding ed_Freigeben}"/>
+
             <Label Content="Beginn:" Grid.Column="0" Grid.Row="2"/>
-            <TextBox x:Name="ed_BeginnTextBox" Grid.Column="0" Grid.Row="3"/>
-            
+            <TextBox x:Name="ed_BeginnTextBox" Grid.Column="0" Grid.Row="3" Text="{Binding ed_Beginn}"/>
+
             <Label Content="Ende:" Grid.Column="0" Grid.Row="4"/>
-            <TextBox x:Name="ed_EndeTextBox" Grid.Column="0" Grid.Row="5"/>
-            
+            <TextBox x:Name="ed_EndeTextBox" Grid.Column="0" Grid.Row="5" Text="{Binding ed_Ende}"/>
+
             <Label Content="Startort:" Grid.Column="1" Grid.Row="2"/>
-            <TextBox x:Name="ed_StartOrtTextBox" Grid.Column="1" Grid.Row="3"/>
+            <TextBox x:Name="ed_StartOrtTextBox" Grid.Column="1" Grid.Row="3" Text="{Binding ed_StartOrt}"/>
 
             <Label Content="Zielort:" Grid.Column="1" Grid.Row="4"/>
-            <TextBox x:Name="ed_ZielOrtTextBox" Grid.Column="1" Grid.Row="5"/>
+            <TextBox x:Name="ed_ZielOrtTextBox" Grid.Column="1" Grid.Row="5" Text="{Binding ed_Zielort}"/>
 
             <Label Content="Vermittlungssatz:" Grid.Column="2" Grid.Row="2"/>
-            <TextBox x:Name="ed_RabattTextBox" Grid.Column="2" Grid.Row="3"/>
+            <TextBox x:Name="ed_RabattTextBox" Grid.Column="2" Grid.Row="3" Text="{Binding ed_Rabtt}"/>
 
             <Label Content="Preis:" Grid.Column="2" Grid.Row="4"/>
-            <TextBox x:Name="ed_PreisTextBox" Grid.Column="2" Grid.Row="5"/>
+            <TextBox x:Name="ed_PreisTextBox" Grid.Column="2" Grid.Row="5" Text="{Binding ed_Preis, Converter={StaticResource moneyConverter}}"/>
 
             <Label Content="Max. Teilnehmerzahl" Grid.Column="3" Grid.Row="2"/>
-            <TextBox x:Name="ed_MaxTeilnehmerTextBox" Grid.Column="3" Grid.Row="3"/>
+            <TextBox x:Name="ed_MaxTeilnehmerTextBox" Grid.Column="3" Grid.Row="3" Text="{Binding ed_Maxteilnehmer}"/>
 
             <Label Content="Akt. Teilnehmerzahl:" Grid.Column="3" Grid.Row="4"/>
-            <TextBox x:Name="ed_AktTeilnehmerTextBox" Grid.Column="3" Grid.Row="5" IsReadOnly="True"/>
+            <TextBox x:Name="ed_AktTeilnehmerTextBox" Grid.Column="3" Grid.Row="5" IsReadOnly="True" Text="{Binding ed_AktTeilnehmer}"/>
         </Grid>
+        <NavBar:NavBar x:Name="eventNavBar" VerticalAlignment="Bottom" Margin="10,0,450,239"/>
+        <NavBar:NavBar x:Name="eventDatenNavBar" VerticalAlignment="Bottom" Margin="10,0,450,13"/>
     </Grid>
 </Window>
