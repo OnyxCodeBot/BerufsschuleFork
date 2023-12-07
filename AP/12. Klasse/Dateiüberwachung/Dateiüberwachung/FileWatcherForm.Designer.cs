@@ -36,6 +36,10 @@ namespace Dateiüberwachung
             this.btnStop = new System.Windows.Forms.Button();
             this.lstFiles = new System.Windows.Forms.ListBox();
             this.btnBeenden = new System.Windows.Forms.Button();
+            this.fsWatcher = new System.IO.FileSystemWatcher();
+            this.fbDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.btn_fbDialog = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.fsWatcher)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPfad
@@ -56,7 +60,7 @@ namespace Dateiüberwachung
             this.txtPfad.Location = new System.Drawing.Point(15, 25);
             this.txtPfad.MinimumSize = new System.Drawing.Size(200, 20);
             this.txtPfad.Name = "txtPfad";
-            this.txtPfad.Size = new System.Drawing.Size(477, 20);
+            this.txtPfad.Size = new System.Drawing.Size(396, 20);
             this.txtPfad.TabIndex = 1;
             // 
             // chkSubFolder
@@ -68,6 +72,7 @@ namespace Dateiüberwachung
             this.chkSubFolder.TabIndex = 2;
             this.chkSubFolder.Text = "Unterverzeichnisse einbeziehen";
             this.chkSubFolder.UseVisualStyleBackColor = true;
+            this.chkSubFolder.Click += new System.EventHandler(this.chkSubFolder_Click);
             // 
             // btnStart
             // 
@@ -77,6 +82,7 @@ namespace Dateiüberwachung
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "St&arte Überwachung";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
@@ -88,6 +94,7 @@ namespace Dateiüberwachung
             this.btnStop.TabIndex = 4;
             this.btnStop.Text = "St&oppe Überwachung";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // lstFiles
             // 
@@ -109,12 +116,32 @@ namespace Dateiüberwachung
             this.btnBeenden.TabIndex = 6;
             this.btnBeenden.Text = "B&eenden";
             this.btnBeenden.UseVisualStyleBackColor = true;
+            this.btnBeenden.Click += new System.EventHandler(this.btnBeenden_Click);
+            // 
+            // fsWatcher
+            // 
+            this.fsWatcher.SynchronizingObject = this;
+            this.fsWatcher.Changed += new System.IO.FileSystemEventHandler(this.fsWatcher_Changed);
+            this.fsWatcher.Created += new System.IO.FileSystemEventHandler(this.fsWatcher_Created);
+            this.fsWatcher.Deleted += new System.IO.FileSystemEventHandler(this.fsWatcher_Deleted);
+            this.fsWatcher.Renamed += new System.IO.RenamedEventHandler(this.fsWatcher_Renamed);
+            // 
+            // btn_fbDialog
+            // 
+            this.btn_fbDialog.Location = new System.Drawing.Point(417, 25);
+            this.btn_fbDialog.Name = "btn_fbDialog";
+            this.btn_fbDialog.Size = new System.Drawing.Size(75, 23);
+            this.btn_fbDialog.TabIndex = 7;
+            this.btn_fbDialog.Text = "...";
+            this.btn_fbDialog.UseVisualStyleBackColor = true;
+            this.btn_fbDialog.Click += new System.EventHandler(this.btn_fbDialog_Click);
             // 
             // FileWatcherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 401);
+            this.Controls.Add(this.btn_fbDialog);
             this.Controls.Add(this.btnBeenden);
             this.Controls.Add(this.lstFiles);
             this.Controls.Add(this.btnStop);
@@ -124,6 +151,7 @@ namespace Dateiüberwachung
             this.Controls.Add(this.lblPfad);
             this.Name = "FileWatcherForm";
             this.Text = "Überwachen eines Ordners";
+            ((System.ComponentModel.ISupportInitialize)(this.fsWatcher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +166,9 @@ namespace Dateiüberwachung
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.ListBox lstFiles;
         private System.Windows.Forms.Button btnBeenden;
+        private System.IO.FileSystemWatcher fsWatcher;
+        private System.Windows.Forms.Button btn_fbDialog;
+        private System.Windows.Forms.FolderBrowserDialog fbDialog;
     }
 }
 
