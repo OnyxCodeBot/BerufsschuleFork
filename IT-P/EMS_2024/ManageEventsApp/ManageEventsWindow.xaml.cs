@@ -34,6 +34,16 @@ namespace ManageEventsApp
 
             eventView = ((CollectionViewSource)this.FindResource("tbl_EventsViewSource")).View;
             eventDatenView = ((CollectionViewSource)this.FindResource("tbl_Events_tbl_EventDatenViewSource")).View;
+
+            //lokale XML Daten laden
+            try
+            {
+                ladenAusDateiMenuItem.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void beendenMenueItem_Click(object sender, RoutedEventArgs e)
@@ -133,6 +143,28 @@ namespace ManageEventsApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ladenAusDateiMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                dsEvents.Clear();
+                dsEvents.ReadXml("Buchungen.xml", System.Data.XmlReadMode.DiffGram);
+
+                RefreshBindings();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Der Dialog wird geschlossen. Aenderungen werden gespeichert.
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            // lokales Speichern der Daten
+            speichernInDateiMenuItem.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         }
     }
 }
