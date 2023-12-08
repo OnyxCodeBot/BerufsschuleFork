@@ -1,0 +1,78 @@
+.favorites{
+    width: 100%;
+    height: 100%;
+    background-color: #404040;
+}
+
+.sidenav-container {
+    height: 100%;
+    width: 7rem;
+    position: fixed;
+    background-color: #181717;
+    border-right: 1px solid black;
+}
+
+.sidenav-list {
+    list-style: none;
+}
+
+.sidenav-list-item {
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: -1rem;
+    margin-top: 3rem;
+}
+
+.image-button {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-header {
+    margin-top: 3rem;
+    height: 3rem;
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.MH{
+    color:white;
+}
+
+.meme-favorite-list {
+	width: 85%;
+    margin-left: 14rem;
+    padding-top: 3rem;
+}
+
+.header-text {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.card-navigation{
+    width: 17.37rem;
+    background-color: #181717;
+}
+
+.square-img {
+    max-width: 17.37rem;
+    height: 170px;
+}
+
+.meme-card {
+    margin-left: 20px;
+    padding: 1.25rem;
+    width: 17.37rem;
+}
+
