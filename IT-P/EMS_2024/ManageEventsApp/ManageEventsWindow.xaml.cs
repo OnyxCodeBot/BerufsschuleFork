@@ -166,5 +166,16 @@ namespace ManageEventsApp
             // lokales Speichern der Daten
             speichernInDateiMenuItem.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         }
+
+        private void ed_FreigegebenCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            //Event is freigegeben
+            ed_FreigegebenCheckBox.IsEnabled = false;
+        }
+
+        private void ed_FreigegebenCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ed_FreigegebenCheckBox.IsEnabled = true;
+        }
     }
 }

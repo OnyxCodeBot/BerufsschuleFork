@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using ManageEvents.ManageEventsDatasetTableAdapters;
+using Microsoft.Data.SqlClient;
 
 namespace ManageEvents
 {
@@ -72,6 +73,62 @@ namespace ManageEvents
                 {
                     this.cnEvents.Close();
                 }
+            }
+        }
+
+        public void UpdateDatabase(ManageEventsDataset dsEvents)
+        {
+            //Datenbankverbindung oeffnen
+            this.cnEvents.Open();
+
+            SqlTransaction trans = cnEvents.BeginTransaction(IsolationLevel.ReadCommitted);
+
+            //Update und Insert Commands zur Transaktion hinzufuegen
+            taEvents.Adapter.UpdateCommand.Transaction = trans;
+            taEvents.Adapter.InsertCommand.Transaction = trans;
+
+            taEvDaten.Adapter.UpdateCommand.Transaction = trans;
+            taEvDaten.Adapter.InsertCommand.Transaction = trans;
+
+            taKategorie.Adapter.UpdateCommand.Transaction = trans;
+            taKategorie.Adapter.InsertCommand.Transaction = trans;
+
+            taVeranstalter.Adapter.UpdateCommand.Transaction = trans;
+            taVeranstalter.Adapter.InsertCommand.Transaction = trans;
+
+            try
+            {
+                if (dsEvents.HasChanges())
+                {
+                    //Updates und Inserts in der richtigen Reihenfolge
+                    taKategorie.Update(dsEvents.tbl_EvKategorie);
+                    taVeranstalter.Update(dsEvents.tbl_EvVeranstalter);
+                    taEvents.Update(dsEvents.tbl_Events);
+                    taEvDaten.Update(dsEvents.tbl_EventDaten);
+                }
+
+                trans.Commit();
+            }
+            catch(SqlException ex)
+            {
+                trans.Rollback();
+                throw ex;
+            }
+            catch(System.Exception ex)
+            {
+                trans.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                //Datenbank schliessen
+                if(this.cnEvents.State == ConnectionState.Open)
+                {
+                    this.cnEvents.Close();
+                }
+
+                //Aktuelle Daten aus der DB holen
+                LoadData(dsEvents);
             }
         }
     }

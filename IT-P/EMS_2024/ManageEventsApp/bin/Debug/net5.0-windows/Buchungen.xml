@@ -567,7 +567,7 @@
       <ed_Rabtt>10</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_EventDaten diffgr:id="tbl_EventDaten42" msdata:rowOrder="41">
+    <tbl_EventDaten diffgr:id="tbl_EventDaten42" msdata:rowOrder="41" diffgr:hasChanges="modified">
       <ed_EvDatenID>42</ed_EvDatenID>
       <et_EventID>25</et_EventID>
       <ed_Preis>0.0000</ed_Preis>
@@ -577,7 +577,7 @@
       <ed_Zielort>Verona</ed_Zielort>
       <ed_Maxteilnehmer>15</ed_Maxteilnehmer>
       <ed_AktTeilnehmer>0</ed_AktTeilnehmer>
-      <ed_Freigeben>false</ed_Freigeben>
+      <ed_Freigeben>true</ed_Freigeben>
       <ed_Rabtt>15</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
@@ -927,4 +927,20 @@
       <ek_KatBezeichnung>FamilySports</ek_KatBezeichnung>
     </tbl_EvKategorie>
   </ManageEventsDataset>
+  <diffgr:before>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten42" msdata:rowOrder="41" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <ed_EvDatenID>42</ed_EvDatenID>
+      <et_EventID>25</et_EventID>
+      <ed_Preis>0.0000</ed_Preis>
+      <ed_Beginn>2024-01-30T08:00:00+01:00</ed_Beginn>
+      <ed_Ende>2024-01-30T18:00:00+01:00</ed_Ende>
+      <ed_StartOrt>Verona</ed_StartOrt>
+      <ed_Zielort>Verona</ed_Zielort>
+      <ed_Maxteilnehmer>15</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>0</ed_AktTeilnehmer>
+      <ed_Freigeben>false</ed_Freigeben>
+      <ed_Rabtt>15</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
+  </diffgr:before>
 </diffgr:diffgram>
