@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -149,6 +150,9 @@ namespace ManageEventsApp
         {
             try
             {
+                //Alle aktuellen Bearbeitungen stoppen
+                eventBindingGroup.UpdateSources();
+
                 dsEvents.Clear();
                 dsEvents.ReadXml("Buchungen.xml", System.Data.XmlReadMode.DiffGram);
 
@@ -176,6 +180,219 @@ namespace ManageEventsApp
         private void ed_FreigegebenCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             ed_FreigegebenCheckBox.IsEnabled = true;
+        }
+
+        private void synchronisierenMitDatenbankMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Objekt für Zugriff auf die Mittelschicht erzeugen
+                ManageEvents.ManageEventsModule m = new ManageEvents.ManageEventsModule();
+
+                //Alle aktuellen Bearbeitungen stoppen
+                eventBindingGroup.UpdateSources();
+
+                //Sind Änderungen im Dataset?
+                if (dsEvents.HasChanges())
+                {
+                    MessageBox.Show("Die Änderungen werden zur Datenbank übertragen.", "Datentransfer", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    Cursor = Cursors.Wait;
+
+                    //Änderungen herausfiltern
+                    ManageEvents.ManageEventsDataset dsChanges = (ManageEvents.ManageEventsDataset)dsEvents.GetChanges();
+
+                    //Update mit der DB fahren
+                    m.UpdateDatabase(dsChanges);
+
+                    //Aktuellste Daten der DB übernehmen
+                    dsEvents.Clear();
+                    dsEvents.Merge(dsChanges);
+                    dsEvents.AcceptChanges();
+
+                    //Databindings aktualisieren
+                    RefreshBindings();
+                }
+                else
+                {
+                    MessageBox.Show("Im Dataset finden sich zur Zeit keine Änderungen zum Abgleich mit der Datenbank.", "Kein Datentransfer", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch(Microsoft.Data.SqlClient.SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Arrow;
+            }
+        }
+
+        private void SetProtection(bool stat)
+        {
+            //Menues/Textfelder/Buttons sperren oder freigeben
+            ed_BeginnComboBox.IsEnabled = stat;
+            et_BezeichnungListBox.IsEnabled = stat;
+
+            btnNeuerEvent.IsEnabled = stat;
+            btnNeuerTermin.IsEnabled = stat;
+            btnVeranstalter.IsEnabled = stat;
+            btnKategorie.IsEnabled = stat;
+
+            btnAbbrechen.IsEnabled = !stat;
+            btnUebernehmen.IsEnabled = !stat;
+
+            dateiMenueItem.IsEnabled = stat;
+            bearbeitenMenuItem.IsEnabled = stat;
+
+            eventNavBar.IsEnabled = stat;
+            eventDatenNavBar.IsEnabled = stat;
+        }
+
+        private void btnNeuerEvent_Click(object sender, RoutedEventArgs e)
+        {
+            //Constraints ausschalten
+            dsEvents.EnforceConstraints = false;
+
+            //Neue Rows erzeugen und hinzufügen
+            ManageEvents.ManageEventsDataset.tbl_EventsRow evRow = (ManageEvents.ManageEventsDataset.tbl_EventsRow)dsEvents.tbl_Events.NewRow();
+            dsEvents.tbl_Events.Rows.Add(evRow);
+
+            //ParentRows setzen
+            evRow.SetParentRow(dsEvents.tbl_EvKategorie.Rows[0]);
+            evRow.SetParentRow(dsEvents.tbl_EvVeranstalter.Rows[0]);
+
+            ManageEvents.ManageEventsDataset.tbl_EventDatenRow evDaRow = (ManageEvents.ManageEventsDataset.tbl_EventDatenRow)dsEvents.tbl_EventDaten.NewRow();
+
+            //ParentRow und Standardwerte setzen
+            evDaRow.SetParentRow(evRow);
+
+            evDaRow.ed_AktTeilnehmer = 0;
+            evDaRow.ed_Freigeben = false;
+            evDaRow.ed_Preis = 0.0M;
+            evDaRow.ed_VeranstalterBenachrichtigt = false;
+
+            //Zeile der Tabelle tbl_EventDaten hinzufügen
+            dsEvents.tbl_EventDaten.Rows.Add(evDaRow);
+
+            //Auf aktuelle Position springen und Refresh
+            eventView.MoveCurrentToLast();
+
+            //Eingabefelder freigeben
+            this.SetProtection(false);
+
+            //Editiervorgang starten
+            evRow.BeginEdit();
+            evDaRow.BeginEdit();
+        }
+
+        private void btnNeuerTermin_Click(object sender, RoutedEventArgs e)
+        {
+            //Constraints ausschalten
+            dsEvents.EnforceConstraints = false;
+
+            //Neue DataRow für Eventstable erzeugen
+            ManageEvents.ManageEventsDataset.tbl_EventDatenRow evDaRow = (ManageEvents.ManageEventsDataset.tbl_EventDatenRow)dsEvents.tbl_EventDaten.NewRow();
+
+            //ParentRow und Standardwerte setzen
+            evDaRow.SetParentRow(((DataRowView)eventView.CurrentItem).Row);
+
+            evDaRow.ed_AktTeilnehmer = 0;
+            evDaRow.ed_Freigeben = false;
+            evDaRow.ed_Preis = 0.0M;
+            evDaRow.ed_VeranstalterBenachrichtigt = false;
+
+            //Row zur Eventdaten Tabelle hinzufügen
+            dsEvents.tbl_EventDaten.Rows.Add(evDaRow);
+
+            //Auf aktuelle Zeile springen
+            eventDatenView.MoveCurrentToLast();
+
+            //Mit den Änderungen in evDaRow beginnen
+            evDaRow.BeginEdit();
+
+            //Editfelder freischalten
+            this.SetProtection(false);
+        }
+
+        private void btnAbbrechen_Click(object sender, RoutedEventArgs e)
+        {
+            //Lokale DataRow für das bearbeitete Event
+            DataRow evRow = ((DataRowView)eventView.CurrentItem).Row;
+
+            //Ein neuer Event wurde hinzugefügt
+            if(((CollectionView)eventDatenView).Count == 1)
+            {
+                dsEvents.tbl_EventDaten.Rows.Remove(evRow.GetChildRows("FK_tbl_EventDaten_tbl_Events")[0]);
+
+                dsEvents.tbl_Events.Rows.Remove(evRow);
+
+                dsEvents.EnforceConstraints = true;
+
+                eventView.MoveCurrentToFirst();
+            }
+            //Ein neuer Eventtermin wurde hinzugefügt
+            else
+            {
+                dsEvents.tbl_EventDaten.Rows.Remove(evRow.GetChildRows("FK_tbl_EventDaten_tbl_Events")[((CollectionView)eventDatenView).Count - 1]);
+
+                //Constraints im Dataset wieder zuschalten
+                dsEvents.EnforceConstraints = true;
+            }
+
+            //Schreibschutz wieder herstellen
+            this.SetProtection(true);
+        }
+
+        private void btnUebernehmen_Click(object sender, RoutedEventArgs e)
+        {
+            //Lokale Rows für EventDaten und Event
+            DataRow evRow = ((DataRowView)eventView.CurrentItem).Row;
+            DataRow evDaRow = ((DataRowView)eventDatenView.CurrentItem).Row;
+
+            try
+            {
+                //Daten aus Steuerelementen übernehmen
+                eventBindingGroup.UpdateSources();
+                eventDatenBindingGroup.UpdateSources();
+
+                //Neuer Event wurde erstellt
+                if(evRow.RowState == DataRowState.Added)
+                {
+                    //ParentRows für Event setzen
+                    //Eventveranstalter zuordnen
+                    evRow.SetParentRow(dsEvents.tbl_EvVeranstalter.Rows[cboVeranstalter.SelectedIndex], dsEvents.Relations["FK_tbl_Events_tbl_EvVeranstalter"]);
+
+                    //Eventkategorie zuordnen
+                    evRow.SetParentRow(dsEvents.tbl_EvKategorie.Rows[cboKategorie.SelectedIndex], dsEvents.Relations["FK_tbl_Events_tbl_EvKategorie"]);
+                }
+
+                //Änderungen an Event und gewählter EventDataRow übernehmen
+                evDaRow.EndEdit();
+                evRow.EndEdit();
+
+                //Constraints im Dataset zuschalten
+                dsEvents.EnforceConstraints = true;
+
+                //Refresh der Bindungen
+                RefreshBindings();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler beim Editieren", MessageBoxButton.OK, MessageBoxImage.Error);
+
+                //Vorgang abbrechen
+                btnAbbrechen.RaiseEvent(e);
+            }
+            finally
+            {
+                //Schreibschutz wiederherstellen
+                SetProtection(true);
+            }
         }
     }
 }
