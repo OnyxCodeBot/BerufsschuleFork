@@ -609,7 +609,7 @@
       <ed_Rabtt>20</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_Events diffgr:id="tbl_Events1" msdata:rowOrder="0">
+    <tbl_Events diffgr:id="tbl_Events1" msdata:rowOrder="0" diffgr:hasChanges="modified">
       <et_EventID>5</et_EventID>
       <ev_EvVeranstalterID>7</ev_EvVeranstalterID>
       <ek_EvKategorieID>1</ek_EvKategorieID>
@@ -927,4 +927,13 @@
       <ek_KatBezeichnung>FamilySports</ek_KatBezeichnung>
     </tbl_EvKategorie>
   </ManageEventsDataset>
+  <diffgr:before>
+    <tbl_Events diffgr:id="tbl_Events1" msdata:rowOrder="0" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>5</et_EventID>
+      <ev_EvVeranstalterID>7</ev_EvVeranstalterID>
+      <ek_EvKategorieID>1</ek_EvKategorieID>
+      <et_Bezeichnung>Adria Cup</et_Bezeichnung>
+      <et_Beschreibung>Radrennen von den Alpen zur Adria. Verpflegung und Übernachtung inclusive. </et_Beschreibung>
+    </tbl_Events>
+  </diffgr:before>
 </diffgr:diffgram>

@@ -394,5 +394,16 @@ namespace ManageEventsApp
                 SetProtection(true);
             }
         }
+
+        //Startet das Editieren/Anlegen von Veranstaltern
+        private void btnVeranstalter_Click(object sender, RoutedEventArgs e)
+        {
+            //Fenster erzeugen und anzeigen
+            ManageVeranstalterWindow mvw = new ManageVeranstalterWindow();
+
+            mvw.SetDataSet(dsEvents, cboVeranstalter.SelectedIndex);
+
+            mvw.ShowDialog();
+        }
     }
 }

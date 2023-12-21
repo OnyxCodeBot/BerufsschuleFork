@@ -131,3 +131,5 @@ K:\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageEventsAp
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\NavBar.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\NavBar.pdb
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageVeranstalterWindow.g.cs
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageVeranstalterWindow.baml

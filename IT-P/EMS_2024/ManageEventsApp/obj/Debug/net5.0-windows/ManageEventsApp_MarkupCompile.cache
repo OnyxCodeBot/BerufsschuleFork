@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\App.xaml
-1-1323028337
+2-2075076247
 
-41799879715
+51757552857
 210-1832673171
-ManageEventsWindow.xaml;
+ManageEventsWindow.xaml;ManageVeranstalterWindow.xaml;
 
 False
 
