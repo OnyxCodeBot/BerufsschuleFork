@@ -107,3 +107,77 @@ select year(datum) as jahr, count(*) as count
 from akte
 group by year(datum)
 order by jahr desc
+
+
+--3.1
+select abt.ABTNAME, pers.VNAME, pers.NNAME, pers.TELEFONNR
+from Abteilung as abt
+inner join Personal as pers on pers.PERSNR = abt.CHEFNR
+order by abt.ABTNAME
+
+--3.2
+select pers.PERSNR, pers.NNAME, pers.VNAME, abt.ABTNAME
+from personal as pers
+inner join Projekt as proj on proj.PROJNR = pers.PROJNR
+inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
+order by pers.PERSNR
+
+--3.3
+select *
+from personal
+where PERSNR in (
+	select abt.CHEFNR
+	from Personal as pers
+	inner join Projekt as proj on proj.PROJNR = pers.PROJNR
+	inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
+	where pers.VNAME = 'Heinz')
+
+--3.4
+select pers.*
+from Personal as pers
+inner join Projekt as proj on proj.PROJNR = pers.PROJNR
+inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
+where abt.ABTNR in (
+	select abt.abtnr
+	from Personal as pers
+	inner join Projekt as proj on proj.PROJNR = pers.PROJNR
+	inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
+	where pers.VNAME = 'Donald')
+
+--3.5
+select distinct abt.ABTNAME, abt.BUDGET
+from Abteilung as abt
+inner join Projekt as proj on proj.BUDGET = abt.BUDGET
+order by abt.ABTNAME
+
+--3.6
+select distinct akt.PERSNR, year(akt.DATUM) as jahr, pers.VNAME, pers.NNAME
+from Akte as akt
+inner join Personal as pers on pers.PERSNR = akt.PERSNR
+group by akt.PERSNR, year(akt.DATUM), pers.VNAME, pers.NNAME
+having sum(akt.GEHALT) >= 1000
+order by persnr, year(akt.DATUM)
+
+--3.7
+select pers1.PERSNR, pers1.VNAME, pers1.NNAME, pers2.PERSNR, pers2.VNAME, pers2.NNAME
+from Personal as pers1
+inner join Personal as pers2 on pers1.VNAME = pers2.VNAME and pers1.PERSNR != pers2.PERSNR
+order by pers1.PERSNR, pers2.PERSNR
+
+--3.8
+select pers.PERSNR, pers.VNAME, pers.NNAME, akt.POSITION
+from Personal as pers
+left join Akte as akt on akt.PERSNR = pers.PERSNR
+where pers.NNAME like '%a%'
+order by pers.PERSNR, akt.POSITION
+
+--3.9
+select abt.ABTNR, abt.ABTNAME, count(proj.PROJNR) as anz_proj
+from Abteilung as abt
+left join Projekt as proj on proj.ABTNR = abt.ABTNR
+group by abt.ABTNR, abt.ABTNAME
+order by abt.ABTNR
+
+--3.10
+
+--3.11
