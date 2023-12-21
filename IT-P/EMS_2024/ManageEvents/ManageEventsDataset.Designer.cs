@@ -34,9 +34,9 @@ namespace ManageEvents {
         
         private global::System.Data.DataRelation relationFK_tbl_EventDaten_tbl_Events;
         
-        private global::System.Data.DataRelation relationFK_tbl_Events_tbl_EvKategorie;
-        
         private global::System.Data.DataRelation relationFK_tbl_Events_tbl_EvVeranstalter;
+        
+        private global::System.Data.DataRelation relationFK_tbl_Events_tbl_EvKategorie;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -273,8 +273,8 @@ namespace ManageEvents {
                 }
             }
             this.relationFK_tbl_EventDaten_tbl_Events = this.Relations["FK_tbl_EventDaten_tbl_Events"];
-            this.relationFK_tbl_Events_tbl_EvKategorie = this.Relations["FK_tbl_Events_tbl_EvKategorie"];
             this.relationFK_tbl_Events_tbl_EvVeranstalter = this.Relations["FK_tbl_Events_tbl_EvVeranstalter"];
+            this.relationFK_tbl_Events_tbl_EvKategorie = this.Relations["FK_tbl_Events_tbl_EvKategorie"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -301,16 +301,16 @@ namespace ManageEvents {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_tbl_Events_tbl_EvKategorie", new global::System.Data.DataColumn[] {
-                        this.tabletbl_EvKategorie.ek_EvKategorieIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Events.ek_EvKategorieIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_tbl_Events_tbl_EvVeranstalter", new global::System.Data.DataColumn[] {
+                        this.tabletbl_EvVeranstalter.ev_EvVeranstalterIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Events.ev_EvVeranstalterIDColumn});
             this.tabletbl_Events.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_tbl_Events_tbl_EvVeranstalter", new global::System.Data.DataColumn[] {
-                        this.tabletbl_EvVeranstalter.ev_EvVeranstalterIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Events.ev_EvVeranstalterIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_tbl_Events_tbl_EvKategorie", new global::System.Data.DataColumn[] {
+                        this.tabletbl_EvKategorie.ek_EvKategorieIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Events.ek_EvKategorieIDColumn});
             this.tabletbl_Events.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -319,14 +319,14 @@ namespace ManageEvents {
                         this.tabletbl_Events.et_EventIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_EventDaten.et_EventIDColumn}, false);
             this.Relations.Add(this.relationFK_tbl_EventDaten_tbl_Events);
-            this.relationFK_tbl_Events_tbl_EvKategorie = new global::System.Data.DataRelation("FK_tbl_Events_tbl_EvKategorie", new global::System.Data.DataColumn[] {
-                        this.tabletbl_EvKategorie.ek_EvKategorieIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletbl_Events.ek_EvKategorieIDColumn}, false);
-            this.Relations.Add(this.relationFK_tbl_Events_tbl_EvKategorie);
             this.relationFK_tbl_Events_tbl_EvVeranstalter = new global::System.Data.DataRelation("FK_tbl_Events_tbl_EvVeranstalter", new global::System.Data.DataColumn[] {
                         this.tabletbl_EvVeranstalter.ev_EvVeranstalterIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletbl_Events.ev_EvVeranstalterIDColumn}, false);
             this.Relations.Add(this.relationFK_tbl_Events_tbl_EvVeranstalter);
+            this.relationFK_tbl_Events_tbl_EvKategorie = new global::System.Data.DataRelation("FK_tbl_Events_tbl_EvKategorie", new global::System.Data.DataColumn[] {
+                        this.tabletbl_EvKategorie.ek_EvKategorieIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletbl_Events.ek_EvKategorieIDColumn}, false);
+            this.Relations.Add(this.relationFK_tbl_Events_tbl_EvKategorie);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -713,8 +713,18 @@ namespace ManageEvents {
                 this.columned_EvDatenID.AllowDBNull = false;
                 this.columned_EvDatenID.ReadOnly = true;
                 this.columned_EvDatenID.Unique = true;
+                this.columnet_EventID.AllowDBNull = false;
+                this.columned_Preis.AllowDBNull = false;
+                this.columned_Beginn.AllowDBNull = false;
+                this.columned_Ende.AllowDBNull = false;
+                this.columned_StartOrt.AllowDBNull = false;
                 this.columned_StartOrt.MaxLength = 50;
                 this.columned_Zielort.MaxLength = 50;
+                this.columned_Maxteilnehmer.AllowDBNull = false;
+                this.columned_AktTeilnehmer.AllowDBNull = false;
+                this.columned_Freigeben.AllowDBNull = false;
+                this.columned_Rabtt.AllowDBNull = false;
+                this.columned_VeranstalterBenachrichtigt.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1039,6 +1049,9 @@ namespace ManageEvents {
                 this.columnet_EventID.AllowDBNull = false;
                 this.columnet_EventID.ReadOnly = true;
                 this.columnet_EventID.Unique = true;
+                this.columnev_EvVeranstalterID.AllowDBNull = false;
+                this.columnek_EvKategorieID.AllowDBNull = false;
+                this.columnet_Bezeichnung.AllowDBNull = false;
                 this.columnet_Bezeichnung.MaxLength = 50;
                 this.columnet_Beschreibung.MaxLength = 2147483647;
             }
@@ -1415,10 +1428,15 @@ namespace ManageEvents {
                 this.columnev_EvVeranstalterID.AllowDBNull = false;
                 this.columnev_EvVeranstalterID.ReadOnly = true;
                 this.columnev_EvVeranstalterID.Unique = true;
+                this.columnev_Firma.AllowDBNull = false;
                 this.columnev_Firma.MaxLength = 50;
+                this.columnev_Strasse.AllowDBNull = false;
                 this.columnev_Strasse.MaxLength = 50;
+                this.columnev_PLZ.AllowDBNull = false;
                 this.columnev_PLZ.MaxLength = 10;
+                this.columnev_HNummer.AllowDBNull = false;
                 this.columnev_HNummer.MaxLength = 10;
+                this.columnev_Ort.AllowDBNull = false;
                 this.columnev_Ort.MaxLength = 50;
                 this.columnev_Telefon.MaxLength = 25;
                 this.columnev_Email.MaxLength = 50;
@@ -1699,6 +1717,7 @@ namespace ManageEvents {
                 this.columnek_EvKategorieID.AllowDBNull = false;
                 this.columnek_EvKategorieID.ReadOnly = true;
                 this.columnek_EvKategorieID.Unique = true;
+                this.columnek_KatBezeichnung.AllowDBNull = false;
                 this.columnek_KatBezeichnung.MaxLength = 15;
             }
             
@@ -1855,12 +1874,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int et_EventID {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_EventDaten.et_EventIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte et_EventID in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_EventDaten.et_EventIDColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.et_EventIDColumn] = value;
@@ -1871,12 +1885,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal ed_Preis {
                 get {
-                    try {
-                        return ((decimal)(this[this.tabletbl_EventDaten.ed_PreisColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Preis in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tabletbl_EventDaten.ed_PreisColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_PreisColumn] = value;
@@ -1887,12 +1896,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime ed_Beginn {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_EventDaten.ed_BeginnColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Beginn in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tabletbl_EventDaten.ed_BeginnColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_BeginnColumn] = value;
@@ -1903,12 +1907,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime ed_Ende {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabletbl_EventDaten.ed_EndeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Ende in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tabletbl_EventDaten.ed_EndeColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_EndeColumn] = value;
@@ -1919,12 +1918,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ed_StartOrt {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EventDaten.ed_StartOrtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_StartOrt in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EventDaten.ed_StartOrtColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_StartOrtColumn] = value;
@@ -1951,12 +1945,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ed_Maxteilnehmer {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_EventDaten.ed_MaxteilnehmerColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Maxteilnehmer in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_EventDaten.ed_MaxteilnehmerColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_MaxteilnehmerColumn] = value;
@@ -1967,12 +1956,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ed_AktTeilnehmer {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_EventDaten.ed_AktTeilnehmerColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_AktTeilnehmer in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_EventDaten.ed_AktTeilnehmerColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_AktTeilnehmerColumn] = value;
@@ -1983,12 +1967,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool ed_Freigeben {
                 get {
-                    try {
-                        return ((bool)(this[this.tabletbl_EventDaten.ed_FreigebenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Freigeben in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((bool)(this[this.tabletbl_EventDaten.ed_FreigebenColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_FreigebenColumn] = value;
@@ -1999,12 +1978,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal ed_Rabtt {
                 get {
-                    try {
-                        return ((decimal)(this[this.tabletbl_EventDaten.ed_RabttColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_Rabtt in Tabelle tbl_EventDaten ist DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tabletbl_EventDaten.ed_RabttColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_RabttColumn] = value;
@@ -2015,13 +1989,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool ed_VeranstalterBenachrichtigt {
                 get {
-                    try {
-                        return ((bool)(this[this.tabletbl_EventDaten.ed_VeranstalterBenachrichtigtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ed_VeranstalterBenachrichtigt in Tabelle tbl_EventDaten ist D" +
-                                "BNull.", e);
-                    }
+                    return ((bool)(this[this.tabletbl_EventDaten.ed_VeranstalterBenachrichtigtColumn]));
                 }
                 set {
                     this[this.tabletbl_EventDaten.ed_VeranstalterBenachrichtigtColumn] = value;
@@ -2041,66 +2009,6 @@ namespace ManageEvents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iset_EventIDNull() {
-                return this.IsNull(this.tabletbl_EventDaten.et_EventIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setet_EventIDNull() {
-                this[this.tabletbl_EventDaten.et_EventIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_PreisNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_PreisColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_PreisNull() {
-                this[this.tabletbl_EventDaten.ed_PreisColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_BeginnNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_BeginnColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_BeginnNull() {
-                this[this.tabletbl_EventDaten.ed_BeginnColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_EndeNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_EndeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_EndeNull() {
-                this[this.tabletbl_EventDaten.ed_EndeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_StartOrtNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_StartOrtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_StartOrtNull() {
-                this[this.tabletbl_EventDaten.ed_StartOrtColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Ised_ZielortNull() {
                 return this.IsNull(this.tabletbl_EventDaten.ed_ZielortColumn);
             }
@@ -2109,66 +2017,6 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Seted_ZielortNull() {
                 this[this.tabletbl_EventDaten.ed_ZielortColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_MaxteilnehmerNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_MaxteilnehmerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_MaxteilnehmerNull() {
-                this[this.tabletbl_EventDaten.ed_MaxteilnehmerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_AktTeilnehmerNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_AktTeilnehmerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_AktTeilnehmerNull() {
-                this[this.tabletbl_EventDaten.ed_AktTeilnehmerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_FreigebenNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_FreigebenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_FreigebenNull() {
-                this[this.tabletbl_EventDaten.ed_FreigebenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_RabttNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_RabttColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_RabttNull() {
-                this[this.tabletbl_EventDaten.ed_RabttColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Ised_VeranstalterBenachrichtigtNull() {
-                return this.IsNull(this.tabletbl_EventDaten.ed_VeranstalterBenachrichtigtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Seted_VeranstalterBenachrichtigtNull() {
-                this[this.tabletbl_EventDaten.ed_VeranstalterBenachrichtigtColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2201,12 +2049,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ev_EvVeranstalterID {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_Events.ev_EvVeranstalterIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_EvVeranstalterID in Tabelle tbl_Events ist DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_Events.ev_EvVeranstalterIDColumn]));
                 }
                 set {
                     this[this.tabletbl_Events.ev_EvVeranstalterIDColumn] = value;
@@ -2217,12 +2060,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ek_EvKategorieID {
                 get {
-                    try {
-                        return ((int)(this[this.tabletbl_Events.ek_EvKategorieIDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ek_EvKategorieID in Tabelle tbl_Events ist DBNull.", e);
-                    }
+                    return ((int)(this[this.tabletbl_Events.ek_EvKategorieIDColumn]));
                 }
                 set {
                     this[this.tabletbl_Events.ek_EvKategorieIDColumn] = value;
@@ -2233,12 +2071,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string et_Bezeichnung {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_Events.et_BezeichnungColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte et_Bezeichnung in Tabelle tbl_Events ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_Events.et_BezeichnungColumn]));
                 }
                 set {
                     this[this.tabletbl_Events.et_BezeichnungColumn] = value;
@@ -2263,17 +2096,6 @@ namespace ManageEvents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tbl_EvKategorieRow tbl_EvKategorieRow {
-                get {
-                    return ((tbl_EvKategorieRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_Events_tbl_EvKategorie"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_Events_tbl_EvKategorie"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tbl_EvVeranstalterRow tbl_EvVeranstalterRow {
                 get {
                     return ((tbl_EvVeranstalterRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_Events_tbl_EvVeranstalter"])));
@@ -2285,38 +2107,13 @@ namespace ManageEvents {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_EvVeranstalterIDNull() {
-                return this.IsNull(this.tabletbl_Events.ev_EvVeranstalterIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_EvVeranstalterIDNull() {
-                this[this.tabletbl_Events.ev_EvVeranstalterIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isek_EvKategorieIDNull() {
-                return this.IsNull(this.tabletbl_Events.ek_EvKategorieIDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setek_EvKategorieIDNull() {
-                this[this.tabletbl_Events.ek_EvKategorieIDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Iset_BezeichnungNull() {
-                return this.IsNull(this.tabletbl_Events.et_BezeichnungColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setet_BezeichnungNull() {
-                this[this.tabletbl_Events.et_BezeichnungColumn] = global::System.Convert.DBNull;
+            public tbl_EvKategorieRow tbl_EvKategorieRow {
+                get {
+                    return ((tbl_EvKategorieRow)(this.GetParentRow(this.Table.ParentRelations["FK_tbl_Events_tbl_EvKategorie"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tbl_Events_tbl_EvKategorie"]);
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2372,12 +2169,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ev_Firma {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvVeranstalter.ev_FirmaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_Firma in Tabelle tbl_EvVeranstalter ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvVeranstalter.ev_FirmaColumn]));
                 }
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_FirmaColumn] = value;
@@ -2388,12 +2180,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ev_Strasse {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvVeranstalter.ev_StrasseColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_Strasse in Tabelle tbl_EvVeranstalter ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvVeranstalter.ev_StrasseColumn]));
                 }
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_StrasseColumn] = value;
@@ -2404,12 +2191,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ev_PLZ {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvVeranstalter.ev_PLZColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_PLZ in Tabelle tbl_EvVeranstalter ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvVeranstalter.ev_PLZColumn]));
                 }
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_PLZColumn] = value;
@@ -2420,12 +2202,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ev_HNummer {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvVeranstalter.ev_HNummerColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_HNummer in Tabelle tbl_EvVeranstalter ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvVeranstalter.ev_HNummerColumn]));
                 }
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_HNummerColumn] = value;
@@ -2436,12 +2213,7 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ev_Ort {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvVeranstalter.ev_OrtColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ev_Ort in Tabelle tbl_EvVeranstalter ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvVeranstalter.ev_OrtColumn]));
                 }
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_OrtColumn] = value;
@@ -2494,66 +2266,6 @@ namespace ManageEvents {
                 set {
                     this[this.tabletbl_EvVeranstalter.ev_FaxColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_FirmaNull() {
-                return this.IsNull(this.tabletbl_EvVeranstalter.ev_FirmaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_FirmaNull() {
-                this[this.tabletbl_EvVeranstalter.ev_FirmaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_StrasseNull() {
-                return this.IsNull(this.tabletbl_EvVeranstalter.ev_StrasseColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_StrasseNull() {
-                this[this.tabletbl_EvVeranstalter.ev_StrasseColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_PLZNull() {
-                return this.IsNull(this.tabletbl_EvVeranstalter.ev_PLZColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_PLZNull() {
-                this[this.tabletbl_EvVeranstalter.ev_PLZColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_HNummerNull() {
-                return this.IsNull(this.tabletbl_EvVeranstalter.ev_HNummerColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_HNummerNull() {
-                this[this.tabletbl_EvVeranstalter.ev_HNummerColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isev_OrtNull() {
-                return this.IsNull(this.tabletbl_EvVeranstalter.ev_OrtColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setev_OrtNull() {
-                this[this.tabletbl_EvVeranstalter.ev_OrtColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2633,28 +2345,11 @@ namespace ManageEvents {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ek_KatBezeichnung {
                 get {
-                    try {
-                        return ((string)(this[this.tabletbl_EvKategorie.ek_KatBezeichnungColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Der Wert für Spalte ek_KatBezeichnung in Tabelle tbl_EvKategorie ist DBNull.", e);
-                    }
+                    return ((string)(this[this.tabletbl_EvKategorie.ek_KatBezeichnungColumn]));
                 }
                 set {
                     this[this.tabletbl_EvKategorie.ek_KatBezeichnungColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isek_KatBezeichnungNull() {
-                return this.IsNull(this.tabletbl_EvKategorie.ek_KatBezeichnungColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setek_KatBezeichnungNull() {
-                this[this.tabletbl_EvKategorie.ek_KatBezeichnungColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3102,43 +2797,18 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ed_EvDatenID, global::System.Nullable<int> Original_et_EventID, global::System.Nullable<decimal> Original_ed_Preis, global::System.Nullable<global::System.DateTime> Original_ed_Beginn, global::System.Nullable<global::System.DateTime> Original_ed_Ende, string Original_ed_StartOrt, string Original_ed_Zielort, global::System.Nullable<int> Original_ed_Maxteilnehmer, global::System.Nullable<int> Original_ed_AktTeilnehmer, global::System.Nullable<bool> Original_ed_Freigeben, global::System.Nullable<decimal> Original_ed_Rabtt, global::System.Nullable<bool> Original_ed_VeranstalterBenachrichtigt) {
+        public virtual int Delete(int Original_ed_EvDatenID, int Original_et_EventID, decimal Original_ed_Preis, System.DateTime Original_ed_Beginn, System.DateTime Original_ed_Ende, string Original_ed_StartOrt, string Original_ed_Zielort, int Original_ed_Maxteilnehmer, int Original_ed_AktTeilnehmer, bool Original_ed_Freigeben, decimal Original_ed_Rabtt, bool Original_ed_VeranstalterBenachrichtigt) {
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ed_EvDatenID));
-            if ((Original_et_EventID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_et_EventID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Preis.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_ed_Preis.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Beginn.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_ed_Beginn.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Ende.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_ed_Ende.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_et_EventID));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_ed_Preis));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_ed_Beginn));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_ed_Ende));
             if ((Original_ed_StartOrt == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ed_StartOrt");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
@@ -3152,46 +2822,16 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_ed_Zielort));
             }
-            if ((Original_ed_Maxteilnehmer.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_ed_Maxteilnehmer.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_AktTeilnehmer.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_ed_AktTeilnehmer.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Freigeben.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((bool)(Original_ed_Freigeben.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Rabtt.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((decimal)(Original_ed_Rabtt.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_VeranstalterBenachrichtigt.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_ed_VeranstalterBenachrichtigt.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_ed_Maxteilnehmer));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_ed_AktTeilnehmer));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((bool)(Original_ed_Freigeben));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((decimal)(Original_ed_Rabtt));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_ed_VeranstalterBenachrichtigt));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3212,33 +2852,13 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> et_EventID, global::System.Nullable<decimal> ed_Preis, global::System.Nullable<global::System.DateTime> ed_Beginn, global::System.Nullable<global::System.DateTime> ed_Ende, string ed_StartOrt, string ed_Zielort, global::System.Nullable<int> ed_Maxteilnehmer, global::System.Nullable<int> ed_AktTeilnehmer, global::System.Nullable<bool> ed_Freigeben, global::System.Nullable<decimal> ed_Rabtt, global::System.Nullable<bool> ed_VeranstalterBenachrichtigt) {
-            if ((et_EventID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(et_EventID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Preis.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(ed_Preis.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Beginn.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(ed_Beginn.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Ende.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(ed_Ende.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+        public virtual int Insert(int et_EventID, decimal ed_Preis, System.DateTime ed_Beginn, System.DateTime ed_Ende, string ed_StartOrt, string ed_Zielort, int ed_Maxteilnehmer, int ed_AktTeilnehmer, bool ed_Freigeben, decimal ed_Rabtt, bool ed_VeranstalterBenachrichtigt) {
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(et_EventID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(ed_Preis));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(ed_Beginn));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(ed_Ende));
             if ((ed_StartOrt == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ed_StartOrt");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ed_StartOrt));
@@ -3249,36 +2869,11 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ed_Zielort));
             }
-            if ((ed_Maxteilnehmer.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(ed_Maxteilnehmer.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((ed_AktTeilnehmer.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ed_AktTeilnehmer.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Freigeben.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(ed_Freigeben.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Rabtt.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(ed_Rabtt.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((ed_VeranstalterBenachrichtigt.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(ed_VeranstalterBenachrichtigt.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(ed_Maxteilnehmer));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ed_AktTeilnehmer));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(ed_Freigeben));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(ed_Rabtt));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((bool)(ed_VeranstalterBenachrichtigt));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3300,54 +2895,34 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> et_EventID, 
-                    global::System.Nullable<decimal> ed_Preis, 
-                    global::System.Nullable<global::System.DateTime> ed_Beginn, 
-                    global::System.Nullable<global::System.DateTime> ed_Ende, 
+                    int et_EventID, 
+                    decimal ed_Preis, 
+                    System.DateTime ed_Beginn, 
+                    System.DateTime ed_Ende, 
                     string ed_StartOrt, 
                     string ed_Zielort, 
-                    global::System.Nullable<int> ed_Maxteilnehmer, 
-                    global::System.Nullable<bool> ed_Freigeben, 
-                    global::System.Nullable<decimal> ed_Rabtt, 
-                    global::System.Nullable<bool> ed_VeranstalterBenachrichtigt, 
+                    int ed_Maxteilnehmer, 
+                    bool ed_Freigeben, 
+                    decimal ed_Rabtt, 
+                    bool ed_VeranstalterBenachrichtigt, 
                     int Original_ed_EvDatenID, 
-                    global::System.Nullable<int> Original_et_EventID, 
-                    global::System.Nullable<decimal> Original_ed_Preis, 
-                    global::System.Nullable<global::System.DateTime> Original_ed_Beginn, 
-                    global::System.Nullable<global::System.DateTime> Original_ed_Ende, 
+                    int Original_et_EventID, 
+                    decimal Original_ed_Preis, 
+                    System.DateTime Original_ed_Beginn, 
+                    System.DateTime Original_ed_Ende, 
                     string Original_ed_StartOrt, 
                     string Original_ed_Zielort, 
-                    global::System.Nullable<int> Original_ed_Maxteilnehmer, 
-                    global::System.Nullable<bool> Original_ed_Freigeben, 
-                    global::System.Nullable<decimal> Original_ed_Rabtt, 
-                    global::System.Nullable<bool> Original_ed_VeranstalterBenachrichtigt, 
+                    int Original_ed_Maxteilnehmer, 
+                    bool Original_ed_Freigeben, 
+                    decimal Original_ed_Rabtt, 
+                    bool Original_ed_VeranstalterBenachrichtigt, 
                     int ed_EvDatenID) {
-            if ((et_EventID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(et_EventID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Preis.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(ed_Preis.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Beginn.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(ed_Beginn.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Ende.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(ed_Ende.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(et_EventID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(ed_Preis));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(ed_Beginn));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(ed_Ende));
             if ((ed_StartOrt == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ed_StartOrt");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ed_StartOrt));
@@ -3358,66 +2933,21 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ed_Zielort));
             }
-            if ((ed_Maxteilnehmer.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ed_Maxteilnehmer.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Freigeben.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(ed_Freigeben.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((ed_Rabtt.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(ed_Rabtt.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((ed_VeranstalterBenachrichtigt.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(ed_VeranstalterBenachrichtigt.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ed_Maxteilnehmer));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(ed_Freigeben));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(ed_Rabtt));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(ed_VeranstalterBenachrichtigt));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ed_EvDatenID));
-            if ((Original_et_EventID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_et_EventID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Preis.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_ed_Preis.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Beginn.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_ed_Beginn.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Ende.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_ed_Ende.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_et_EventID));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_ed_Preis));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_ed_Beginn));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_ed_Ende));
             if ((Original_ed_StartOrt == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ed_StartOrt");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
@@ -3431,38 +2961,14 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_ed_Zielort));
             }
-            if ((Original_ed_Maxteilnehmer.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_ed_Maxteilnehmer.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Freigeben.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((bool)(Original_ed_Freigeben.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_Rabtt.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_ed_Rabtt.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ed_VeranstalterBenachrichtigt.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_ed_VeranstalterBenachrichtigt.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_ed_Maxteilnehmer));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((bool)(Original_ed_Freigeben));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_ed_Rabtt));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((bool)(Original_ed_VeranstalterBenachrichtigt));
             this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(ed_EvDatenID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3485,27 +2991,27 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    global::System.Nullable<int> et_EventID, 
-                    global::System.Nullable<decimal> ed_Preis, 
-                    global::System.Nullable<global::System.DateTime> ed_Beginn, 
-                    global::System.Nullable<global::System.DateTime> ed_Ende, 
+                    int et_EventID, 
+                    decimal ed_Preis, 
+                    System.DateTime ed_Beginn, 
+                    System.DateTime ed_Ende, 
                     string ed_StartOrt, 
                     string ed_Zielort, 
-                    global::System.Nullable<int> ed_Maxteilnehmer, 
-                    global::System.Nullable<bool> ed_Freigeben, 
-                    global::System.Nullable<decimal> ed_Rabtt, 
-                    global::System.Nullable<bool> ed_VeranstalterBenachrichtigt, 
+                    int ed_Maxteilnehmer, 
+                    bool ed_Freigeben, 
+                    decimal ed_Rabtt, 
+                    bool ed_VeranstalterBenachrichtigt, 
                     int Original_ed_EvDatenID, 
-                    global::System.Nullable<int> Original_et_EventID, 
-                    global::System.Nullable<decimal> Original_ed_Preis, 
-                    global::System.Nullable<global::System.DateTime> Original_ed_Beginn, 
-                    global::System.Nullable<global::System.DateTime> Original_ed_Ende, 
+                    int Original_et_EventID, 
+                    decimal Original_ed_Preis, 
+                    System.DateTime Original_ed_Beginn, 
+                    System.DateTime Original_ed_Ende, 
                     string Original_ed_StartOrt, 
                     string Original_ed_Zielort, 
-                    global::System.Nullable<int> Original_ed_Maxteilnehmer, 
-                    global::System.Nullable<bool> Original_ed_Freigeben, 
-                    global::System.Nullable<decimal> Original_ed_Rabtt, 
-                    global::System.Nullable<bool> Original_ed_VeranstalterBenachrichtigt) {
+                    int Original_ed_Maxteilnehmer, 
+                    bool Original_ed_Freigeben, 
+                    decimal Original_ed_Rabtt, 
+                    bool Original_ed_VeranstalterBenachrichtigt) {
             return this.Update(et_EventID, ed_Preis, ed_Beginn, ed_Ende, ed_StartOrt, ed_Zielort, ed_Maxteilnehmer, ed_Freigeben, ed_Rabtt, ed_VeranstalterBenachrichtigt, Original_ed_EvDatenID, Original_et_EventID, Original_ed_Preis, Original_ed_Beginn, Original_ed_Ende, Original_ed_StartOrt, Original_ed_Zielort, Original_ed_Maxteilnehmer, Original_ed_Freigeben, Original_ed_Rabtt, Original_ed_VeranstalterBenachrichtigt, Original_ed_EvDatenID);
         }
     }
@@ -3763,21 +3269,11 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ev_EvVeranstalterID, global::System.Nullable<int> ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung) {
-            if ((ev_EvVeranstalterID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ev_EvVeranstalterID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ek_EvKategorieID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ek_EvKategorieID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+        public virtual int Insert(int ev_EvVeranstalterID, int ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung) {
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ev_EvVeranstalterID));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ek_EvKategorieID));
             if ((et_Bezeichnung == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("et_Bezeichnung");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(et_Bezeichnung));
@@ -3808,21 +3304,11 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> ev_EvVeranstalterID, global::System.Nullable<int> ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung, int Original_et_EventID, int et_EventID) {
-            if ((ev_EvVeranstalterID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ev_EvVeranstalterID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ek_EvKategorieID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ek_EvKategorieID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+        public virtual int Update(int ev_EvVeranstalterID, int ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung, int Original_et_EventID, int et_EventID) {
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ev_EvVeranstalterID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ek_EvKategorieID));
             if ((et_Bezeichnung == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("et_Bezeichnung");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(et_Bezeichnung));
@@ -3855,7 +3341,7 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> ev_EvVeranstalterID, global::System.Nullable<int> ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung, int Original_et_EventID) {
+        public virtual int Update(int ev_EvVeranstalterID, int ek_EvKategorieID, string et_Bezeichnung, string et_Beschreibung, int Original_et_EventID) {
             return this.Update(ev_EvVeranstalterID, ek_EvKategorieID, et_Bezeichnung, et_Beschreibung, Original_et_EventID, Original_et_EventID);
         }
     }
@@ -4138,40 +3624,35 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         public virtual int Delete(int Original_ev_EvVeranstalterID, string Original_ev_Firma, string Original_ev_Strasse, string Original_ev_PLZ, string Original_ev_HNummer, string Original_ev_Ort, string Original_ev_Telefon, string Original_ev_Email, string Original_ev_Fax) {
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ev_EvVeranstalterID));
             if ((Original_ev_Firma == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Firma");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ev_Firma));
             }
             if ((Original_ev_Strasse == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Strasse");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_ev_Strasse));
             }
             if ((Original_ev_PLZ == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_PLZ");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_ev_PLZ));
             }
             if ((Original_ev_HNummer == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_HNummer");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_ev_HNummer));
             }
             if ((Original_ev_Ort == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Ort");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
@@ -4223,31 +3704,31 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string ev_Firma, string ev_Strasse, string ev_PLZ, string ev_HNummer, string ev_Ort, string ev_Telefon, string ev_Email, string ev_Fax) {
             if ((ev_Firma == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Firma");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ev_Firma));
             }
             if ((ev_Strasse == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Strasse");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ev_Strasse));
             }
             if ((ev_PLZ == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_PLZ");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(ev_PLZ));
             }
             if ((ev_HNummer == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_HNummer");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ev_HNummer));
             }
             if ((ev_Ort == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Ort");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ev_Ort));
@@ -4310,31 +3791,31 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
                     string Original_ev_Fax, 
                     int ev_EvVeranstalterID) {
             if ((ev_Firma == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Firma");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ev_Firma));
             }
             if ((ev_Strasse == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Strasse");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ev_Strasse));
             }
             if ((ev_PLZ == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_PLZ");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(ev_PLZ));
             }
             if ((ev_HNummer == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_HNummer");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ev_HNummer));
             }
             if ((ev_Ort == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ev_Ort");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ev_Ort));
@@ -4359,40 +3840,35 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
             }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ev_EvVeranstalterID));
             if ((Original_ev_Firma == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Firma");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ev_Firma));
             }
             if ((Original_ev_Strasse == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Strasse");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ev_Strasse));
             }
             if ((Original_ev_PLZ == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_PLZ");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_ev_PLZ));
             }
             if ((Original_ev_HNummer == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_HNummer");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_ev_HNummer));
             }
             if ((Original_ev_Ort == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ev_Ort");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
@@ -4694,8 +4170,7 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         public virtual int Delete(int Original_ek_EvKategorieID, string Original_ek_KatBezeichnung) {
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ek_EvKategorieID));
             if ((Original_ek_KatBezeichnung == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ek_KatBezeichnung");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
@@ -4723,7 +4198,7 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string ek_KatBezeichnung) {
             if ((ek_KatBezeichnung == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ek_KatBezeichnung");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ek_KatBezeichnung));
@@ -4750,15 +4225,14 @@ namespace ManageEvents.ManageEventsDatasetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string ek_KatBezeichnung, int Original_ek_EvKategorieID, string Original_ek_KatBezeichnung, int ek_EvKategorieID) {
             if ((ek_KatBezeichnung == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ek_KatBezeichnung");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ek_KatBezeichnung));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ek_EvKategorieID));
             if ((Original_ek_KatBezeichnung == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ek_KatBezeichnung");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));

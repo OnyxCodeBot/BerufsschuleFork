@@ -20,4 +20,3 @@ K:\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.csproj.CoreC
 K:\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.dll
 K:\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ref\ManageEvents.dll
 K:\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.pdb
-\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Debug\net5.0\ManageEvents.csproj.AssemblyReference.cache

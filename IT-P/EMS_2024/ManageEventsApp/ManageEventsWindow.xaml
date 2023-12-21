@@ -11,99 +11,33 @@
         Title="Event Management System" Height="500" Width="800" MinHeight="600" MinWidth="700" Closing="Window_Closing">
 
     <Window.Resources>
-        <ManageEvents:ManageEventsDataset 
-            x:Key="manageEventsDataset"/>
-
-        <CollectionViewSource 
-            x:Key="tbl_EventsViewSource" 
-            Source="{Binding tbl_Events, Source={StaticResource manageEventsDataset}}"/>
-
-        <CollectionViewSource 
-            x:Key="tbl_Events_tbl_EventDatenViewSource" 
-            Source="{Binding FK_tbl_EventDaten_tbl_Events, Source={StaticResource tbl_EventsViewSource}}"/>
-
-        <CustomConverter:MoneyConverter 
-            x:Key="moneyConverter"/>
+        <ManageEvents:ManageEventsDataset x:Key="manageEventsDataset"/>
+        <CollectionViewSource x:Key="tbl_EventsViewSource" Source="{Binding tbl_Events, Source={StaticResource manageEventsDataset}}"/>
+        <CollectionViewSource x:Key="tbl_Events_tbl_EventDatenViewSource" Source="{Binding FK_tbl_EventDaten_tbl_Events, Source={StaticResource tbl_EventsViewSource}}"/>
+        <CustomConverter:MoneyConverter x:Key="moneyConverter"/>
     </Window.Resources>
 
     <Grid Background="#333333">
-        <Menu 
-            x:Name="hauptMenue" 
-            Height="26" 
-            VerticalAlignment="Top" 
-            Background="#222222">
+        <Menu x:Name="hauptMenue" Height="26" VerticalAlignment="Top" Background="#222222">
 
-            <MenuItem 
-                x:Name="dateiMenueItem" 
-                Header="_Datei" 
-                Background="#333333" 
-                Foreground="#EEEEEE">
-
-                <MenuItem 
-                    x:Name="ladenAusDateiMenuItem" 
-                    Header="_Laden aus Datei" 
-                    Click="ladenAusDateiMenuItem_Click" 
-                    Background="#333333" 
-                    Foreground="#EEEEEE"/>
-                <MenuItem 
-                    x:Name="speichernInDateiMenuItem" 
-                    Header="_Speichern in Datei" 
-                    Click="speichernInDateiMenuItem_Click" 
-                    Background="#333333" 
-                    Foreground="#EEEEEE"/>
+            <MenuItem x:Name="dateiMenueItem" Header="_Datei" Background="#333333" Foreground="#EEEEEE">
+                <MenuItem x:Name="ladenAusDateiMenuItem" Header="_Laden aus Datei" Click="ladenAusDateiMenuItem_Click" Background="#333333" Foreground="#EEEEEE"/>
+                <MenuItem x:Name="speichernInDateiMenuItem" Header="_Speichern in Datei" Click="speichernInDateiMenuItem_Click" Background="#333333" Foreground="#EEEEEE"/>
                 <Separator Background="#333333" Foreground="#EEEEEE"/>
-                <MenuItem 
-                    x:Name="ladenAusDatenbankMenuItem" 
-                    Header="_Laden aus Datenbank" 
-                    Click="ladenAusDatenbankMenuItem_Click" 
-                    Background="#333333" 
-                    Foreground="#EEEEEE"/>
-                <MenuItem 
-                    x:Name="synchronisierenMitDatenbankMenuItem" 
-                    Header="S_ynchronisieren mit Datenbank" Click="synchronisierenMitDatenbankMenuItem_Click"
-                    Background="#333333" 
-                    Foreground="#EEEEEE"/>
+                <MenuItem x:Name="ladenAusDatenbankMenuItem" Header="_Laden aus Datenbank" Click="ladenAusDatenbankMenuItem_Click" Background="#333333" Foreground="#EEEEEE"/>
+                <MenuItem x:Name="synchronisierenMitDatenbankMenuItem" Header="S_ynchronisieren mit Datenbank" Click="synchronisierenMitDatenbankMenuItem_Click" Background="#333333" Foreground="#EEEEEE"/>
                 <Separator Background="#333333" Foreground="#EEEEEE"/>
-                <MenuItem
-                    x:Name="beendenMenueItem" 
-                    Header="_Beenden" 
-                    Click="beendenMenueItem_Click" 
-                    Background="#333333" 
-                    Foreground="#EEEEEE"/>
+                <MenuItem x:Name="beendenMenueItem" Header="_Beenden" Click="beendenMenueItem_Click" Background="#333333" Foreground="#EEEEEE"/>
             </MenuItem>
-
-            <MenuItem
-                x:Name="bearbeitenMenuItem"
-                Header="_Bearbeiten"
-                Background="#333333" 
-                Foreground="#EEEEEE">
-
-                <MenuItem
-                    x:Name="eventMenuItem"
-                    Header="_Event"
-                    Background="#333333" 
-                    Foreground="#EEEEEE">
-
-                    <MenuItem
-                        x:Name="neuerEventMenuItem"
-                        Header="_Neuen Event erstellen"
-                        Background="#333333" 
-                        Foreground="#EEEEEE" Click="btnNeuerEvent_Click"/>
-
-                    <MenuItem
-                        x:Name="eventterminHinzufügenMenuItem"
-                        Header="Eventtermin _hinzufügen"
-                        Background="#333333" 
-                        Foreground="#EEEEEE" Click="btnNeuerTermin_Click"/>
+            
+            <MenuItem x:Name="bearbeitenMenuItem" Header="_Bearbeiten" Background="#333333" Foreground="#EEEEEE">
+                <MenuItem x:Name="eventMenuItem" Header="_Event" Background="#333333" Foreground="#EEEEEE">
+                    <MenuItem x:Name="neuerEventMenuItem" Header="_Neuen Event erstellen" Background="#333333" Foreground="#EEEEEE" Click="btnNeuerEvent_Click"/>
+                    <MenuItem x:Name="eventterminHinzufügenMenuItem" Header="Eventtermin _hinzufügen" Background="#333333" Foreground="#EEEEEE" Click="btnNeuerTermin_Click"/>
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <Grid 
-            x:Name="eventGrid" 
-            Margin="10,50,450,270" 
-            DataContext="{StaticResource tbl_EventsViewSource}" 
-            Background="#333333">
-
+        <Grid x:Name="eventGrid" Margin="10,50,450,270" DataContext="{StaticResource tbl_EventsViewSource}" Background="#333333">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -113,56 +47,19 @@
             </Grid.RowDefinitions>
 
             <Grid.BindingGroup>
-                <BindingGroup 
-                    x:Name="eventBindingGroup"/>
+                <BindingGroup x:Name="eventBindingGroup"/>
             </Grid.BindingGroup>
 
-            <Label 
-                Content="Eventbezeichnung:" 
-                Grid.Row="0" 
-                Margin="2" 
-                Foreground="#EEEEEE"/>
-            <TextBox 
-                x:Name="et_BezeichnungTextBox" 
-                Margin="5" 
-                Grid.Row="1" 
-                Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" 
-                Background="#666666" 
-                Foreground="#EEEEEE"/>
+            <Label Content="Eventbezeichnung:" Grid.Row="0" Margin="2" Foreground="#EEEEEE"/>
+            <TextBox x:Name="et_BezeichnungTextBox" Margin="5" Grid.Row="1" Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" Background="#666666" Foreground="#EEEEEE"/>
 
-            <ListBox 
-                x:Name="et_BezeichnungListBox" 
-                DisplayMemberPath="et_Bezeichnung" 
-                ItemsSource="{Binding}" 
-                Margin="5" 
-                Grid.Row="2" 
-                IsSynchronizedWithCurrentItem="True" 
-                Background="#666666" 
-                Foreground="#EEEEEE"/>
+            <ListBox x:Name="et_BezeichnungListBox" DisplayMemberPath="et_Bezeichnung" ItemsSource="{Binding}" Margin="5" Grid.Row="2" IsSynchronizedWithCurrentItem="True" Background="#666666" Foreground="#EEEEEE"/>
 
-            <Label 
-                Content="Eventbeschreibung:" 
-                Grid.Row="3" 
-                Margin="2" 
-                Foreground="#EEEEEE"/>
-            <TextBox 
-                x:Name="et_BeschreibungTextBox" 
-                Margin="5" 
-                Grid.Row="4" 
-                TextWrapping="Wrap" 
-                Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}"  
-                Background="#666666" 
-                Foreground="#EEEEEE"/>
+            <Label Content="Eventbeschreibung:" Grid.Row="3" Margin="2" Foreground="#EEEEEE"/>
+            <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" Background="#666666" Foreground="#EEEEEE"/>
         </Grid>
 
-        <Grid 
-            x:Name="masterTablesGrid" 
-            Height="220" 
-            Width="180" 
-            HorizontalAlignment="Right" 
-            VerticalAlignment="Top" 
-            Margin="0,50,20,0" 
-            DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
+        <Grid x:Name="masterTablesGrid" Height="220" Width="180" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,20,0" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -173,42 +70,16 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
 
-            <Label 
-                Content="Veranstalter:" 
-                Grid.Row="0" 
-                Margin="5" 
-                Foreground="#EEEEEE"/>
-            <ComboBox 
-                x:Name="cboVeranstalter" 
-                Grid.Row="1" 
-                Margin="5"/>
-            <Button 
-                x:Name="btnVeranstalter" 
-                Content="_Veranstalter bearbeiten" 
-                Grid.Row="2" 
-                Margin="5"/>
+            <Label Content="Veranstalter:" Grid.Row="0" Margin="5" Foreground="#EEEEEE"/>
+            <ComboBox x:Name="cboVeranstalter" Grid.Row="1" Margin="5"/>
+            <Button x:Name="btnVeranstalter" Content="_Veranstalter bearbeiten" Grid.Row="2" Margin="5"/>
 
-            <Label 
-                Content="Kategorie:" 
-                Grid.Row="3" 
-                Margin="5" 
-                Foreground="#EEEEEE"/>
-            <ComboBox 
-                x:Name="cboKategorie" 
-                Grid.Row="4" 
-                Margin="5"/>
-            <Button 
-                x:Name="btnKategorie" 
-                Content="_Kategorie bearbeiten" 
-                Grid.Row="5" 
-                Margin="5"/>
+            <Label Content="Kategorie:" Grid.Row="3" Margin="5" Foreground="#EEEEEE"/>
+            <ComboBox x:Name="cboKategorie" Grid.Row="4" Margin="5"/>
+            <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5"/>
         </Grid>
 
-        <Grid 
-            x:Name="eventDatenGrid" 
-            Margin="10,0,10,44" 
-            VerticalAlignment="Bottom" 
-            DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
+        <Grid x:Name="eventDatenGrid" Margin="10,0,10,44" VerticalAlignment="Bottom" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -226,8 +97,7 @@
             </Grid.RowDefinitions>
 
             <Grid.BindingGroup>
-                <BindingGroup 
-                    x:Name="eventDatenBindingGroup"/>
+                <BindingGroup x:Name="eventDatenBindingGroup"/>
             </Grid.BindingGroup>
 
             <Label 

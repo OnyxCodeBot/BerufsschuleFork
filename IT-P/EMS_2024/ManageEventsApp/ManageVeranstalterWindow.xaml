@@ -1,0 +1,42 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageEventsApp"
+        xmlns:NavBar="clr-namespace:NavBar;assembly=NavBar" x:Class="ManageEventsApp.ManageVeranstalterWindow"
+        mc:Ignorable="d"
+        Title="Bearbeitung der Eventveranstalter" Height="460" Width="650"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid x:Name="veranstalterGrid" VerticalAlignment="Top" Margin="10,10,10,0" Height="335">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox x:Name="ev_FirmaListBox" Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" IsSynchronizedWithCurrentItem="True"/>
+            
+            <Label Content="Eventveranstalter" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="ev_FirmaTextBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+            <Label Content="Straße" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="ev_StrasseTextBox" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+        </Grid>
+        <NavBar:NavBar HorizontalAlignment="Left" Margin="172,236,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
-using ManageEvents.ManageEventsDatasetTableAdapters;
 using Microsoft.Data.SqlClient;
+using ManageEvents.ManageEventsDatasetTableAdapters;
 
 namespace ManageEvents
 {

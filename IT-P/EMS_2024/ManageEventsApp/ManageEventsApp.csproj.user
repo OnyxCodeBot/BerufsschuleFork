@@ -7,7 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ManageVeranstalterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="ManageEventsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManageVeranstalterWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
