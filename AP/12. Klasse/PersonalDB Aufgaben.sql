@@ -179,5 +179,45 @@ group by abt.ABTNR, abt.ABTNAME
 order by abt.ABTNR
 
 --3.10
+select proj.PROJNR, proj.ABTNR, pers.VNAME, pers.NNAME
+from Projekt as proj
+left join Abteilung as abt on abt.ABTNR = proj.ABTNR
+left join Personal as pers on pers.PERSNR = abt.CHEFNR and pers.PROJNR = proj.PROJNR
+order by proj.PROJNR
 
 --3.11
+select abt.ABTNR, sum(pers.GEHALT) as gehaltssumme
+from Abteilung as abt
+left join Projekt as proj on proj.ABTNR = abt.ABTNR
+left join Personal as pers on pers.PROJNR = proj.PROJNR
+group by abt.ABTNR
+order by abt.ABTNR
+
+
+--4.1
+select *
+from personal
+where persnr not in
+(
+select pers.persnr
+from personal as pers
+inner join akte as akt on akt.persnr = pers.persnr
+)
+
+--4.2
+
+--4.3
+
+--4.4
+
+--4.5
+
+--4.6
+
+--4.7
+
+--4.8
+
+--4.9
+
+--4.10
