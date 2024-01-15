@@ -82,20 +82,6 @@
       <ed_Rabtt>21</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_EventDaten diffgr:id="tbl_EventDaten7" msdata:rowOrder="6">
-      <ed_EvDatenID>7</ed_EvDatenID>
-      <et_EventID>5</et_EventID>
-      <ed_Preis>175.0000</ed_Preis>
-      <ed_Beginn>2024-04-04T06:00:00+02:00</ed_Beginn>
-      <ed_Ende>2024-04-05T22:00:00+02:00</ed_Ende>
-      <ed_StartOrt>Tarvisio</ed_StartOrt>
-      <ed_Zielort>Triest</ed_Zielort>
-      <ed_Maxteilnehmer>8</ed_Maxteilnehmer>
-      <ed_AktTeilnehmer>6</ed_AktTeilnehmer>
-      <ed_Freigeben>true</ed_Freigeben>
-      <ed_Rabtt>12</ed_Rabtt>
-      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
-    </tbl_EventDaten>
     <tbl_EventDaten diffgr:id="tbl_EventDaten8" msdata:rowOrder="7">
       <ed_EvDatenID>8</ed_EvDatenID>
       <et_EventID>6</et_EventID>
@@ -176,20 +162,6 @@
       <ed_Zielort>Flughafen München</ed_Zielort>
       <ed_Maxteilnehmer>4</ed_Maxteilnehmer>
       <ed_AktTeilnehmer>2</ed_AktTeilnehmer>
-      <ed_Freigeben>true</ed_Freigeben>
-      <ed_Rabtt>15</ed_Rabtt>
-      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
-    </tbl_EventDaten>
-    <tbl_EventDaten diffgr:id="tbl_EventDaten14" msdata:rowOrder="13">
-      <ed_EvDatenID>14</ed_EvDatenID>
-      <et_EventID>13</et_EventID>
-      <ed_Preis>189.0000</ed_Preis>
-      <ed_Beginn>2024-10-25T14:00:00+02:00</ed_Beginn>
-      <ed_Ende>2024-10-25T20:00:00+02:00</ed_Ende>
-      <ed_StartOrt>Flugplatz Remmscheid</ed_StartOrt>
-      <ed_Zielort>Flugplatz Remmscheid</ed_Zielort>
-      <ed_Maxteilnehmer>3</ed_Maxteilnehmer>
-      <ed_AktTeilnehmer>3</ed_AktTeilnehmer>
       <ed_Freigeben>true</ed_Freigeben>
       <ed_Rabtt>15</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
@@ -553,34 +525,6 @@
       <ed_Rabtt>15</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_EventDaten diffgr:id="tbl_EventDaten41" msdata:rowOrder="40">
-      <ed_EvDatenID>41</ed_EvDatenID>
-      <et_EventID>24</et_EventID>
-      <ed_Preis>5.0000</ed_Preis>
-      <ed_Beginn>2025-06-20T18:00:00+02:00</ed_Beginn>
-      <ed_Ende>2025-06-21T06:00:00+02:00</ed_Ende>
-      <ed_StartOrt>Zwiesel</ed_StartOrt>
-      <ed_Zielort>Zwiesel</ed_Zielort>
-      <ed_Maxteilnehmer>20</ed_Maxteilnehmer>
-      <ed_AktTeilnehmer>3</ed_AktTeilnehmer>
-      <ed_Freigeben>true</ed_Freigeben>
-      <ed_Rabtt>10</ed_Rabtt>
-      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
-    </tbl_EventDaten>
-    <tbl_EventDaten diffgr:id="tbl_EventDaten42" msdata:rowOrder="41">
-      <ed_EvDatenID>42</ed_EvDatenID>
-      <et_EventID>25</et_EventID>
-      <ed_Preis>0.0000</ed_Preis>
-      <ed_Beginn>2024-01-30T08:00:00+01:00</ed_Beginn>
-      <ed_Ende>2024-01-30T18:00:00+01:00</ed_Ende>
-      <ed_StartOrt>Verona</ed_StartOrt>
-      <ed_Zielort>Verona</ed_Zielort>
-      <ed_Maxteilnehmer>15</ed_Maxteilnehmer>
-      <ed_AktTeilnehmer>0</ed_AktTeilnehmer>
-      <ed_Freigeben>false</ed_Freigeben>
-      <ed_Rabtt>15</ed_Rabtt>
-      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
-    </tbl_EventDaten>
     <tbl_EventDaten diffgr:id="tbl_EventDaten43" msdata:rowOrder="42">
       <ed_EvDatenID>43</ed_EvDatenID>
       <et_EventID>26</et_EventID>
@@ -609,34 +553,6 @@
       <ed_Rabtt>20</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_Events diffgr:id="tbl_Events1" msdata:rowOrder="0" diffgr:hasChanges="modified">
-      <et_EventID>5</et_EventID>
-      <ev_EvVeranstalterID>7</ev_EvVeranstalterID>
-      <ek_EvKategorieID>1</ek_EvKategorieID>
-      <et_Bezeichnung>Adria Cup</et_Bezeichnung>
-      <et_Beschreibung>Radrennen von den Alpen zur Adria. Verpflegung und Übernachtung inclusive. </et_Beschreibung>
-    </tbl_Events>
-    <tbl_Events diffgr:id="tbl_Events2" msdata:rowOrder="1">
-      <et_EventID>13</et_EventID>
-      <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
-      <ek_EvKategorieID>1</ek_EvKategorieID>
-      <et_Bezeichnung>Balonfahren über Remmscheid</et_Bezeichnung>
-      <et_Beschreibung>Kleine Balonfahrt</et_Beschreibung>
-    </tbl_Events>
-    <tbl_Events diffgr:id="tbl_Events3" msdata:rowOrder="2">
-      <et_EventID>24</et_EventID>
-      <ev_EvVeranstalterID>8</ev_EvVeranstalterID>
-      <ek_EvKategorieID>7</ek_EvKategorieID>
-      <et_Bezeichnung>Blade Night in Zwiesel</et_Bezeichnung>
-      <et_Beschreibung>Bladen bis in den frühen Morgen</et_Beschreibung>
-    </tbl_Events>
-    <tbl_Events diffgr:id="tbl_Events4" msdata:rowOrder="3">
-      <et_EventID>25</et_EventID>
-      <ev_EvVeranstalterID>9</ev_EvVeranstalterID>
-      <ek_EvKategorieID>2</ek_EvKategorieID>
-      <et_Bezeichnung>Bunjee Jumping</et_Bezeichnung>
-      <et_Beschreibung>Sprung in die Tiefe der Brücke von Verona</et_Beschreibung>
-    </tbl_Events>
     <tbl_Events diffgr:id="tbl_Events5" msdata:rowOrder="4">
       <et_EventID>17</et_EventID>
       <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
@@ -928,12 +844,89 @@
     </tbl_EvKategorie>
   </ManageEventsDataset>
   <diffgr:before>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten7" msdata:rowOrder="6" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <ed_EvDatenID>7</ed_EvDatenID>
+      <et_EventID>5</et_EventID>
+      <ed_Preis>175.0000</ed_Preis>
+      <ed_Beginn>2024-04-04T06:00:00+02:00</ed_Beginn>
+      <ed_Ende>2024-04-05T22:00:00+02:00</ed_Ende>
+      <ed_StartOrt>Tarvisio</ed_StartOrt>
+      <ed_Zielort>Triest</ed_Zielort>
+      <ed_Maxteilnehmer>8</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>6</ed_AktTeilnehmer>
+      <ed_Freigeben>true</ed_Freigeben>
+      <ed_Rabtt>12</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten14" msdata:rowOrder="13" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <ed_EvDatenID>14</ed_EvDatenID>
+      <et_EventID>13</et_EventID>
+      <ed_Preis>189.0000</ed_Preis>
+      <ed_Beginn>2024-10-25T14:00:00+02:00</ed_Beginn>
+      <ed_Ende>2024-10-25T20:00:00+02:00</ed_Ende>
+      <ed_StartOrt>Flugplatz Remmscheid</ed_StartOrt>
+      <ed_Zielort>Flugplatz Remmscheid</ed_Zielort>
+      <ed_Maxteilnehmer>3</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>3</ed_AktTeilnehmer>
+      <ed_Freigeben>true</ed_Freigeben>
+      <ed_Rabtt>15</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten41" msdata:rowOrder="40" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <ed_EvDatenID>41</ed_EvDatenID>
+      <et_EventID>24</et_EventID>
+      <ed_Preis>5.0000</ed_Preis>
+      <ed_Beginn>2025-06-20T18:00:00+02:00</ed_Beginn>
+      <ed_Ende>2025-06-21T06:00:00+02:00</ed_Ende>
+      <ed_StartOrt>Zwiesel</ed_StartOrt>
+      <ed_Zielort>Zwiesel</ed_Zielort>
+      <ed_Maxteilnehmer>20</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>3</ed_AktTeilnehmer>
+      <ed_Freigeben>true</ed_Freigeben>
+      <ed_Rabtt>10</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten42" msdata:rowOrder="41" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <ed_EvDatenID>42</ed_EvDatenID>
+      <et_EventID>25</et_EventID>
+      <ed_Preis>0.0000</ed_Preis>
+      <ed_Beginn>2024-01-30T08:00:00+01:00</ed_Beginn>
+      <ed_Ende>2024-01-30T18:00:00+01:00</ed_Ende>
+      <ed_StartOrt>Verona</ed_StartOrt>
+      <ed_Zielort>Verona</ed_Zielort>
+      <ed_Maxteilnehmer>15</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>0</ed_AktTeilnehmer>
+      <ed_Freigeben>false</ed_Freigeben>
+      <ed_Rabtt>15</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
     <tbl_Events diffgr:id="tbl_Events1" msdata:rowOrder="0" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
       <et_EventID>5</et_EventID>
       <ev_EvVeranstalterID>7</ev_EvVeranstalterID>
       <ek_EvKategorieID>1</ek_EvKategorieID>
       <et_Bezeichnung>Adria Cup</et_Bezeichnung>
       <et_Beschreibung>Radrennen von den Alpen zur Adria. Verpflegung und Übernachtung inclusive. </et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events2" msdata:rowOrder="1" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>13</et_EventID>
+      <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
+      <ek_EvKategorieID>1</ek_EvKategorieID>
+      <et_Bezeichnung>Balonfahren über Remmscheid</et_Bezeichnung>
+      <et_Beschreibung>Kleine Balonfahrt</et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events3" msdata:rowOrder="2" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>24</et_EventID>
+      <ev_EvVeranstalterID>8</ev_EvVeranstalterID>
+      <ek_EvKategorieID>7</ek_EvKategorieID>
+      <et_Bezeichnung>Blade Night in Zwiesel</et_Bezeichnung>
+      <et_Beschreibung>Bladen bis in den frühen Morgen</et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events4" msdata:rowOrder="3" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>25</et_EventID>
+      <ev_EvVeranstalterID>9</ev_EvVeranstalterID>
+      <ek_EvKategorieID>2</ek_EvKategorieID>
+      <et_Bezeichnung>Bunjee Jumping</et_Bezeichnung>
+      <et_Beschreibung>Sprung in die Tiefe der Brücke von Verona</et_Beschreibung>
     </tbl_Events>
   </diffgr:before>
 </diffgr:diffgram>

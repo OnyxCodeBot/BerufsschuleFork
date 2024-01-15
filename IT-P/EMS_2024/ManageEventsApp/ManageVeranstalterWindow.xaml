@@ -62,7 +62,7 @@
 
         <NavBar:NavBar x:Name="veranstalterNavBar" HorizontalAlignment="Left" Margin="10,350,0,0" VerticalAlignment="Top" Width="245" Height="30"/>
 
-        <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Margin="260,0,60,24" Height="70" Width="330">
+        <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Margin="260,0,10,10" Height="70">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -73,9 +73,9 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnNeuerVeranstalter" Content="_Neuer Veranstalter" Grid.Row="0" Grid.Column="0" Margin="5"/>
-            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False"/>
-            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5" IsEnabled="False"/>
+            <Button x:Name="btnNeuerVeranstalter" Content="_Neuer Veranstalter" Grid.Row="0" Grid.Column="0" Margin="5" Click="btnNeuerVeranstalter_Click"/>
+            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click"/>
+            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click"/>
             <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"/>
         </Grid>
     </Grid>
