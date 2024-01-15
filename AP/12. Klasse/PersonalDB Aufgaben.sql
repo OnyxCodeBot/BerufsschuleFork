@@ -125,12 +125,14 @@ order by pers.PERSNR
 --3.3
 select *
 from personal
-where PERSNR in (
-	select abt.CHEFNR
-	from Personal as pers
-	inner join Projekt as proj on proj.PROJNR = pers.PROJNR
-	inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
-	where pers.VNAME = 'Heinz')
+where PERSNR in 
+(
+select abt.CHEFNR
+from Personal as pers
+inner join Projekt as proj on proj.PROJNR = pers.PROJNR
+inner join Abteilung as abt on abt.ABTNR = proj.ABTNR
+where pers.VNAME = 'Heinz'
+)
 
 --3.4
 select pers.*
@@ -151,12 +153,11 @@ inner join Projekt as proj on proj.BUDGET = abt.BUDGET
 order by abt.ABTNAME
 
 --3.6
-select distinct akt.PERSNR, year(akt.DATUM) as jahr, pers.VNAME, pers.NNAME
-from Akte as akt
-inner join Personal as pers on pers.PERSNR = akt.PERSNR
-group by akt.PERSNR, year(akt.DATUM), pers.VNAME, pers.NNAME
-having sum(akt.GEHALT) >= 1000
-order by persnr, year(akt.DATUM)
+select a1.persnr, year(a1.DATUM) as jahr
+from Akte as a1
+inner join Akte as a2 on a2.PERSNR = a1.PERSNR
+where year(a1.DATUM) = year(a2.DATUM) and
+a1.GEHALT - a2.GEHALT >= 1000
 
 --3.7
 select pers1.PERSNR, pers1.VNAME, pers1.NNAME, pers2.PERSNR, pers2.VNAME, pers2.NNAME
