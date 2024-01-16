@@ -7,7 +7,7 @@
         xmlns:NavBar="clr-namespace:NavBar;assembly=NavBar" x:Class="ManageEventsApp.ManageVeranstalterWindow"
         mc:Ignorable="d"
         Title="Bearbeitung der Eventveranstalter" Height="460" Width="650"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
         <Grid x:Name="veranstalterGrid" VerticalAlignment="Top" Margin="10,10,10,0" Height="335">
             <Grid.RowDefinitions>
@@ -76,7 +76,7 @@
             <Button x:Name="btnNeuerVeranstalter" Content="_Neuer Veranstalter" Grid.Row="0" Grid.Column="0" Margin="5" Click="btnNeuerVeranstalter_Click"/>
             <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click"/>
             <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click"/>
-            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5"/>
+            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Click="btnSchliessen_Click"/>
         </Grid>
     </Grid>
 </Window>

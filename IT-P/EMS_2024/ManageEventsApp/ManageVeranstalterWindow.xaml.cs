@@ -135,7 +135,40 @@ namespace ManageEventsApp
                 //Überprüfung der constraints wieder zuschalten
                 dsVeranstalter.EnforceConstraints = true;
 
-                //TODO
+                //NavBar neu initialisieren
+                veranstalterNavBar.NavSourceView = (CollectionView)veranstalterView;
+
+                //Buttons nach Bearbeitung sperren/freigeben
+                veranstalterNavBar.IsEnabled = true;
+
+                btnNeuerVeranstalter.IsEnabled = true;
+                btnSchliessen.IsEnabled = true;
+
+                btnAbbrechen.IsEnabled = false;
+                btnUebernehmen.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                ShowErrorMessages(ex, e);
+            }
+        }
+
+        private void btnSchliessen_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                //Aktuelle Bearbeitung beenden
+                veranstalterBindingGroup.UpdateSources();
+            }
+            catch (Exception ex)
+            {
+                //Fehler abfangen und ausgeben
+                this.ShowErrorMessages(ex, new RoutedEventArgs());
             }
         }
     }

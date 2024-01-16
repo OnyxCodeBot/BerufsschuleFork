@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj": {}
+    "B:\\Berufsschule\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj": {}
   },
   "projects": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj": {
+    "B:\\Berufsschule\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj",
+        "projectUniqueName": "B:\\Berufsschule\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj",
         "projectName": "ManageEvents",
-        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj",
-        "packagesPath": "C:\\Users\\21ITA007\\.nuget\\packages\\",
-        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEvents\\obj\\",
+        "projectPath": "B:\\Berufsschule\\IT-P\\EMS_2024\\ManageEvents\\ManageEvents.csproj",
+        "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
+        "outputPath": "B:\\Berufsschule\\IT-P\\EMS_2024\\ManageEvents\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "B:\\Program Files (x86)\\VisualStudio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\21ITA007\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -55,16 +55,31 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

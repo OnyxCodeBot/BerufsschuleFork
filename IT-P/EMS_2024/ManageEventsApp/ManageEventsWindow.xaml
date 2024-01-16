@@ -36,6 +36,7 @@
                     <MenuItem x:Name="eventterminHinzufügenMenuItem" Header="Eventtermin _hinzufügen" Click="btnNeuerTermin_Click"/>
                 </MenuItem>
                 <MenuItem x:Name="veranstalterBearbeitenMenuItem" Header="Veranstalter bearbeiten" Click="btnVeranstalter_Click"/>
+                <MenuItem x:Name="kategorieBearbeitenMenuItem" Header="Kategorie bearbeiten" Click="btnKategorie_Click"/>
             </MenuItem>
         </Menu>
         <Grid x:Name="eventGrid" Margin="10,50,450,270" DataContext="{StaticResource tbl_EventsViewSource}">
@@ -77,7 +78,7 @@
 
             <Label Content="Kategorie:" Grid.Row="3" Margin="5"/>
             <ComboBox x:Name="cboKategorie" Grid.Row="4" Margin="5"/>
-            <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5"/>
+            <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5" Click="btnKategorie_Click"/>
         </Grid>
 
         <Grid x:Name="eventDatenGrid" Margin="10,0,10,44" VerticalAlignment="Bottom" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">

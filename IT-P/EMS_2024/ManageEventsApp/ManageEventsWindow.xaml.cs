@@ -405,5 +405,15 @@ namespace ManageEventsApp
 
             mvw.ShowDialog();
         }
+
+        private void btnKategorie_Click(object sender, RoutedEventArgs e)
+        {
+            //Fenster erzeugen und anzeigen
+            ManageKategorieWindow mkw = new ManageKategorieWindow();
+
+            mkw.SetDataSet(dsEvents, cboKategorie.SelectedIndex);
+
+            mkw.ShowDialog();
+        }
     }
 }

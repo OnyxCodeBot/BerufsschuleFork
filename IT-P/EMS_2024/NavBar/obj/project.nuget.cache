@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "w+bBJlJAfY1yZsy0WNfGM/NHJ6OX1HR13Zexus3ZnVkJaHKL6wI5xSnRVn8m55UiQrK6Bxez+PRPU/hMXAwveQ==",
+  "dgSpecHash": "k74x7pcYTqJK0uHEd0MzCyCX1Vb3GZ8U3KlncbLL7GC2jd4ErmFlv3ZimupO3tKr6NHe6DOsF4cDX18gEZjlMg==",
   "success": true,
-  "projectFilePath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mariu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\mariu\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\mariu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

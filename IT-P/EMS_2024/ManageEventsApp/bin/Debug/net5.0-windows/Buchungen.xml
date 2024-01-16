@@ -553,7 +553,7 @@
       <ed_Rabtt>20</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
-    <tbl_Events diffgr:id="tbl_Events5" msdata:rowOrder="4">
+    <tbl_Events diffgr:id="tbl_Events5" msdata:rowOrder="4" diffgr:hasChanges="modified">
       <et_EventID>17</et_EventID>
       <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
       <ek_EvKategorieID>1</ek_EvKategorieID>
@@ -927,6 +927,13 @@
       <ek_EvKategorieID>2</ek_EvKategorieID>
       <et_Bezeichnung>Bunjee Jumping</et_Bezeichnung>
       <et_Beschreibung>Sprung in die Tiefe der Brücke von Verona</et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events5" msdata:rowOrder="4" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>17</et_EventID>
+      <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
+      <ek_EvKategorieID>1</ek_EvKategorieID>
+      <et_Bezeichnung>Bunjee Jumping an der Remmscheider Brücke</et_Bezeichnung>
+      <et_Beschreibung>Bunjee Jumping an der Remmscheider Brücke. Kopfüber in den Himmel.</et_Beschreibung>
     </tbl_Events>
   </diffgr:before>
 </diffgr:diffgram>
