@@ -553,6 +553,20 @@
       <ed_Rabtt>20</ed_Rabtt>
       <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
     </tbl_EventDaten>
+    <tbl_EventDaten diffgr:id="tbl_EventDaten45" msdata:rowOrder="44" diffgr:hasChanges="inserted">
+      <ed_EvDatenID>-5</ed_EvDatenID>
+      <et_EventID>-7</et_EventID>
+      <ed_Preis>10.00</ed_Preis>
+      <ed_Beginn>2024-09-15T00:00:00+02:00</ed_Beginn>
+      <ed_Ende>2024-09-15T00:00:00+02:00</ed_Ende>
+      <ed_StartOrt>Testort</ed_StartOrt>
+      <ed_Zielort>Testort</ed_Zielort>
+      <ed_Maxteilnehmer>1</ed_Maxteilnehmer>
+      <ed_AktTeilnehmer>0</ed_AktTeilnehmer>
+      <ed_Freigeben>false</ed_Freigeben>
+      <ed_Rabtt>10</ed_Rabtt>
+      <ed_VeranstalterBenachrichtigt>false</ed_VeranstalterBenachrichtigt>
+    </tbl_EventDaten>
     <tbl_Events diffgr:id="tbl_Events5" msdata:rowOrder="4" diffgr:hasChanges="modified">
       <et_EventID>17</et_EventID>
       <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
@@ -700,12 +714,19 @@
       <et_Bezeichnung>Überleben im Amazonas Becken</et_Bezeichnung>
       <et_Beschreibung>Überlebenstraining im Dschungel Südamerikas. Inclusive Flug und Verpflegung.</et_Beschreibung>
     </tbl_Events>
-    <tbl_Events diffgr:id="tbl_Events26" msdata:rowOrder="25">
+    <tbl_Events diffgr:id="tbl_Events26" msdata:rowOrder="25" diffgr:hasChanges="modified">
       <et_EventID>9</et_EventID>
-      <ev_EvVeranstalterID>5</ev_EvVeranstalterID>
-      <ek_EvKategorieID>1</ek_EvKategorieID>
+      <ev_EvVeranstalterID>-1</ev_EvVeranstalterID>
+      <ek_EvKategorieID>-1</ek_EvKategorieID>
       <et_Bezeichnung>Unterhachinger Stadtmarathon</et_Bezeichnung>
       <et_Beschreibung>Rennen um die Stadtmeisterschaft</et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events27" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+      <et_EventID>-7</et_EventID>
+      <ev_EvVeranstalterID>-1</ev_EvVeranstalterID>
+      <ek_EvKategorieID>-1</ek_EvKategorieID>
+      <et_Bezeichnung>Testevent</et_Bezeichnung>
+      <et_Beschreibung>Testbeschreibung</et_Beschreibung>
     </tbl_Events>
     <tbl_EvVeranstalter diffgr:id="tbl_EvVeranstalter1" msdata:rowOrder="0">
       <ev_EvVeranstalterID>1</ev_EvVeranstalterID>
@@ -810,6 +831,17 @@
       <ev_Telefon>06674-777656</ev_Telefon>
       <ev_Email>MaxTours@providers.net</ev_Email>
     </tbl_EvVeranstalter>
+    <tbl_EvVeranstalter diffgr:id="tbl_EvVeranstalter11" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+      <ev_EvVeranstalterID>-1</ev_EvVeranstalterID>
+      <ev_Firma>Testveranstalter</ev_Firma>
+      <ev_Strasse>Teststraße</ev_Strasse>
+      <ev_PLZ>12345</ev_PLZ>
+      <ev_HNummer>3</ev_HNummer>
+      <ev_Ort>Testort</ev_Ort>
+      <ev_Telefon>21412455</ev_Telefon>
+      <ev_Email>test@email.com</ev_Email>
+      <ev_Fax>213123</ev_Fax>
+    </tbl_EvVeranstalter>
     <tbl_EvKategorie diffgr:id="tbl_EvKategorie1" msdata:rowOrder="0">
       <ek_EvKategorieID>1</ek_EvKategorieID>
       <ek_KatBezeichnung>FunSports</ek_KatBezeichnung>
@@ -841,6 +873,10 @@
     <tbl_EvKategorie diffgr:id="tbl_EvKategorie8" msdata:rowOrder="7">
       <ek_EvKategorieID>8</ek_EvKategorieID>
       <ek_KatBezeichnung>FamilySports</ek_KatBezeichnung>
+    </tbl_EvKategorie>
+    <tbl_EvKategorie diffgr:id="tbl_EvKategorie9" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+      <ek_EvKategorieID>-1</ek_EvKategorieID>
+      <ek_KatBezeichnung>Testkategorie</ek_KatBezeichnung>
     </tbl_EvKategorie>
   </ManageEventsDataset>
   <diffgr:before>
@@ -934,6 +970,13 @@
       <ek_EvKategorieID>1</ek_EvKategorieID>
       <et_Bezeichnung>Bunjee Jumping an der Remmscheider Brücke</et_Bezeichnung>
       <et_Beschreibung>Bunjee Jumping an der Remmscheider Brücke. Kopfüber in den Himmel.</et_Beschreibung>
+    </tbl_Events>
+    <tbl_Events diffgr:id="tbl_Events26" msdata:rowOrder="25" xmlns="http://tempuri.org/ManageEventsDataset.xsd">
+      <et_EventID>9</et_EventID>
+      <ev_EvVeranstalterID>5</ev_EvVeranstalterID>
+      <ek_EvKategorieID>1</ek_EvKategorieID>
+      <et_Bezeichnung>Unterhachinger Stadtmarathon</et_Bezeichnung>
+      <et_Beschreibung>Rennen um die Stadtmeisterschaft</et_Beschreibung>
     </tbl_Events>
   </diffgr:before>
 </diffgr:diffgram>

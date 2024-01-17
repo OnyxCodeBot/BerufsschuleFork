@@ -17,7 +17,6 @@
 B:\Berufsschule\IT-P\EMS_2024\NavBar\bin\Debug\net5.0-windows\NavBar.deps.json
 B:\Berufsschule\IT-P\EMS_2024\NavBar\bin\Debug\net5.0-windows\NavBar.dll
 B:\Berufsschule\IT-P\EMS_2024\NavBar\bin\Debug\net5.0-windows\NavBar.pdb
-B:\Berufsschule\IT-P\EMS_2024\NavBar\obj\Debug\net5.0-windows\NavBar.csproj.AssemblyReference.cache
 B:\Berufsschule\IT-P\EMS_2024\NavBar\obj\Debug\net5.0-windows\NavBar.g.cs
 B:\Berufsschule\IT-P\EMS_2024\NavBar\obj\Debug\net5.0-windows\NavBar_MarkupCompile.cache
 B:\Berufsschule\IT-P\EMS_2024\NavBar\obj\Debug\net5.0-windows\NavBar_MarkupCompile.lref

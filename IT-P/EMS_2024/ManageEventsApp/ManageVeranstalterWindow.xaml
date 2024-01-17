@@ -33,34 +33,34 @@
                 <BindingGroup x:Name="veranstalterBindingGroup"/>
             </Grid.BindingGroup>
 
-            <ListBox x:Name="ev_FirmaListBox" Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="ev_Firma" ItemsSource="{Binding}" Margin="5"/>
+            <ListBox x:Name="ev_FirmaListBox" Grid.Row="0" Grid.Column="0" Grid.RowSpan="10" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="ev_Firma" ItemsSource="{Binding}" Margin="5" ToolTip="Liste aller Eventveranstalter"/>
 
             <Label Content="Eventveranstalter" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
-            <TextBox x:Name="ev_FirmaTextBox" Text="{Binding ev_Firma, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="ev_FirmaTextBox" Text="{Binding ev_Firma, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" ToolTip="Eingabefeld für den Namen des Eventveranstalters"/>
 
             <Label Content="Straße" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="ev_StrasseTextBox" Text="{Binding ev_Strasse, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="ev_StrasseTextBox" Text="{Binding ev_Strasse, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" ToolTip="Eingabefeld für die Straße des Eventveranstalters"/>
 
             <Label Content="Hausnummer" Grid.Row="2" Grid.Column="3"/>
-            <TextBox x:Name="ev_HNummberTextBox" Text="{Binding ev_HNummer, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="3" Grid.Column="3"/>
+            <TextBox x:Name="ev_HNummberTextBox" Text="{Binding ev_HNummer, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="3" Grid.Column="3" ToolTip="Eingabefeld für die Hausnummer des Eventveranstalters"/>
 
             <Label Content="PLZ" Grid.Row="4" Grid.Column="1"/>
-            <TextBox x:Name="ev_PLZTextBox" Text="{Binding ev_PLZ, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="5" Grid.Column="1"/>
+            <TextBox x:Name="ev_PLZTextBox" Text="{Binding ev_PLZ, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="5" Grid.Column="1" ToolTip="Eingabefeld für die PLZ des Eventveranstalters"/>
 
             <Label Content="Ort" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="ev_OrtTextBox" Text="{Binding ev_Ort, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="ev_OrtTextBox" Text="{Binding ev_Ort, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" ToolTip="Eingabefeld für den Ortsnamen des Eventveranstalters"/>
 
             <Label Content="Telefon" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <TextBox x:Name="ev_TelefonTextBox" Text="{Binding ev_Telefon, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="ev_TelefonTextBox" Text="{Binding ev_Telefon, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" ToolTip="Eingabefeld für die Telefonnummer des Eventveranstalters"/>
 
             <Label Content="Fax" Grid.Row="6" Grid.Column="3"/>
-            <TextBox x:Name="ev_FaxTextBox" Text="{Binding ev_Fax, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="7" Grid.Column="3"/>
+            <TextBox x:Name="ev_FaxTextBox" Text="{Binding ev_Fax, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="7" Grid.Column="3" ToolTip="Eingabefeld für die Fax Nummer des Eventveranstalters"/>
 
             <Label Content="E-Mailadresse" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3"/>
-            <TextBox x:Name="ev_EMailTextBox" Text="{Binding ev_Email, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <TextBox x:Name="ev_EMailTextBox" Text="{Binding ev_Email, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" ToolTip="Eingabefeld für die E-Mail Adresse des Eventveranstalters"/>
         </Grid>
 
-        <NavBar:NavBar x:Name="veranstalterNavBar" HorizontalAlignment="Left" Margin="10,350,0,0" VerticalAlignment="Top" Width="245" Height="30"/>
+        <NavBar:NavBar x:Name="veranstalterNavBar" HorizontalAlignment="Left" Margin="10,350,0,0" VerticalAlignment="Top" Width="245" Height="30" ToolTip="Navigationsleiste"/>
 
         <Grid x:Name="buttonGrid" VerticalAlignment="Bottom" Margin="260,0,10,10" Height="70">
             <Grid.RowDefinitions>
@@ -73,10 +73,10 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnNeuerVeranstalter" Content="_Neuer Veranstalter" Grid.Row="0" Grid.Column="0" Margin="5" Click="btnNeuerVeranstalter_Click"/>
-            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click"/>
-            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click"/>
-            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Click="btnSchliessen_Click"/>
+            <Button x:Name="btnNeuerVeranstalter" Content="_Neuer Veranstalter" Grid.Row="0" Grid.Column="0" Margin="5" Click="btnNeuerVeranstalter_Click" ToolTip="Erstellen eines neuen Veranstalters"/>
+            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click" ToolTip="Uebernehmen des neu erstellten Veranstalters"/>
+            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click" ToolTip="Abbrechen der Erstellung eines neuen Veranstalters"/>
+            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5" Click="btnSchliessen_Click" ToolTip="Bearbeitung der Eventveranstalter schließen und ausgewaehlten Eventveranstalter uebernehmen"/>
         </Grid>
     </Grid>
 </Window>
