@@ -208,3 +208,14 @@ B:\Berufsschule\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageKat
 B:\Berufsschule\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageKategorieWindow.baml
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageKategorieWindow.g.cs
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\ManageKategorieWindow.baml
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\CustomHelp.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\CustomHelp.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Configuration.Json.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\Microsoft.Extensions.Primitives.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\bin\Debug\net5.0-windows\System.Text.Json.dll

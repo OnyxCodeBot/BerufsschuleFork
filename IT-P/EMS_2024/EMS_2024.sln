@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEvents", "ManageEvent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEventsApp", "ManageEventsApp\ManageEventsApp.csproj", "{03D45FA3-1FF4-4D5E-A69C-12F52A89F93C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavBar", "NavBar\NavBar.csproj", "{18F90ABE-BF22-45F0-8D11-35E810E77E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavBar", "NavBar\NavBar.csproj", "{18F90ABE-BF22-45F0-8D11-35E810E77E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHelp", "CustomHelp\CustomHelp.csproj", "{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{18F90ABE-BF22-45F0-8D11-35E810E77E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18F90ABE-BF22-45F0-8D11-35E810E77E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18F90ABE-BF22-45F0-8D11-35E810E77E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

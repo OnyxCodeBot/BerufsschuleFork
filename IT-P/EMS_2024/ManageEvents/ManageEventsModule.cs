@@ -2,6 +2,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 using ManageEvents.ManageEventsDatasetTableAdapters;
+using Microsoft.Extensions.Configuration;
 
 namespace ManageEvents
 {
@@ -15,8 +16,14 @@ namespace ManageEvents
 
         public ManageEventsModule()
         {
+            //Config Object mit *.json Datei
+            IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
             cnEvents = new Microsoft.Data.SqlClient.SqlConnection();
-            cnEvents.ConnectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=FunEvents_Entwicklung_21ITA007;Data Source=ITSW16SQL2\SQL_A;Encrypt=False";
+            //cnEvents.ConnectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=FunEvents_Entwicklung_21ITA007;Data Source=ITSW16SQL2\SQL_A;Encrypt=False";
+
+            string conStr = config.GetConnectionString("conString");
+
+            cnEvents.ConnectionString = conStr;
 
             taEvDaten = new tbl_EventDatenTableAdapter();
             taEvents = new tbl_EventsTableAdapter();

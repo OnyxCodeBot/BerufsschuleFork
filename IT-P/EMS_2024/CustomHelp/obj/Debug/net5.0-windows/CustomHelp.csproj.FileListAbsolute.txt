@@ -1,0 +1,11 @@
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\bin\Debug\net5.0-windows\CustomHelp.deps.json
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\bin\Debug\net5.0-windows\CustomHelp.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\bin\Debug\net5.0-windows\ref\CustomHelp.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\bin\Debug\net5.0-windows\CustomHelp.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.GeneratedMSBuildEditorConfig.editorconfig
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.AssemblyInfoInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.AssemblyInfo.cs
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\ref\CustomHelp.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Debug\net5.0-windows\CustomHelp.pdb

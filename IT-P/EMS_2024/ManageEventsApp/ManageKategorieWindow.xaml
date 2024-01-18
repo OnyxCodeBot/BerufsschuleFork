@@ -5,9 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ManageEventsApp"
         xmlns:NavBar="clr-namespace:NavBar;assembly=NavBar" x:Class="ManageEventsApp.ManageKategorieWindow"
+        xmlns:h="clr-namespace:CustomHelp;assembly=CustomHelp"
         mc:Ignorable="d"
         Title="Bearbeitung der Eventkategorien" Height="320" Width="480"
-        ResizeMode="NoResize" Closing="Window_Closing">
+        ResizeMode="NoResize" Closing="Window_Closing"
+        h:CustomHelpProvider.HelpString="Applikation zur Eventkategoriebearbeitung">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="customErrorTemplate">
+            <DockPanel ToolTip="Bitte geben Sie die fehlenden Werte ein!">
+                <TextBlock Background="White" Foreground="Red" FontWeight="ExtraBold" FontSize="20">!!</TextBlock>
+                <AdornedElementPlaceholder Width="20"/>
+            </DockPanel>
+        </ControlTemplate>
+    </Window.Resources>
+
     <Grid>
 
         <Grid x:Name="kategorieGrid" Margin="10,10,10,120">
@@ -22,13 +34,13 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
 
-            <ListBox x:Name="ek_KatBezeichnungListBox" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="ek_KatBezeichnung" ItemsSource="{Binding}" ToolTip="Liste aller Eventkategorien"/>
+            <ListBox x:Name="ek_KatBezeichnungListBox" Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="ek_KatBezeichnung" ItemsSource="{Binding}" ToolTip="Liste aller Eventkategorien" TabIndex="1"/>
 
             <Label Content="Kategoriebezeichnung" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" Margin="5,0,0,0"/>
-            
-            <TextBox x:Name="ek_KatBezeichnungTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding ek_KatBezeichnung, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True}" ToolTip="Eingabefeld für die Bezeichnung einer Eventkategorie"/>
 
-            <NavBar:NavBar x:Name="kategorieNavBar" Grid.Row="3" Grid.Column="0" Margin="5,5" ToolTip="Navigationsleiste"/>
+            <TextBox x:Name="ek_KatBezeichnungTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Text="{Binding ek_KatBezeichnung, Mode=TwoWay, NotifyOnValidationError=True, ValidatesOnExceptions=True, UpdateSourceTrigger=LostFocus}" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" ToolTip="Eingabefeld für die Bezeichnung einer Eventkategorie" h:CustomHelpProvider.HelpString="Eingabefeld fuer die Bezeichnung einer Eventkategorie" TabIndex="3"/>
+
+            <NavBar:NavBar x:Name="kategorieNavBar" Grid.Row="3" Grid.Column="0" Margin="5,5" ToolTip="Navigationsleiste" TabIndex="2"/>
         </Grid>
 
         <Grid x:Name="buttonGrid" Margin="10,190,10,10">
@@ -43,10 +55,10 @@
             </Grid.RowDefinitions>
             
             
-            <Button x:Name="btnNeueKategorie" Content="_Neue Kategorie" Grid.Row="0" Grid.Column="0" Margin="5,5" Click="btnNeueKategorie_Click" ToolTip="Erstellen einer neuen Eventkategorie"/>
-            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5,5" IsEnabled="False" Click="btnUebernehmen_Click" ToolTip="Uebernehmen einer neu erstellten Eventkategorie"/>
-            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5,5" IsEnabled="False" Click="btnAbbrechen_Click" ToolTip="Abbrechen der Erstellung einer neuen Eventkategorie"/>
-            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5" Click="btnSchliessen_Click" ToolTip="Bearbeitung der Eventveranstalter schließen und ausgewaehlten Eventkategorie uebernehmen"/>
+            <Button x:Name="btnNeueKategorie" Content="_Neue Kategorie" Grid.Row="0" Grid.Column="0" Margin="5,5" Click="btnNeueKategorie_Click" ToolTip="Erstellen einer neuen Eventkategorie" h:CustomHelpProvider.HelpString="Button zum Erstellen einer neuen Eventkategorie" TabIndex="4"/>
+            <Button x:Name="btnUebernehmen" Content="_Übernehmen" Grid.Row="0" Grid.Column="1" Margin="5,5" IsEnabled="False" Click="btnUebernehmen_Click" ToolTip="Uebernehmen einer neu erstellten Eventkategorie" h:CustomHelpProvider.HelpString="Button zum Uebernehmen einer neu erstellten Eventkategorie" TabIndex="5"/>
+            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="0" Grid.Column="2" Margin="5,5" IsEnabled="False" Click="btnAbbrechen_Click" ToolTip="Abbrechen der Erstellung einer neuen Eventkategorie" h:CustomHelpProvider.HelpString="Button zum Abbrechen der Erstellung einer neuen Eventkategorie" TabIndex="6"/>
+            <Button x:Name="btnSchliessen" Content="_Schließen" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,5" Click="btnSchliessen_Click" ToolTip="Bearbeitung der Eventveranstalter schließen und ausgewaehlten Eventkategorie uebernehmen" h:CustomHelpProvider.HelpString="Button zum Schließen der Bearbeitung der Eventkategorien" TabIndex="7"/>
         </Grid>
     </Grid>
 </Window>

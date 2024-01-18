@@ -7,8 +7,10 @@
         xmlns:ManageEvents="clr-namespace:ManageEvents;assembly=ManageEvents"
         xmlns:NavBar="clr-namespace:NavBar;assembly=NavBar" x:Class="ManageEventsApp.ManageEventsWindow"
         xmlns:CustomConverter="clr-namespace:CustomConverter"
+        xmlns:h="clr-namespace:CustomHelp;assembly=CustomHelp"
         mc:Ignorable="d"
-        Title="Event Management System" Height="500" Width="800" MinHeight="600" MinWidth="700" Closing="Window_Closing">
+        Title="Event Management System" Height="500" Width="800" MinHeight="600" MinWidth="700" Closing="Window_Closing"
+        h:CustomHelpProvider.HelpString="Applikation zur Eventbearbeitung">
 
     <Window.Resources>
         <ManageEvents:ManageEventsDataset x:Key="manageEventsDataset"/>
@@ -27,23 +29,23 @@
     <Grid>
         <Menu x:Name="hauptMenue" Height="26" VerticalAlignment="Top">
 
-            <MenuItem x:Name="dateiMenueItem" Header="_Datei" ToolTip="Datei Menue fuer das Speicher und Laden der Eventdaten aus der Lokalen Datei oder der Datenbank">
-                <MenuItem x:Name="ladenAusDateiMenuItem" Header="_Laden aus Datei" Click="ladenAusDateiMenuItem_Click"/>
-                <MenuItem x:Name="speichernInDateiMenuItem" Header="_Speichern in Datei" Click="speichernInDateiMenuItem_Click"/>
+            <MenuItem x:Name="dateiMenueItem" Header="_Datei" ToolTip="Datei Menue fuer das Speicher und Laden der Eventdaten aus der Lokalen Datei oder der Datenbank" h:CustomHelpProvider.HelpString="Datei Menue fuer das Speicher und Laden der Eventdaten aus der Lokalen Datei oder der Datenbank" TabIndex="1">
+                <MenuItem x:Name="ladenAusDateiMenuItem" Header="_Laden aus Datei" Click="ladenAusDateiMenuItem_Click" ToolTip="EMS Daten aus der Lokalen Datei laden" h:CustomHelpProvider.HelpString="EMS Daten aus der Lokalen Datei laden"/>
+                <MenuItem x:Name="speichernInDateiMenuItem" Header="_Speichern in Datei" Click="speichernInDateiMenuItem_Click" ToolTip="EMS Daten in die Lokale Datei speichern" h:CustomHelpProvider.HelpString="EMS Daten in die Lokale Datei speichern"/>
                 <Separator/>
-                <MenuItem x:Name="ladenAusDatenbankMenuItem" Header="_Laden aus Datenbank" Click="ladenAusDatenbankMenuItem_Click"/>
-                <MenuItem x:Name="synchronisierenMitDatenbankMenuItem" Header="S_ynchronisieren mit Datenbank" Click="synchronisierenMitDatenbankMenuItem_Click"/>
+                <MenuItem x:Name="ladenAusDatenbankMenuItem" Header="_Laden aus Datenbank" Click="ladenAusDatenbankMenuItem_Click" ToolTip="EMS Daten aus der DB laden" h:CustomHelpProvider.HelpString="EMS Daten aus der DB laden"/>
+                <MenuItem x:Name="synchronisierenMitDatenbankMenuItem" Header="S_ynchronisieren mit Datenbank" Click="synchronisierenMitDatenbankMenuItem_Click" ToolTip="EMS Daten in die DB speichern" h:CustomHelpProvider.HelpString="EMS Daten in die DB speichern"/>
                 <Separator/>
-                <MenuItem x:Name="beendenMenueItem" Header="_Beenden" Click="beendenMenueItem_Click"/>
+                <MenuItem x:Name="beendenMenueItem" Header="_Beenden" Click="beendenMenueItem_Click" ToolTip="Beenden des EMS" h:CustomHelpProvider.HelpString="Beenden des EMS"/>
             </MenuItem>
-            
-            <MenuItem x:Name="bearbeitenMenuItem" Header="_Bearbeiten" ToolTip="Bearbeiten Menue fuer das EMS">
-                <MenuItem x:Name="eventMenuItem" Header="_Event" ToolTip="Untermenue fuer die Aktionen zum Bearbeiten eines Events">
-                    <MenuItem x:Name="neuerEventMenuItem" Header="_Neuen Event erstellen" Click="btnNeuerEvent_Click" ToolTip="Erstellen eines neuen Events"/>
-                    <MenuItem x:Name="eventterminHinzufügenMenuItem" Header="Eventtermin _hinzufügen" Click="btnNeuerTermin_Click" ToolTip="Erstellen eines neuen Eventtermins"/>
+
+            <MenuItem x:Name="bearbeitenMenuItem" Header="_Bearbeiten" ToolTip="Bearbeiten Menue fuer das EMS" h:CustomHelpProvider.HelpString="Bearbeiten Menue fuer das EMS" TabIndex="2">
+                <MenuItem x:Name="eventMenuItem" Header="_Event" ToolTip="Untermenue fuer die Aktionen zum Bearbeiten eines Events" h:CustomHelpProvider.HelpString="Untermenue fuer die Aktionen zum Bearbeiten eines Events">
+                    <MenuItem x:Name="neuerEventMenuItem" Header="_Neuen Event erstellen" Click="btnNeuerEvent_Click" ToolTip="Erstellen eines neuen Events" h:CustomHelpProvider.HelpString="Erstellen eines neuen Events"/>
+                    <MenuItem x:Name="eventterminHinzufügenMenuItem" Header="Eventtermin _hinzufügen" Click="btnNeuerTermin_Click" ToolTip="Erstellen eines neuen Eventtermins" h:CustomHelpProvider.HelpString="Erstellen eines neuen Eventtermins"/>
                 </MenuItem>
-                <MenuItem x:Name="veranstalterBearbeitenMenuItem" Header="Veranstalter bearbeiten" Click="btnVeranstalter_Click" ToolTip="Bearbeiten der Veranstalter"/>
-                <MenuItem x:Name="kategorieBearbeitenMenuItem" Header="Kategorie bearbeiten" Click="btnKategorie_Click" ToolTip="Bearbeiten der Kategorien"/>
+                <MenuItem x:Name="veranstalterBearbeitenMenuItem" Header="Veranstalter bearbeiten" Click="btnVeranstalter_Click" ToolTip="Bearbeiten der Veranstalter" h:CustomHelpProvider.HelpString="Bearbeiten der Veranstalter"/>
+                <MenuItem x:Name="kategorieBearbeitenMenuItem" Header="Kategorie bearbeiten" Click="btnKategorie_Click" ToolTip="Bearbeiten der Kategorien" h:CustomHelpProvider.HelpString="Bearbeiten der Kategorien"/>
             </MenuItem>
         </Menu>
         <Grid x:Name="eventGrid" Margin="10,50,450,270" DataContext="{StaticResource tbl_EventsViewSource}">
@@ -60,12 +62,12 @@
             </Grid.BindingGroup>
 
             <Label Content="Eventbezeichnung:" Grid.Row="0" Margin="2"/>
-            <TextBox x:Name="et_BezeichnungTextBox" Margin="5" Grid.Row="1" Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" ToolTip="Eingabefeld für die Bezeichnung eines Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="et_BezeichnungTextBox" Margin="5" Grid.Row="1" Text="{Binding et_Bezeichnung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" ToolTip="Eingabefeld für die Bezeichnung eines Events" h:CustomHelpProvider.HelpString="Eingabefeld für die Bezeichnung eines Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="3"/>
 
-            <ListBox x:Name="et_BezeichnungListBox" DisplayMemberPath="et_Bezeichnung" ItemsSource="{Binding}" Margin="5" Grid.Row="2" IsSynchronizedWithCurrentItem="True" ToolTip="Liste aller vorhandenen Events"/>
+            <ListBox x:Name="et_BezeichnungListBox" DisplayMemberPath="et_Bezeichnung" ItemsSource="{Binding}" Margin="5" Grid.Row="2" IsSynchronizedWithCurrentItem="True" ToolTip="Liste aller vorhandenen Events" h:CustomHelpProvider.HelpString="Liste aller vorhandenen Events" TabIndex="4"/>
 
             <Label Content="Eventbeschreibung:" Grid.Row="3" Margin="2"/>
-            <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" ToolTip="Eingabefeld für die Beschreibung eines Events"/>
+            <TextBox x:Name="et_BeschreibungTextBox" Margin="5" Grid.Row="4" TextWrapping="Wrap" Text="{Binding et_Beschreibung, Mode=TwoWay, NotifyOnValidationError=True, UpdateSourceTrigger=LostFocus, ValidatesOnExceptions=True}" ToolTip="Eingabefeld für die Beschreibung eines Events" h:CustomHelpProvider.HelpString="Eingabefeld für die Beschreibung eines Events" TabIndex="5"/>
         </Grid>
 
         <Grid x:Name="masterTablesGrid" Height="220" Width="180" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,50,20,0" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
@@ -80,12 +82,12 @@
             </Grid.RowDefinitions>
 
             <Label Content="Veranstalter:" Grid.Row="0" Margin="5"/>
-            <ComboBox x:Name="cboVeranstalter" Grid.Row="1" Margin="5" ToolTip="Dropdown Menue fuer die Auswahl eines Veranstalters"/>
-            <Button x:Name="btnVeranstalter" Content="_Veranstalter bearbeiten" Grid.Row="2" Margin="5" Click="btnVeranstalter_Click" ToolTip="Bearbeiten der Veranstalter"/>
+            <ComboBox x:Name="cboVeranstalter" Grid.Row="1" Margin="5" ToolTip="Dropdown Menue fuer die Auswahl eines Veranstalters" h:CustomHelpProvider.HelpString="Dropdown Menue fuer die Auswahl eines Veranstalters" TabIndex="11"/>
+            <Button x:Name="btnVeranstalter" Content="_Veranstalter bearbeiten" Grid.Row="2" Margin="5" Click="btnVeranstalter_Click" ToolTip="Bearbeiten der Veranstalter" h:CustomHelpProvider.HelpString="Button fuer Bearbeiten der Veranstalter" TabIndex="12"/>
 
             <Label Content="Kategorie:" Grid.Row="3" Margin="5"/>
-            <ComboBox x:Name="cboKategorie" Grid.Row="4" Margin="5" ToolTip="Dropdown Menue fuer die Auswahl einer Kategorie"/>
-            <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5" Click="btnKategorie_Click" ToolTip="Bearbeiten der Kategorien"/>
+            <ComboBox x:Name="cboKategorie" Grid.Row="4" Margin="5" ToolTip="Dropdown Menue fuer die Auswahl einer Kategorie" h:CustomHelpProvider.HelpString="Dropdown Menue fuer die Auswahl einer Kategorie" TabIndex="13"/>
+            <Button x:Name="btnKategorie" Content="_Kategorie bearbeiten" Grid.Row="5" Margin="5" Click="btnKategorie_Click" ToolTip="Bearbeiten der Kategorien" h:CustomHelpProvider.HelpString="Button fuer Bearbeiten der Kategorien" TabIndex="14"/>
         </Grid>
 
         <Grid x:Name="eventDatenGrid" Margin="10,0,10,44" VerticalAlignment="Bottom" DataContext="{StaticResource tbl_Events_tbl_EventDatenViewSource}">
@@ -110,33 +112,33 @@
             </Grid.BindingGroup>
 
             <Label Content="Termin:" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox x:Name="ed_BeginnComboBox" Grid.Column="0" Grid.Row="1" DisplayMemberPath="ed_Beginn" ItemsSource="{Binding}" ToolTip="Dropdown der vorhandenen Termine" />
+            <ComboBox x:Name="ed_BeginnComboBox" Grid.Column="0" Grid.Row="1" DisplayMemberPath="ed_Beginn" ItemsSource="{Binding}" ToolTip="Dropdown der vorhandenen Termine" h:CustomHelpProvider.HelpString="Dropdown der vorhandenen Termine" TabIndex="15"/>
 
-            <CheckBox x:Name="ed_FreigegebenCheckBox" Grid.Column="1" Grid.Row="1" Content="freigegeben" IsChecked="{Binding ed_Freigeben, UpdateSourceTrigger=PropertyChanged}" Checked="ed_FreigegebenCheckBox_Checked" Unchecked="ed_FreigegebenCheckBox_Unchecked" ToolTip="Checkbox zum Freigeben des Termins"/>
+            <CheckBox x:Name="ed_FreigegebenCheckBox" Grid.Column="1" Grid.Row="1" Content="freigegeben" IsChecked="{Binding ed_Freigeben, UpdateSourceTrigger=PropertyChanged}" Checked="ed_FreigegebenCheckBox_Checked" Unchecked="ed_FreigegebenCheckBox_Unchecked" ToolTip="Checkbox zum Freigeben des Termins" h:CustomHelpProvider.HelpString="Checkbox zum Freigeben des Termins" TabIndex="16"/>
 
             <Label Content="Beginn:" Grid.Column="0" Grid.Row="2"/>
-            <TextBox x:Name="ed_BeginnTextBox" Grid.Column="0" Grid.Row="3" Text="{Binding ed_Beginn, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer das Startdatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_BeginnTextBox" Grid.Column="0" Grid.Row="3" Text="{Binding ed_Beginn, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer das Startdatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" h:CustomHelpProvider.HelpString="Eingabefeld fuer das Startdatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="17"/>
 
             <Label Content="Ende:" Grid.Column="0" Grid.Row="4"/>
-            <TextBox x:Name="ed_EndeTextBox" Grid.Column="0" Grid.Row="5" Text="{Binding ed_Ende, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer das Enddatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_EndeTextBox" Grid.Column="0" Grid.Row="5" Text="{Binding ed_Ende, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer das Enddatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" h:CustomHelpProvider.HelpString="Eingabefeld fuer das Enddatum MM/DD/YYYY und der Zeit HH:MM:SS AM/PM des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="18"/>
 
             <Label Content="Startort:" Grid.Column="1" Grid.Row="2"/>
-            <TextBox x:Name="ed_StartOrtTextBox" Grid.Column="1" Grid.Row="3" Text="{Binding ed_StartOrt, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Startort des Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_StartOrtTextBox" Grid.Column="1" Grid.Row="3" Text="{Binding ed_StartOrt, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Startort des Events" h:CustomHelpProvider.HelpString="Eingabefeld fuer den Startort des Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="19"/>
 
             <Label Content="Zielort:" Grid.Column="1" Grid.Row="4"/>
-            <TextBox x:Name="ed_ZielOrtTextBox" Grid.Column="1" Grid.Row="5" Text="{Binding ed_Zielort, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Endort eines Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_ZielOrtTextBox" Grid.Column="1" Grid.Row="5" Text="{Binding ed_Zielort, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Endort eines Events" h:CustomHelpProvider.HelpString="Eingabefeld fuer den Endort eines Events" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="20"/>
 
             <Label Content="Vermittlungssatz:" Grid.Column="2" Grid.Row="2"/>
-            <TextBox x:Name="ed_RabattTextBox" Grid.Column="2" Grid.Row="3" Text="{Binding ed_Rabtt, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer den Vermittlungssatz" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_RabattTextBox" Grid.Column="2" Grid.Row="3" Text="{Binding ed_Rabtt, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer den Vermittlungssatz" h:CustomHelpProvider.HelpString="Eingabefeld fuer den Vermittlungssatz" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="21"/>
 
             <Label Content="Preis:" Grid.Column="2" Grid.Row="4"/>
-            <TextBox x:Name="ed_PreisTextBox" Grid.Column="2" Grid.Row="5" Text="{Binding ed_Preis, Converter={StaticResource moneyConverter}, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Preis des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_PreisTextBox" Grid.Column="2" Grid.Row="5" Text="{Binding ed_Preis, Converter={StaticResource moneyConverter}, UpdateSourceTrigger=LostFocus}" IsReadOnly="{Binding ed_Freigeben}" ToolTip="Eingabefeld fuer den Preis des Termins" h:CustomHelpProvider.HelpString="Eingabefeld fuer den Preis des Termins" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="22"/>
 
             <Label Content="Max. Teilnehmerzahl" Grid.Column="3" Grid.Row="2"/>
-            <TextBox x:Name="ed_MaxTeilnehmerTextBox" Grid.Column="3" Grid.Row="3" Text="{Binding ed_Maxteilnehmer, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer die Maximale Teilnehmeranzahl" Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_MaxTeilnehmerTextBox" Grid.Column="3" Grid.Row="3" Text="{Binding ed_Maxteilnehmer, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer die Maximale Teilnehmeranzahl" h:CustomHelpProvider.HelpString="Eingabefeld fuer die Maximale Teilnehmeranzahl" Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="23"/>
 
             <Label Content="Akt. Teilnehmerzahl:" Grid.Column="3" Grid.Row="4"/>
-            <TextBox x:Name="ed_AktTeilnehmerTextBox" Grid.Column="3" Grid.Row="5" IsReadOnly="True" Text="{Binding ed_AktTeilnehmer, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer die Aktuelle Teilnehmeranzahl"  Validation.ErrorTemplate="{StaticResource customErrorTemplate}"/>
+            <TextBox x:Name="ed_AktTeilnehmerTextBox" Grid.Column="3" Grid.Row="5" IsReadOnly="True" Text="{Binding ed_AktTeilnehmer, UpdateSourceTrigger=LostFocus}" ToolTip="Eingabefeld fuer die Aktuelle Teilnehmeranzahl" h:CustomHelpProvider.HelpString="Eingabefeld fuer die Aktuelle Teilnehmeranzahl"  Validation.ErrorTemplate="{StaticResource customErrorTemplate}" TabIndex="24"/>
         </Grid>
 
         <Grid x:Name="buttonGrid" VerticalAlignment="Top" Height="145" Width="180" HorizontalAlignment="Right" Margin="0,125,220,0">
@@ -147,13 +149,13 @@
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="btnNeuerEvent" Content="_Neuen Event erstellen" Grid.Row="0" Margin="5" Click="btnNeuerEvent_Click" ToolTip="Erstellen eines neuen Events"/>
-            <Button x:Name="btnNeuerTermin" Content="Eventtermin _hinzufügen" Grid.Row="1" Margin="5" Click="btnNeuerTermin_Click" ToolTip="Erstellen eines neuen Eventtermins"/>
-            <Button x:Name="btnUebernehmen" Content="_Änderungen übernehmen" Grid.Row="2" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click" ToolTip="Neu erstelltes Event uebernehmen"/>
-            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="3" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click" ToolTip="Erstellung eines neuen Events abbrechen"/>
+            <Button x:Name="btnNeuerEvent" Content="_Neuen Event erstellen" Grid.Row="0" Margin="5" Click="btnNeuerEvent_Click" ToolTip="Erstellen eines neuen Events" h:CustomHelpProvider.HelpString="Button fuer Erstellen eines neuen Events" TabIndex="7"/>
+            <Button x:Name="btnNeuerTermin" Content="Eventtermin _hinzufügen" Grid.Row="1" Margin="5" Click="btnNeuerTermin_Click" ToolTip="Erstellen eines neuen Eventtermins" h:CustomHelpProvider.HelpString="Button fuer Erstellen eines neuen Eventtermins" TabIndex="8"/>
+            <Button x:Name="btnUebernehmen" Content="_Änderungen übernehmen" Grid.Row="2" Margin="5" IsEnabled="False" Click="btnUebernehmen_Click" ToolTip="Neu erstelltes Event uebernehmen" h:CustomHelpProvider.HelpString="Button fuer Neu erstelltes Event uebernehmen" TabIndex="9"/>
+            <Button x:Name="btnAbbrechen" Content="Abb_rechen" Grid.Row="3" Margin="5" IsEnabled="False" Click="btnAbbrechen_Click" ToolTip="Erstellung eines neuen Events abbrechen" h:CustomHelpProvider.HelpString="Button fuer Erstellung eines neuen Events abbrechen" TabIndex="10"/>
         </Grid>
 
-        <NavBar:NavBar x:Name="eventNavBar" VerticalAlignment="Bottom" Margin="10,0,450,239"/>
+        <NavBar:NavBar x:Name="eventNavBar" VerticalAlignment="Bottom" Margin="10,0,450,239" TabIndex="6"/>
         <NavBar:NavBar x:Name="eventDatenNavBar" VerticalAlignment="Bottom" Margin="10,0,450,13"/>
     </Grid>
 </Window>
