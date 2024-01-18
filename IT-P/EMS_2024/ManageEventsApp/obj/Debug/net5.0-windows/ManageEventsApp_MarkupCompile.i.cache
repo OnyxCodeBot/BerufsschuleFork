@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-B:\Berufsschule\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\obj\Debug\net5.0-windows\
 ManageEventsApp
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-B:\Berufsschule\IT-P\EMS_2024\ManageEventsApp\App.xaml
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\App.xaml
 31820312927
 
 81555322934
-21080813241
+210-1832673171
 ManageEventsWindow.xaml;ManageKategorieWindow.xaml;ManageVeranstalterWindow.xaml;
 
 True

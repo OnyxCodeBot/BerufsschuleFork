@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {}
+    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {}
   },
   "projects": {
-    "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {
+    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
+        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
         "projectName": "NavBar",
-        "projectPath": "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
-        "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
-        "outputPath": "B:\\Berufsschule\\IT-P\\EMS_2024\\NavBar\\obj\\",
+        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
+        "packagesPath": "C:\\Users\\21ITA007\\.nuget\\packages\\",
+        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "B:\\Program Files (x86)\\VisualStudio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\21ITA007\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -49,25 +49,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -76,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
