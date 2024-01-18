@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Formular</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()" method="post">
+        <table>
+            <tr>
+                <td><label for="fname">Vorname:</label></td>
+                <td><input id="fname" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Name:</label></td>
+                <td><input id="lname" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="street">Street:</label></td>
+                <td><input id="street" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="hNr">Hausnummer:</label></td>
+                <td><input id="hNr" type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="plz">Postleitzahl:</label></td>
+                <td><input id="plz" type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="destination">
+                        <option value="Ausflug Berlin">Ausflug Berlin</option>
+                        <option value="Ausflug Hamburg">Ausflug Hamburg</option>
+                        <option value="Ausflug München">Ausflug München</option>
+                        <option value="Ausflug Köln">Ausflug Köln</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><p id="message"></p></td>
+            </tr>
+            <tr>
+                <td><button id="send" type="submit">Absenden</button></td>
+                <td><button id="reset" type="button" onclick="reset()">Zurücksetzen</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
