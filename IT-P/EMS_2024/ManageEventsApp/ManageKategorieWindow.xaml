@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Title="Bearbeitung der Eventkategorien" Height="320" Width="480"
         ResizeMode="NoResize" Closing="Window_Closing"
-        h:CustomHelpProvider.HelpString="Applikation zur Eventkategoriebearbeitung">
+        h:CustomHelpProvider.HelpString="Applikation zur Eventkategoriebearbeitung" Icon="/Icons/App.ico">
 
     <Window.Resources>
         <ControlTemplate x:Key="customErrorTemplate">

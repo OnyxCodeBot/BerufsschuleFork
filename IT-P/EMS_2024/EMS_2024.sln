@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageEventsApp", "ManageEv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavBar", "NavBar\NavBar.csproj", "{18F90ABE-BF22-45F0-8D11-35E810E77E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomHelp", "CustomHelp\CustomHelp.csproj", "{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomHelp", "CustomHelp\CustomHelp.csproj", "{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EMS_30_Setup", "EMS_30_Setup\EMS_30_Setup.vdproj", "{8CD1CE30-49E0-4E95-83B1-E10F4EAEC4BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,9 @@ Global
 		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9ECFBB0-F446-41E8-B2A4-4E33CD053645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD1CE30-49E0-4E95-83B1-E10F4EAEC4BC}.Debug|Any CPU.ActiveCfg = Debug
+		{8CD1CE30-49E0-4E95-83B1-E10F4EAEC4BC}.Release|Any CPU.ActiveCfg = Release
+		{8CD1CE30-49E0-4E95-83B1-E10F4EAEC4BC}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

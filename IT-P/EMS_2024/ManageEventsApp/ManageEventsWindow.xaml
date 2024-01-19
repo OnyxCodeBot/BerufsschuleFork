@@ -10,7 +10,7 @@
         xmlns:h="clr-namespace:CustomHelp;assembly=CustomHelp"
         mc:Ignorable="d"
         Title="Event Management System" Height="500" Width="800" MinHeight="600" MinWidth="700" Closing="Window_Closing"
-        h:CustomHelpProvider.HelpString="Applikation zur Eventbearbeitung">
+        h:CustomHelpProvider.HelpString="Applikation zur Eventbearbeitung" Icon="/Icons/App.ico">
 
     <Window.Resources>
         <ManageEvents:ManageEventsDataset x:Key="manageEventsDataset"/>

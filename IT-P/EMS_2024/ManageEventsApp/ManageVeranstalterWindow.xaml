@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Title="Bearbeitung der Eventveranstalter" Height="460" Width="650"
         ResizeMode="NoResize" Closing="Window_Closing"
-        h:CustomHelpProvider.HelpString="Applikation zur Eventveranstalterbearbeitung">
+        h:CustomHelpProvider.HelpString="Applikation zur Eventveranstalterbearbeitung" Icon="/Icons/App.ico">
 
     <Window.Resources>
         <ControlTemplate x:Key="customErrorTemplate">

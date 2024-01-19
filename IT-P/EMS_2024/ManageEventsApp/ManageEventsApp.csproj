@@ -4,12 +4,21 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>App.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\App.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CustomHelp\CustomHelp.csproj" />
     <ProjectReference Include="..\ManageEvents\ManageEvents.csproj" />
     <ProjectReference Include="..\NavBar\NavBar.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\App.ico" />
   </ItemGroup>
 
 </Project>
