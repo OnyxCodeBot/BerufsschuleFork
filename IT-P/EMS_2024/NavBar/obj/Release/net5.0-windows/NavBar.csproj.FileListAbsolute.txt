@@ -14,3 +14,4 @@
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\NavBar\obj\Release\net5.0-windows\NavBar.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\NavBar\obj\Release\net5.0-windows\ref\NavBar.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\NavBar\obj\Release\net5.0-windows\NavBar.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\NavBar\obj\Release\net5.0-windows\NavBar.csproj.AssemblyReference.cache

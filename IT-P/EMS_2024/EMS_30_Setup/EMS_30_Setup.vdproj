@@ -201,7 +201,7 @@
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_46A7744E20FB4F0BAC21E2C287AF6139"
                             {
                             "Name" = "8:Icon"
-                            "AlwaysCreate" = "11:TRUE"
+                            "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
                             "Property" = "8:_2FC7E334819F40279E305E10C9A46BBA"
@@ -252,7 +252,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EMS_30_Setup"
         "ProductCode" = "8:{02523631-44F5-49AA-89C1-971704552844}"
-        "PackageCode" = "8:{B360CA90-80A2-453A-8C9E-F4C1E420A1FA}"
+        "PackageCode" = "8:{F6ED159B-4CDE-4D07-94B5-EE7BCD96D366}"
         "UpgradeCode" = "8:{70861F84-0A8C-4E3B-B88C-1A6644FD23A4}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -384,20 +384,6 @@
             "Folder" = "8:_B3BCEFFF9C344404B337DB77772FF451"
             "WorkingFolder" = "8:_2EED16B3E792422C8EDF2E188B1A7C9D"
             "Icon" = "8:_D13DE5C1E5CF406588AEEB1CF318C438"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4E985205DAD54D0E855C175242EDD757"
-            {
-            "Name" = "8:Shortcut to Icon"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_46A7744E20FB4F0BAC21E2C287AF6139"
-            "Folder" = "8:_1C3550AA6F2B4DC3A6EB35B1E35A327C"
-            "WorkingFolder" = "8:_1C3550AA6F2B4DC3A6EB35B1E35A327C"
-            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_5CCEBED67DFE4D119C36D4D2D0463DB4"

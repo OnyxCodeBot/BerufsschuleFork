@@ -9,3 +9,4 @@
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Release\net5.0\ManageEvents.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Release\net5.0\ref\ManageEvents.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Release\net5.0\ManageEvents.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEvents\obj\Release\net5.0\ManageEvents.csproj.AssemblyReference.cache

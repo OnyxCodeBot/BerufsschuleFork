@@ -9,3 +9,4 @@
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Release\net5.0-windows\CustomHelp.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Release\net5.0-windows\ref\CustomHelp.dll
 \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Release\net5.0-windows\CustomHelp.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\CustomHelp\obj\Release\net5.0-windows\CustomHelp.csproj.AssemblyReference.cache
