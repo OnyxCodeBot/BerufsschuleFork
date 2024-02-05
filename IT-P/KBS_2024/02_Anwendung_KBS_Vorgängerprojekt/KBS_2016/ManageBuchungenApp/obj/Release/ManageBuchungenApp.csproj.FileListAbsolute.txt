@@ -35,3 +35,23 @@ J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\
 J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.CopyComplete
 J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.exe
 J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe.config
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.dll.config
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.AssemblyReference.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenAnalyseForm.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenBuchungsForm.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.MainForm.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.Properties.Resources.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.VeranstalterBenachrichtigungsForm.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.ZahlungsForm.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.GenerateResource.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.CopyComplete
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.exe
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.pdb
