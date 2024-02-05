@@ -52,7 +52,9 @@
     <Compile Include="AdressForm.Designer.cs">
       <DependentUpon>AdressForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IPersonDAO.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PersonDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdressForm.resx">
