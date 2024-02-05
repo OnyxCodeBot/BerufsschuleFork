@@ -30,7 +30,6 @@ namespace Adressbuch
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdressForm));
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label hausnummerLabel;
             System.Windows.Forms.Label nameLabel;
@@ -39,7 +38,30 @@ namespace Adressbuch
             System.Windows.Forms.Label strasseLabel;
             System.Windows.Forms.Label telefonLabel;
             System.Windows.Forms.Label vornameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdressForm));
             this.tscAdressen = new System.Windows.Forms.ToolStripContainer();
+            this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.personBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.hausnummerTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.ortTextBox = new System.Windows.Forms.TextBox();
+            this.plzTextBox = new System.Windows.Forms.TextBox();
+            this.strasseTextBox = new System.Windows.Forms.TextBox();
+            this.telefonTextBox = new System.Windows.Forms.TextBox();
+            this.vornameTextBox = new System.Windows.Forms.TextBox();
             this.mainMenue = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,28 +87,6 @@ namespace Adressbuch
             this.druckvorschauToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.druckenToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.personBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.hausnummerTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.ortTextBox = new System.Windows.Forms.TextBox();
-            this.plzTextBox = new System.Windows.Forms.TextBox();
-            this.strasseTextBox = new System.Windows.Forms.TextBox();
-            this.telefonTextBox = new System.Windows.Forms.TextBox();
-            this.vornameTextBox = new System.Windows.Forms.TextBox();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             emailLabel = new System.Windows.Forms.Label();
             hausnummerLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -99,12 +99,84 @@ namespace Adressbuch
             this.tscAdressen.ContentPanel.SuspendLayout();
             this.tscAdressen.TopToolStripPanel.SuspendLayout();
             this.tscAdressen.SuspendLayout();
-            this.mainMenue.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
+            this.mainMenue.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(12, 130);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(35, 13);
+            emailLabel.TabIndex = 0;
+            emailLabel.Text = "Email:";
+            // 
+            // hausnummerLabel
+            // 
+            hausnummerLabel.AutoSize = true;
+            hausnummerLabel.Location = new System.Drawing.Point(221, 74);
+            hausnummerLabel.Name = "hausnummerLabel";
+            hausnummerLabel.Size = new System.Drawing.Size(72, 13);
+            hausnummerLabel.TabIndex = 2;
+            hausnummerLabel.Text = "Hausnummer:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(12, 19);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(38, 13);
+            nameLabel.TabIndex = 4;
+            nameLabel.Text = "Name:";
+            // 
+            // ortLabel
+            // 
+            ortLabel.AutoSize = true;
+            ortLabel.Location = new System.Drawing.Point(148, 101);
+            ortLabel.Name = "ortLabel";
+            ortLabel.Size = new System.Drawing.Size(24, 13);
+            ortLabel.TabIndex = 6;
+            ortLabel.Text = "Ort:";
+            // 
+            // plzLabel
+            // 
+            plzLabel.AutoSize = true;
+            plzLabel.Location = new System.Drawing.Point(12, 101);
+            plzLabel.Name = "plzLabel";
+            plzLabel.Size = new System.Drawing.Size(24, 13);
+            plzLabel.TabIndex = 8;
+            plzLabel.Text = "Plz:";
+            // 
+            // strasseLabel
+            // 
+            strasseLabel.AutoSize = true;
+            strasseLabel.Location = new System.Drawing.Point(12, 74);
+            strasseLabel.Name = "strasseLabel";
+            strasseLabel.Size = new System.Drawing.Size(45, 13);
+            strasseLabel.TabIndex = 10;
+            strasseLabel.Text = "Strasse:";
+            // 
+            // telefonLabel
+            // 
+            telefonLabel.AutoSize = true;
+            telefonLabel.Location = new System.Drawing.Point(12, 159);
+            telefonLabel.Name = "telefonLabel";
+            telefonLabel.Size = new System.Drawing.Size(46, 13);
+            telefonLabel.TabIndex = 12;
+            telefonLabel.Text = "Telefon:";
+            // 
+            // vornameLabel
+            // 
+            vornameLabel.AutoSize = true;
+            vornameLabel.Location = new System.Drawing.Point(12, 46);
+            vornameLabel.Name = "vornameLabel";
+            vornameLabel.Size = new System.Drawing.Size(52, 13);
+            vornameLabel.TabIndex = 14;
+            vornameLabel.Text = "Vorname:";
             // 
             // tscAdressen
             // 
@@ -143,6 +215,199 @@ namespace Adressbuch
             // 
             this.tscAdressen.TopToolStripPanel.Controls.Add(this.mainMenue);
             this.tscAdressen.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // personBindingNavigator
+            // 
+            this.personBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.personBindingNavigator.BindingSource = this.personBindingSource;
+            this.personBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.personBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.personBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.personBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.personBindingNavigatorSaveItem});
+            this.personBindingNavigator.Location = new System.Drawing.Point(3, 0);
+            this.personBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.personBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.personBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.personBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.personBindingNavigator.Name = "personBindingNavigator";
+            this.personBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.personBindingNavigator.Size = new System.Drawing.Size(287, 25);
+            this.personBindingNavigator.TabIndex = 1;
+            this.personBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
+            // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(Adressbuch.Person);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(44, 22);
+            this.bindingNavigatorCountItem.Text = "von {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Die Gesamtanzahl der Elemente.";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Löschen";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Erste verschieben";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Vorherige verschieben";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Aktuelle Position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Nächste verschieben";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Letzte verschieben";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // personBindingNavigatorSaveItem
+            // 
+            this.personBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.personBindingNavigatorSaveItem.Enabled = false;
+            this.personBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personBindingNavigatorSaveItem.Image")));
+            this.personBindingNavigatorSaveItem.Name = "personBindingNavigatorSaveItem";
+            this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.personBindingNavigatorSaveItem.Text = "Daten speichern";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(90, 127);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(236, 20);
+            this.emailTextBox.TabIndex = 1;
+            // 
+            // hausnummerTextBox
+            // 
+            this.hausnummerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Hausnummer", true));
+            this.hausnummerTextBox.Location = new System.Drawing.Point(299, 71);
+            this.hausnummerTextBox.Name = "hausnummerTextBox";
+            this.hausnummerTextBox.Size = new System.Drawing.Size(27, 20);
+            this.hausnummerTextBox.TabIndex = 3;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(90, 16);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(236, 20);
+            this.nameTextBox.TabIndex = 5;
+            // 
+            // ortTextBox
+            // 
+            this.ortTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Ort", true));
+            this.ortTextBox.Location = new System.Drawing.Point(178, 98);
+            this.ortTextBox.Name = "ortTextBox";
+            this.ortTextBox.Size = new System.Drawing.Size(148, 20);
+            this.ortTextBox.TabIndex = 7;
+            // 
+            // plzTextBox
+            // 
+            this.plzTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Plz", true));
+            this.plzTextBox.Location = new System.Drawing.Point(90, 98);
+            this.plzTextBox.Name = "plzTextBox";
+            this.plzTextBox.Size = new System.Drawing.Size(50, 20);
+            this.plzTextBox.TabIndex = 9;
+            // 
+            // strasseTextBox
+            // 
+            this.strasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Strasse", true));
+            this.strasseTextBox.Location = new System.Drawing.Point(90, 71);
+            this.strasseTextBox.Name = "strasseTextBox";
+            this.strasseTextBox.Size = new System.Drawing.Size(125, 20);
+            this.strasseTextBox.TabIndex = 11;
+            // 
+            // telefonTextBox
+            // 
+            this.telefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Telefon", true));
+            this.telefonTextBox.Location = new System.Drawing.Point(90, 156);
+            this.telefonTextBox.Name = "telefonTextBox";
+            this.telefonTextBox.Size = new System.Drawing.Size(236, 20);
+            this.telefonTextBox.TabIndex = 13;
+            // 
+            // vornameTextBox
+            // 
+            this.vornameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Vorname", true));
+            this.vornameTextBox.Location = new System.Drawing.Point(90, 43);
+            this.vornameTextBox.Name = "vornameTextBox";
+            this.vornameTextBox.Size = new System.Drawing.Size(236, 20);
+            this.vornameTextBox.TabIndex = 15;
             // 
             // mainMenue
             // 
@@ -352,271 +617,6 @@ namespace Adressbuch
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // personBindingNavigator
-            // 
-            this.personBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.personBindingNavigator.BindingSource = this.personBindingSource;
-            this.personBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.personBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.personBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
-            this.personBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.personBindingNavigatorSaveItem});
-            this.personBindingNavigator.Location = new System.Drawing.Point(3, 0);
-            this.personBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.personBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.personBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.personBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.personBindingNavigator.Name = "personBindingNavigator";
-            this.personBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.personBindingNavigator.Size = new System.Drawing.Size(287, 25);
-            this.personBindingNavigator.TabIndex = 1;
-            this.personBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Erste verschieben";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Vorherige verschieben";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Aktuelle Position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(44, 22);
-            this.bindingNavigatorCountItem.Text = "von {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Die Gesamtanzahl der Elemente.";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Nächste verschieben";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Letzte verschieben";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Löschen";
-            // 
-            // personBindingNavigatorSaveItem
-            // 
-            this.personBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.personBindingNavigatorSaveItem.Enabled = false;
-            this.personBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("personBindingNavigatorSaveItem.Image")));
-            this.personBindingNavigatorSaveItem.Name = "personBindingNavigatorSaveItem";
-            this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.personBindingNavigatorSaveItem.Text = "Daten speichern";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(3, 11);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(35, 13);
-            emailLabel.TabIndex = 0;
-            emailLabel.Text = "Email:";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(81, 8);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(100, 20);
-            this.emailTextBox.TabIndex = 1;
-            // 
-            // hausnummerLabel
-            // 
-            hausnummerLabel.AutoSize = true;
-            hausnummerLabel.Location = new System.Drawing.Point(3, 37);
-            hausnummerLabel.Name = "hausnummerLabel";
-            hausnummerLabel.Size = new System.Drawing.Size(72, 13);
-            hausnummerLabel.TabIndex = 2;
-            hausnummerLabel.Text = "Hausnummer:";
-            // 
-            // hausnummerTextBox
-            // 
-            this.hausnummerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Hausnummer", true));
-            this.hausnummerTextBox.Location = new System.Drawing.Point(81, 34);
-            this.hausnummerTextBox.Name = "hausnummerTextBox";
-            this.hausnummerTextBox.Size = new System.Drawing.Size(100, 20);
-            this.hausnummerTextBox.TabIndex = 3;
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(3, 63);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(38, 13);
-            nameLabel.TabIndex = 4;
-            nameLabel.Text = "Name:";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(81, 60);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nameTextBox.TabIndex = 5;
-            // 
-            // ortLabel
-            // 
-            ortLabel.AutoSize = true;
-            ortLabel.Location = new System.Drawing.Point(3, 89);
-            ortLabel.Name = "ortLabel";
-            ortLabel.Size = new System.Drawing.Size(24, 13);
-            ortLabel.TabIndex = 6;
-            ortLabel.Text = "Ort:";
-            // 
-            // ortTextBox
-            // 
-            this.ortTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Ort", true));
-            this.ortTextBox.Location = new System.Drawing.Point(81, 86);
-            this.ortTextBox.Name = "ortTextBox";
-            this.ortTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ortTextBox.TabIndex = 7;
-            // 
-            // plzLabel
-            // 
-            plzLabel.AutoSize = true;
-            plzLabel.Location = new System.Drawing.Point(3, 115);
-            plzLabel.Name = "plzLabel";
-            plzLabel.Size = new System.Drawing.Size(24, 13);
-            plzLabel.TabIndex = 8;
-            plzLabel.Text = "Plz:";
-            // 
-            // plzTextBox
-            // 
-            this.plzTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Plz", true));
-            this.plzTextBox.Location = new System.Drawing.Point(81, 112);
-            this.plzTextBox.Name = "plzTextBox";
-            this.plzTextBox.Size = new System.Drawing.Size(100, 20);
-            this.plzTextBox.TabIndex = 9;
-            // 
-            // strasseLabel
-            // 
-            strasseLabel.AutoSize = true;
-            strasseLabel.Location = new System.Drawing.Point(3, 141);
-            strasseLabel.Name = "strasseLabel";
-            strasseLabel.Size = new System.Drawing.Size(45, 13);
-            strasseLabel.TabIndex = 10;
-            strasseLabel.Text = "Strasse:";
-            // 
-            // strasseTextBox
-            // 
-            this.strasseTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Strasse", true));
-            this.strasseTextBox.Location = new System.Drawing.Point(81, 138);
-            this.strasseTextBox.Name = "strasseTextBox";
-            this.strasseTextBox.Size = new System.Drawing.Size(100, 20);
-            this.strasseTextBox.TabIndex = 11;
-            // 
-            // telefonLabel
-            // 
-            telefonLabel.AutoSize = true;
-            telefonLabel.Location = new System.Drawing.Point(3, 167);
-            telefonLabel.Name = "telefonLabel";
-            telefonLabel.Size = new System.Drawing.Size(46, 13);
-            telefonLabel.TabIndex = 12;
-            telefonLabel.Text = "Telefon:";
-            // 
-            // telefonTextBox
-            // 
-            this.telefonTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Telefon", true));
-            this.telefonTextBox.Location = new System.Drawing.Point(81, 164);
-            this.telefonTextBox.Name = "telefonTextBox";
-            this.telefonTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefonTextBox.TabIndex = 13;
-            // 
-            // vornameLabel
-            // 
-            vornameLabel.AutoSize = true;
-            vornameLabel.Location = new System.Drawing.Point(3, 193);
-            vornameLabel.Name = "vornameLabel";
-            vornameLabel.Size = new System.Drawing.Size(52, 13);
-            vornameLabel.TabIndex = 14;
-            vornameLabel.Text = "Vorname:";
-            // 
-            // vornameTextBox
-            // 
-            this.vornameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personBindingSource, "Vorname", true));
-            this.vornameTextBox.Location = new System.Drawing.Point(81, 190);
-            this.vornameTextBox.Name = "vornameTextBox";
-            this.vornameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.vornameTextBox.TabIndex = 15;
-            // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(Adressbuch.Person);
-            // 
             // AdressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,14 +634,14 @@ namespace Adressbuch
             this.tscAdressen.TopToolStripPanel.PerformLayout();
             this.tscAdressen.ResumeLayout(false);
             this.tscAdressen.PerformLayout();
-            this.mainMenue.ResumeLayout(false);
-            this.mainMenue.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).EndInit();
             this.personBindingNavigator.ResumeLayout(false);
             this.personBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
+            this.mainMenue.ResumeLayout(false);
+            this.mainMenue.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
