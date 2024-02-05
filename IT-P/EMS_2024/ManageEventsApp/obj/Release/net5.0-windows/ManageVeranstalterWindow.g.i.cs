@@ -191,7 +191,7 @@ namespace ManageEventsApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ManageEventsApp;component/manageveranstalterwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ManageEventsApp;V1.0.0.0;component/manageveranstalterwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ManageVeranstalterWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

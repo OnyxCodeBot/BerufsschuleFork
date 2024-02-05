@@ -393,7 +393,7 @@ namespace ManageEventsApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ManageEventsApp;component/manageeventswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ManageEventsApp;V1.0.0.0;component/manageeventswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ManageEventsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

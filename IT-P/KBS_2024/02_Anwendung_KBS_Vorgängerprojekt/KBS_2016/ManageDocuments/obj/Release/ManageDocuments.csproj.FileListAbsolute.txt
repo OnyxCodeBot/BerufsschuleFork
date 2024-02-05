@@ -1,0 +1,17 @@
+C:\KBS_2016\ManageDocuments\bin\Release\ManageDocuments.dll
+C:\KBS_2016\ManageDocuments\bin\Release\ManageDocuments.pdb
+C:\KBS_2016\ManageDocuments\bin\Release\ManageBuchungen.dll
+C:\KBS_2016\ManageDocuments\bin\Release\ManageBuchungen.pdb
+C:\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.csprojResolveAssemblyReference.cache
+C:\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.dll
+C:\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\bin\Release\ManageDocuments.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\bin\Release\ManageDocuments.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\bin\Release\ManageBuchungen.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\bin\Release\ManageBuchungen.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\bin\Release\ManageBuchungen.dll.config
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.csproj.AssemblyReference.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.csproj.CoreCompileInputs.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.csproj.CopyComplete
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageDocuments\obj\Release\ManageDocuments.pdb

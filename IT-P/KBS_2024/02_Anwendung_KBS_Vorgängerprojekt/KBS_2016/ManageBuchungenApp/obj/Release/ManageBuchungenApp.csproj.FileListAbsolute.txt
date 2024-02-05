@@ -1,0 +1,37 @@
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe.config
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.pdb
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.dll
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.dll
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.pdb
+C:\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.pdb
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csprojResolveAssemblyReference.cache
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenAnalyseForm.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenBuchungsForm.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.MainForm.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.Properties.Resources.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.VeranstalterBenachrichtigungsForm.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.ZahlungsForm.resources
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.GenerateResource.Cache
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.exe
+C:\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe.config
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.exe
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungenApp.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageBuchungen.dll.config
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\bin\Release\ManageDocuments.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.AssemblyReference.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenAnalyseForm.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.KundenBuchungsForm.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.MainForm.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.Properties.Resources.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.VeranstalterBenachrichtigungsForm.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.ZahlungsForm.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.GenerateResource.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.CoreCompileInputs.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.csproj.CopyComplete
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.exe
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungenApp\obj\Release\ManageBuchungenApp.pdb

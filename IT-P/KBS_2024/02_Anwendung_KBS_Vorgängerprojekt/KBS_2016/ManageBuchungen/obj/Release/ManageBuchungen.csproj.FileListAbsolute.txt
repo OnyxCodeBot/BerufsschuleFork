@@ -1,0 +1,25 @@
+C:\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll.config
+C:\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll
+C:\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.pdb
+C:\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.DataTransferModule.resources
+C:\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.GenerateResource.Cache
+C:\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.dll
+C:\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll.config
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.pdb
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.AssemblyReference.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.DataTransferModule.resources
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.GenerateResource.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.CoreCompileInputs.cache
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.dll
+J:\Faecher\!Neue IT-Berufe ab 2020\12\LF12a - IT-Projekt (AEler)\Installationen\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll.config
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\bin\Release\ManageBuchungen.pdb
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.AssemblyReference.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.DataTransferModule.resources
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.GenerateResource.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.dll
+\\172.16.1.13\21ITA007$\Fächer\IT-P\KBS_2024\02_Anwendung_KBS_Vorgängerprojekt\KBS_2016\ManageBuchungen\obj\Release\ManageBuchungen.pdb
