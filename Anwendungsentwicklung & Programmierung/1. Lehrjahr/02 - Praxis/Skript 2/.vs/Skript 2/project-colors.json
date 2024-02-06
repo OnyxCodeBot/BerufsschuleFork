@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f1a6f964-d25b-4b9c-bd38-680d2382d130": {
+      "ProjectGuid": "f1a6f964-d25b-4b9c-bd38-680d2382d130",
+      "DisplayName": "GanzeZahlen",
+      "ColorIndex": 0
+    },
+    "a1eaa6b7-e4c5-4f21-a294-4c44143a6d73": {
+      "ProjectGuid": "a1eaa6b7-e4c5-4f21-a294-4c44143a6d73",
+      "DisplayName": "Lotto",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Sonstige Dateien",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

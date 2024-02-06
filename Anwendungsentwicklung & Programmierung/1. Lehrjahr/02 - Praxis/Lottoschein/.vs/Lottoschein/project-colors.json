@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a462ab26-82ee-42b7-a555-fea07fc2ac9e": {
+      "ProjectGuid": "a462ab26-82ee-42b7-a555-fea07fc2ac9e",
+      "DisplayName": "Lottoschein",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

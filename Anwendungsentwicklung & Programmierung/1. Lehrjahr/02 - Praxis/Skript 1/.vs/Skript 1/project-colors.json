@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5476daff-e2e7-4783-9fdf-40ca8d00599d": {
+      "ProjectGuid": "5476daff-e2e7-4783-9fdf-40ca8d00599d",
+      "DisplayName": "Lokal_Global_Variablen",
+      "ColorIndex": 0
+    },
+    "00d96151-31a6-4741-ab83-d120949c20a2": {
+      "ProjectGuid": "00d96151-31a6-4741-ab83-d120949c20a2",
+      "DisplayName": "Zinsrechnung",
+      "ColorIndex": 1
+    },
+    "6181dc4a-27ac-43e2-966b-eef77df0e4a4": {
+      "ProjectGuid": "6181dc4a-27ac-43e2-966b-eef77df0e4a4",
+      "DisplayName": "Schleifen",
+      "ColorIndex": 2
+    },
+    "ebceaebe-43fc-4b2e-9e44-99fc4009d142": {
+      "ProjectGuid": "ebceaebe-43fc-4b2e-9e44-99fc4009d142",
+      "DisplayName": "UeberladungVonFunktionen",
+      "ColorIndex": 3
+    },
+    "713cce1a-436e-4908-be2f-9ff0cef26787": {
+      "ProjectGuid": "713cce1a-436e-4908-be2f-9ff0cef26787",
+      "DisplayName": "Linker Chap2",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

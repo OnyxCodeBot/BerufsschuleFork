@@ -1,0 +1,3 @@
+﻿  CSVMain.cpp
+C:\Users\rossgm\Documents\Berufsschule\AP\CSV\CSVMain.cpp(20,19): warning C4101: "v": Unreferenzierte lokale Variable
+  CSV.vcxproj -> C:\Users\rossgm\Documents\Berufsschule\AP\CSV\x64\Debug\CSV.exe

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "834c9117-05bf-46ca-9240-527898837edb": {
+      "ProjectGuid": "834c9117-05bf-46ca-9240-527898837edb",
+      "DisplayName": "Adressen und Pointer",
+      "ColorIndex": 0
+    },
+    "77dbb99e-b9ec-4dcb-bbb0-1a967dddc715": {
+      "ProjectGuid": "77dbb99e-b9ec-4dcb-bbb0-1a967dddc715",
+      "DisplayName": "Bedeutung von Zeigern",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

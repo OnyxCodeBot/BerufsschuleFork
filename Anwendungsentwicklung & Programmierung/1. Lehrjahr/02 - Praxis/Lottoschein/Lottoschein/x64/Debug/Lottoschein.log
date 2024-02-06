@@ -1,0 +1,6 @@
+﻿  Lottoschein.cpp
+C:\Users\rossgm\Documents\Berufsschule\AP\Lottoschein\Lottoschein\Lottoschein.h(26,2): warning C4091: "typedef ": Ignoriert auf der linken Seite von "Lottoschein", wenn keine Variable deklariert wurde
+  LottoscheinMain.cpp
+C:\Users\rossgm\Documents\Berufsschule\AP\Lottoschein\Lottoschein\Lottoschein.h(26,2): warning C4091: "typedef ": Ignoriert auf der linken Seite von "Lottoschein", wenn keine Variable deklariert wurde
+  Code wird generiert...
+  Lottoschein.vcxproj -> C:\Users\rossgm\Documents\Berufsschule\AP\Lottoschein\x64\Debug\Lottoschein.exe

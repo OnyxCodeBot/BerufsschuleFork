@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4cdcd375-a66f-43f7-83d0-30c327c5841d": {
+      "ProjectGuid": "4cdcd375-a66f-43f7-83d0-30c327c5841d",
+      "DisplayName": "NotenZähler",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
