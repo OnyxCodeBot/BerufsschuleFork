@@ -63,11 +63,11 @@ create table tbl_EventDaten (
 	ed_Beginn datetime,
 	ed_Ende datetime,
 	ed_StartOrt nvarchar(50),
-	ed_ZielOrt nvarchar(50),
-	ed_MaxTeilnehmer int,
+	ed_Zielort nvarchar(50),
+	ed_Maxteilnehmer int,
 	ed_AktTeilnehmer int,
-	ed_Freigegeben bit,
-	ed_Rabatt decimal(18,0),
+	ed_Freigeben bit,
+	ed_Rabtt decimal(18,0),
 	ed_VeranstalterBenachrichtigt bit,
 	constraint PK_tbl_EventDaten primary key(ed_EvDatenID),
 	constraint FK_tbl_EventDaten_tbl_Events foreign key (et_EventID) references tbl_Events
@@ -94,7 +94,8 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
 
 bulk insert
@@ -104,7 +105,8 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
 
 bulk insert
@@ -114,7 +116,8 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
 
 bulk insert
@@ -124,7 +127,8 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
 
 bulk insert
@@ -134,7 +138,8 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
 
 bulk insert
@@ -144,5 +149,14 @@ with
 (
 	CODEPAGE = 'ACP',
 	FIRSTROW = 2,
-	FIELDTERMINATOR = ';'
+	FIELDTERMINATOR = ';',
+	ROWTERMINATOR = '\n'
 )
+
+--Select
+select * from tbl_Buchungen
+select * from tbl_EventDaten
+select * from tbl_Events
+select * from tbl_EvKategorie
+select * from tbl_EvVeranstalter
+select * from tbl_Kunden
