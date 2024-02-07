@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="DE">
+	<head>
+		<title>HTML und CSS</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Marius Roßgotterer">
+		<meta name="description" content="Formular Seite">
+		<meta name="keywords" content="Formular, Tutorial, de, DE, Deutsch">
+		<!--<link rel="stylesheet" href="navigation.css" type="text/css">-->
+	</head>
+
+	<body>
+		<header>
+		</header>
+
+		<section>
+			<article>
+			</article>
+
+			<article>
+				<form action="senden.php" name="user" id="register" autocomplete="off" method="post">
+					<br> <label>Namenseingabe</label> <br>
+						<label for="vorname">Vorname</label>
+						<input type="text" name="vorname" id="vorname" placeholder="Vorname..." required maxlength="30" size="20"> <br>
+						
+						<label for="nachname">Nachname</label>
+						<input type="text" name="nachname" id="nachname" placeholder="Nachname..." required maxlength="30" size="20"> <br>
+						
+						<label for="email">E-Mail</label>
+						<input type="email" name="email" id="email" required maxlength="40" size="20"> <br>
+						
+						<label for="passwort">Passwort</label>
+						<input type="password" name="passwort" id="passwort" required maxlength="40" size="40"> <br>
+						
+					<br> <label>Adresseingabe</label> <br>
+						<label for="adresse">Adresse</label>
+						<input type="text" name="adresse" id="adresse" placeholder="Straße + Hausnummer" required maxlength="40" size="40"> <br>
+						
+						<label for="plz">Postleitzahl</label>
+						<input type="number" name="plz" id="plz" required maxlength="5" size="5"> <br>
+						
+						<label for="land">Land</label>
+						<input type="text" name="land" id="land" required maxlength="20" size="20"> <br>
+						
+					<button type="submit">Eingaben absenden</button>
+				</form>
+			</article>
+		</section>
+
+		<footer>
+			<h3><a href="index.html">Impressum</a></h3>
+		</footer>
+	</body>
+</html>
