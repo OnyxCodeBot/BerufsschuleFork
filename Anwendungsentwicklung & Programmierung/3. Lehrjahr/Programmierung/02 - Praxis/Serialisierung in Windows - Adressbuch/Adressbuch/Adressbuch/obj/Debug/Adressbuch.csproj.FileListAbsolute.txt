@@ -8,3 +8,13 @@
 \\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.csproj.CoreCompileInputs.cache
 \\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.exe
 \\172.16.1.13\21ITA007$\Fächer\AP\12. Klasse\Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.pdb
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\bin\Debug\Adressbuch.exe.config
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\bin\Debug\Adressbuch.exe
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\bin\Debug\Adressbuch.pdb
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.csproj.AssemblyReference.cache
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.AdressForm.resources
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.Properties.Resources.resources
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.csproj.GenerateResource.cache
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.csproj.CoreCompileInputs.cache
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.exe
+\\172.16.1.13\21ITA007$\Berufsschule\Anwendungsentwicklung & Programmierung\3. Lehrjahr\Programmierung\02 - Praxis\Serialisierung in Windows - Adressbuch\Adressbuch\Adressbuch\obj\Debug\Adressbuch.pdb

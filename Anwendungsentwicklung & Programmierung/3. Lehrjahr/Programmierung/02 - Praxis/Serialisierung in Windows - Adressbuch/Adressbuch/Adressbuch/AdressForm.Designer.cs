@@ -42,7 +42,6 @@ namespace Adressbuch
             this.tscAdressen = new System.Windows.Forms.ToolStripContainer();
             this.personBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -87,6 +86,7 @@ namespace Adressbuch
             this.druckvorschauToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.druckenToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
             emailLabel = new System.Windows.Forms.Label();
             hausnummerLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -101,9 +101,9 @@ namespace Adressbuch
             this.tscAdressen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).BeginInit();
             this.personBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.mainMenue.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // emailLabel
@@ -256,10 +256,6 @@ namespace Adressbuch
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Neu hinzufügen";
             // 
-            // personBindingSource
-            // 
-            this.personBindingSource.DataSource = typeof(Adressbuch.Person);
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -303,6 +299,7 @@ namespace Adressbuch
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -344,6 +341,7 @@ namespace Adressbuch
             this.personBindingNavigatorSaveItem.Name = "personBindingNavigatorSaveItem";
             this.personBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.personBindingNavigatorSaveItem.Text = "Daten speichern";
+            this.personBindingNavigatorSaveItem.Click += new System.EventHandler(this.personBindingNavigatorSaveItem_Click);
             // 
             // emailTextBox
             // 
@@ -444,6 +442,7 @@ namespace Adressbuch
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
             this.neuToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.neuToolStripMenuItem.Text = "&Neu";
+            this.neuToolStripMenuItem.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
             // öffnenToolStripMenuItem
             // 
@@ -451,6 +450,7 @@ namespace Adressbuch
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
             this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.öffnenToolStripMenuItem.Text = "&Öffnen";
+            this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
             // speichernToolStripMenuItem
             // 
@@ -458,6 +458,7 @@ namespace Adressbuch
             this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
             this.speichernToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.speichernToolStripMenuItem.Text = "&Speichern";
+            this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -517,8 +518,9 @@ namespace Adressbuch
             // 
             this.datensatzLöschenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("datensatzLöschenToolStripMenuItem.Image")));
             this.datensatzLöschenToolStripMenuItem.Name = "datensatzLöschenToolStripMenuItem";
-            this.datensatzLöschenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.datensatzLöschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.datensatzLöschenToolStripMenuItem.Text = "&Datensatz Löschen";
+            this.datensatzLöschenToolStripMenuItem.Click += new System.EventHandler(this.datensatzLöschenToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -536,7 +538,7 @@ namespace Adressbuch
             this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(3, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(191, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(222, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // neuToolStripButton
@@ -547,6 +549,7 @@ namespace Adressbuch
             this.neuToolStripButton.Name = "neuToolStripButton";
             this.neuToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.neuToolStripButton.Text = "toolStripButton1";
+            this.neuToolStripButton.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
             // oeffnenToolStripButton
             // 
@@ -556,6 +559,7 @@ namespace Adressbuch
             this.oeffnenToolStripButton.Name = "oeffnenToolStripButton";
             this.oeffnenToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.oeffnenToolStripButton.Text = "toolStripButton2";
+            this.oeffnenToolStripButton.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
             // speichernToolStripButton
             // 
@@ -565,6 +569,7 @@ namespace Adressbuch
             this.speichernToolStripButton.Name = "speichernToolStripButton";
             this.speichernToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.speichernToolStripButton.Text = "toolStripButton1";
+            this.speichernToolStripButton.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -579,6 +584,7 @@ namespace Adressbuch
             this.neuerDatensatzToolStripButton.Name = "neuerDatensatzToolStripButton";
             this.neuerDatensatzToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.neuerDatensatzToolStripButton.Text = "toolStripButton1";
+            this.neuerDatensatzToolStripButton.Click += new System.EventHandler(this.neuerDatensatzToolStripMenuItem_Click);
             // 
             // datensatzLoeschenToolStripButton
             // 
@@ -588,6 +594,7 @@ namespace Adressbuch
             this.datensatzLoeschenToolStripButton.Name = "datensatzLoeschenToolStripButton";
             this.datensatzLoeschenToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.datensatzLoeschenToolStripButton.Text = "toolStripButton2";
+            this.datensatzLoeschenToolStripButton.Click += new System.EventHandler(this.datensatzLöschenToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -617,6 +624,10 @@ namespace Adressbuch
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // personBindingSource
+            // 
+            this.personBindingSource.DataSource = typeof(Adressbuch.Person);
+            // 
             // AdressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -626,6 +637,7 @@ namespace Adressbuch
             this.MainMenuStrip = this.mainMenue;
             this.Name = "AdressForm";
             this.Text = "Adressbuch in C#";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdressForm_FormClosing);
             this.tscAdressen.BottomToolStripPanel.ResumeLayout(false);
             this.tscAdressen.BottomToolStripPanel.PerformLayout();
             this.tscAdressen.ContentPanel.ResumeLayout(false);
@@ -637,11 +649,11 @@ namespace Adressbuch
             ((System.ComponentModel.ISupportInitialize)(this.personBindingNavigator)).EndInit();
             this.personBindingNavigator.ResumeLayout(false);
             this.personBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.mainMenue.ResumeLayout(false);
             this.mainMenue.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
