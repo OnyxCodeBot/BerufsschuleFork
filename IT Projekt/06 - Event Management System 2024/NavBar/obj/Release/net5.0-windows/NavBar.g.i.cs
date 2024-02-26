@@ -101,7 +101,7 @@ namespace NavBar {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/NavBar;component/navbar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/NavBar;V1.0.0.0;component/navbar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\NavBar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

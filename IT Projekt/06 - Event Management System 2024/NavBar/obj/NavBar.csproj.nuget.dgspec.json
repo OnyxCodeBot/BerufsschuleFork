@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {}
+    "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\NavBar\\NavBar.csproj": {}
   },
   "projects": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj": {
+    "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\NavBar\\NavBar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
+        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\NavBar\\NavBar.csproj",
         "projectName": "NavBar",
-        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\NavBar.csproj",
+        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\NavBar\\NavBar.csproj",
         "packagesPath": "C:\\Users\\21ITA007\\.nuget\\packages\\",
-        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\NavBar\\obj\\",
+        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\NavBar\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = ManageEventsApp
-build_property.ProjectDir = \\172.16.1.13\21ITA007$\Fächer\IT-P\EMS_2024\ManageEventsApp\
+build_property.ProjectDir = \\172.16.1.13\21ITA007$\Berufsschule\IT Projekt\06 - Event Management System 2024\ManageEventsApp\

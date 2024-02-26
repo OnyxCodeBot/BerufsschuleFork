@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\CustomHelp\\CustomHelp.csproj": {}
+    "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\CustomHelp\\CustomHelp.csproj": {}
   },
   "projects": {
-    "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\CustomHelp\\CustomHelp.csproj": {
+    "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\CustomHelp\\CustomHelp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\CustomHelp\\CustomHelp.csproj",
+        "projectUniqueName": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\CustomHelp\\CustomHelp.csproj",
         "projectName": "CustomHelp",
-        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\CustomHelp\\CustomHelp.csproj",
+        "projectPath": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\CustomHelp\\CustomHelp.csproj",
         "packagesPath": "C:\\Users\\21ITA007\\.nuget\\packages\\",
-        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\CustomHelp\\obj\\",
+        "outputPath": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\CustomHelp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

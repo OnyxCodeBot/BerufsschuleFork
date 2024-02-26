@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pz6zOD1+4OPV4cEtQ+wr7gVpBVB0YaYgcdxyfQvhANWqDvvolK0cyVXSwDyzgdiC6O9Cbb6MsbcD11vVU9ZZow==",
+  "dgSpecHash": "A+XeBRYg8AxK1dH5jklL1xtO0asvk9vEPO8wsWAH8jDpMImLhecxqS+uUfwq3OOjnU74RZ25ez1vwvhhyC52gQ==",
   "success": true,
-  "projectFilePath": "\\\\172.16.1.13\\21ITA007$\\Fächer\\IT-P\\EMS_2024\\ManageEventsApp\\ManageEventsApp.csproj",
+  "projectFilePath": "\\\\172.16.1.13\\21ITA007$\\Berufsschule\\IT Projekt\\06 - Event Management System 2024\\ManageEventsApp\\ManageEventsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\21ITA007\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\21ITA007\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
