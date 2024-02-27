@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nachrichten</title>
+</head>
+
+<body>
+    <h1>Ex-RAF-Terroristin Daniela Klette festgenommen</h1>
+    <h3>Stand: 27.02.2024 13:40</h3>
+    <p>
+        <b>
+            Mehr als 30 Jahre lang war sie untergetaucht - nun wurde die ehemalige mutmaßliche RAF-Terroristin Daniela
+            Klette in einer Wohnung in Berlin festgenommen. Die Polizei stellte offenbar Munition und einen
+            italienischen Pass sicher. <br><br>
+        </b>
+        Die unter anderem wegen versuchten Mordes gesuchte Daniela Klette ist festgenommen worden. Die ehemalige
+        mutmaßliche Terroristin der linksextremistischen Rote Armee Fraktion (RAF) sei
+        <span id="text2" type="button">...</span>
+    </p>
+    <p id="status">Status:</p>
+</body>
+<script>
+    var ajaxhttp = new XMLHttpRequest();
+    window.onload = function () {
+        document.getElementById("text2").onclick = function () {
+            if (ajaxhttp != null) {
+                ajaxhttp.open("GET", "weiterlesen.txt", true);
+                ajaxhttp.onreadystatechange = function () {
+                    if (ajaxhttp.readyState == 4) {
+                        document.getElementById("text2").innerHTML = ajaxhttp.responseText;
+                        document.getElementById("status").innerHTML = 'Status: ' + ajaxhttp.status + ' (' + ajaxhttp.statusText + ')';
+                    }
+                };
+                ajaxhttp.send(null);
+            }
+        };
+    };
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJaX</title>
+</head>
+<body>
+    <button id="laden">
+        AJAX - Text laden
+    </button>
+    <hr/>
+    Der nachfolgende Text wird dynamisch nach dem Laden der Webseite geladen und angezeigt.
+    <hr/>
+    <div id="textstelle">
+        Dieser Text wird ausgetauscht ...
+    </div>
+    <div id="status">
+        Stausausgabe
+    </div>
+</body>
+<script>
+    var ajaxhttp = new XMLHttpRequest();
+    window.onload = function() {
+        document.getElementById("laden").onclick = function() {
+            if (ajaxhttp != null) {
+                ajaxhttp.open("GET", "text.txt", true);
+                ajaxhttp.onreadystatechange = function() {
+                    if (ajaxhttp.readyState == 4) {
+                        document.getElementById("textstelle").innerHTML = ajaxhttp.responseText;
+                        document.getElementById("status").innerHTML = 'Status: ' + ajaxhttp.status + ' (' + ajaxhttp.statusText + ')';
+                    }
+                };
+                ajaxhttp.send(null);
+            }
+        };
+    };
+</script>
+</html>
