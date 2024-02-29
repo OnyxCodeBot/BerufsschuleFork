@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Name>Mustermann</Name>
+    <Vorname>Max</Vorname>
+    <Strasse>Musterstraße</Strasse>
+    <Hausnummer>1</Hausnummer>
+    <Plz>123123</Plz>
+    <Ort>Musterort</Ort>
+    <Telefon>08503 2003412</Telefon>
+    <Email>muster@email.com</Email>
+  </Person>
+</ArrayOfPerson>

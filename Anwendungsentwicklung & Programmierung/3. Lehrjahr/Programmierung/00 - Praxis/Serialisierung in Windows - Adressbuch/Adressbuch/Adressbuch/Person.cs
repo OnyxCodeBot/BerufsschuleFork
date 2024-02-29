@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Adressbuch
 {
     [Serializable()]
-    class Person : ISerializable
+    public class Person : ISerializable
     {
         private string name;
         private string vorname;

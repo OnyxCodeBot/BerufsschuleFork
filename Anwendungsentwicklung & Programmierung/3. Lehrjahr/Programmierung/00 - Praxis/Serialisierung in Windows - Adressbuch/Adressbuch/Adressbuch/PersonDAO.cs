@@ -22,6 +22,7 @@ namespace Adressbuch
         private string path = string.Empty;
         private string initialPath = "K:Berufsschule\\Anwendungsentwicklung & Programmierung\\3. Lehrjahr\\Programmierung\\02 - Praxis\\Serialisierung in Windows - Adressbuch\\Adressbuch\\SerializedFiles";
         private string initialFilter = "Adressdateien (*.adr)|*.adr|XMLAdressen (*.xml)|*.xml|JSONAdressen (*.json)|*.json";
+        private string initialFilterAll = "Alle (*.*)|*.*|Adressdateien (*.adr)|*.adr|XMLAdressen (*.xml)|*.xml|JSONAdressen (*.json)|*.json";
 
         private void Load()
         {
@@ -45,7 +46,7 @@ namespace Adressbuch
         {
             try
             {
-            XmlSerializer s = new XmlSerializer(typeof(IPersonDAO));
+            XmlSerializer s = new XmlSerializer(typeof(List<Person>));
             using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
                 pList = (List<Person>)s.Deserialize(fs);
@@ -63,13 +64,14 @@ namespace Adressbuch
         {
             try
             {
+                string result;
                 using (StreamReader sr = new StreamReader(path))
                 {
-                    string result = sr.ReadToEnd();
+                    result = sr.ReadToEnd();
                 }
 
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
-                pList = serializer.Deserialize<IPersonDAO>(result);
+                pList = serializer.Deserialize<List<Person>>(result);
             }
             catch (Exception ex)
             {
@@ -83,7 +85,7 @@ namespace Adressbuch
             try
             {
                 IFormatter f = new BinaryFormatter();
-                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
+                using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
                     f.Serialize(fs, pList);
                     fs.Close();
@@ -100,8 +102,8 @@ namespace Adressbuch
         {
             try
             {
-                XmlSerializer s = new XmlSerializer(typeof(IPersonDAO));
-                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write))
+                XmlSerializer s = new XmlSerializer(typeof(List<Person>));
+                using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
                     s.Serialize(fs, pList);
                     fs.Close();
@@ -114,10 +116,29 @@ namespace Adressbuch
             }
         }
 
+        private void SaveJSON()
+        {
+            try
+            {
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                string result = serializer.Serialize(pList);
+
+                using(StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.WriteLine(result);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler!", 
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void LoadData()
         {
             opDialog.InitialDirectory = initialPath;
-            opDialog.Filter = initialFilter;
+            opDialog.Filter = initialFilterAll;
             if (path != string.Empty)
             {
                 opDialog.FileName = path;
@@ -125,7 +146,19 @@ namespace Adressbuch
             if (opDialog.ShowDialog() == DialogResult.OK)
             {
                 path = opDialog.FileName;
-                Load();
+
+                switch(opDialog.FilterIndex)
+                {
+                    case 2:
+                        LoadXML();
+                        break;
+                    case 3:
+                        LoadJSON();
+                        break;
+                    default:
+                        Load();
+                        break;
+                }
             }
         }
 
@@ -140,7 +173,19 @@ namespace Adressbuch
             if (sfDialog.ShowDialog() == DialogResult.OK)
             {
                 path = sfDialog.FileName;
-                Save();
+
+                if (sfDialog.FileName.EndsWith(".xml"))
+                {
+                    SaveXML();
+                }
+                else if(sfDialog.FileName.EndsWith(".json"))
+                {
+                    SaveJSON();
+                }
+                else
+                {
+                    Save();
+                }
             }
         }
 

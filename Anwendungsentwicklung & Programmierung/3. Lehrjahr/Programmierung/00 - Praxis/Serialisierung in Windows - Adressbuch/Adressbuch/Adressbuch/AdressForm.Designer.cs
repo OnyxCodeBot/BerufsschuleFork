@@ -86,7 +86,11 @@ namespace Adressbuch
             this.druckvorschauToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.druckenToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
+            this.psDialog = new System.Windows.Forms.PageSetupDialog();
+            this.ppDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.personBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pDialog = new System.Windows.Forms.PrintDialog();
             emailLabel = new System.Windows.Forms.Label();
             hausnummerLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -440,7 +444,7 @@ namespace Adressbuch
             // 
             this.neuToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("neuToolStripMenuItem.Image")));
             this.neuToolStripMenuItem.Name = "neuToolStripMenuItem";
-            this.neuToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.neuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.neuToolStripMenuItem.Text = "&Neu";
             this.neuToolStripMenuItem.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
@@ -448,7 +452,7 @@ namespace Adressbuch
             // 
             this.öffnenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("öffnenToolStripMenuItem.Image")));
             this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.öffnenToolStripMenuItem.Text = "&Öffnen";
             this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
@@ -456,44 +460,47 @@ namespace Adressbuch
             // 
             this.speichernToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("speichernToolStripMenuItem.Image")));
             this.speichernToolStripMenuItem.Name = "speichernToolStripMenuItem";
-            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.speichernToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speichernToolStripMenuItem.Text = "&Speichern";
             this.speichernToolStripMenuItem.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // druckenToolStripMenuItem
             // 
             this.druckenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("druckenToolStripMenuItem.Image")));
             this.druckenToolStripMenuItem.Name = "druckenToolStripMenuItem";
-            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.druckenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.druckenToolStripMenuItem.Text = "&Drucken";
+            this.druckenToolStripMenuItem.Click += new System.EventHandler(this.druckenToolStripMenuItem_Click);
             // 
             // druckvorschauToolStripMenuItem
             // 
             this.druckvorschauToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("druckvorschauToolStripMenuItem.Image")));
             this.druckvorschauToolStripMenuItem.Name = "druckvorschauToolStripMenuItem";
-            this.druckvorschauToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.druckvorschauToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.druckvorschauToolStripMenuItem.Text = "Druck&vorschau";
+            this.druckvorschauToolStripMenuItem.Click += new System.EventHandler(this.druckvorschauToolStripMenuItem_Click);
             // 
             // seiteEinrichtenToolStripMenuItem
             // 
             this.seiteEinrichtenToolStripMenuItem.Name = "seiteEinrichtenToolStripMenuItem";
-            this.seiteEinrichtenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.seiteEinrichtenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.seiteEinrichtenToolStripMenuItem.Text = "Seite &Einrichten";
+            this.seiteEinrichtenToolStripMenuItem.Click += new System.EventHandler(this.seiteEinrichtenToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(152, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.beendenToolStripMenuItem.Text = "&Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -518,7 +525,7 @@ namespace Adressbuch
             // 
             this.datensatzLöschenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("datensatzLöschenToolStripMenuItem.Image")));
             this.datensatzLöschenToolStripMenuItem.Name = "datensatzLöschenToolStripMenuItem";
-            this.datensatzLöschenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.datensatzLöschenToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.datensatzLöschenToolStripMenuItem.Text = "&Datensatz Löschen";
             this.datensatzLöschenToolStripMenuItem.Click += new System.EventHandler(this.datensatzLöschenToolStripMenuItem_Click);
             // 
@@ -548,7 +555,7 @@ namespace Adressbuch
             this.neuToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.neuToolStripButton.Name = "neuToolStripButton";
             this.neuToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.neuToolStripButton.Text = "toolStripButton1";
+            this.neuToolStripButton.Text = "Neu";
             this.neuToolStripButton.Click += new System.EventHandler(this.neuToolStripMenuItem_Click);
             // 
             // oeffnenToolStripButton
@@ -558,7 +565,7 @@ namespace Adressbuch
             this.oeffnenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.oeffnenToolStripButton.Name = "oeffnenToolStripButton";
             this.oeffnenToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.oeffnenToolStripButton.Text = "toolStripButton2";
+            this.oeffnenToolStripButton.Text = "Öffnen";
             this.oeffnenToolStripButton.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
             // speichernToolStripButton
@@ -568,7 +575,7 @@ namespace Adressbuch
             this.speichernToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.speichernToolStripButton.Name = "speichernToolStripButton";
             this.speichernToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.speichernToolStripButton.Text = "toolStripButton1";
+            this.speichernToolStripButton.Text = "Speichern";
             this.speichernToolStripButton.Click += new System.EventHandler(this.speichernToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
@@ -583,7 +590,7 @@ namespace Adressbuch
             this.neuerDatensatzToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.neuerDatensatzToolStripButton.Name = "neuerDatensatzToolStripButton";
             this.neuerDatensatzToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.neuerDatensatzToolStripButton.Text = "toolStripButton1";
+            this.neuerDatensatzToolStripButton.Text = "Neuer Datensatz";
             this.neuerDatensatzToolStripButton.Click += new System.EventHandler(this.neuerDatensatzToolStripMenuItem_Click);
             // 
             // datensatzLoeschenToolStripButton
@@ -593,7 +600,7 @@ namespace Adressbuch
             this.datensatzLoeschenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.datensatzLoeschenToolStripButton.Name = "datensatzLoeschenToolStripButton";
             this.datensatzLoeschenToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.datensatzLoeschenToolStripButton.Text = "toolStripButton2";
+            this.datensatzLoeschenToolStripButton.Text = "Datensatz löschen";
             this.datensatzLoeschenToolStripButton.Click += new System.EventHandler(this.datensatzLöschenToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
@@ -608,7 +615,8 @@ namespace Adressbuch
             this.druckvorschauToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.druckvorschauToolStripButton.Name = "druckvorschauToolStripButton";
             this.druckvorschauToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.druckvorschauToolStripButton.Text = "toolStripButton3";
+            this.druckvorschauToolStripButton.Text = "Druckvorschau";
+            this.druckvorschauToolStripButton.Click += new System.EventHandler(this.druckvorschauToolStripMenuItem_Click);
             // 
             // druckenToolStripButton
             // 
@@ -617,16 +625,35 @@ namespace Adressbuch
             this.druckenToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.druckenToolStripButton.Name = "druckenToolStripButton";
             this.druckenToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.druckenToolStripButton.Text = "toolStripButton4";
+            this.druckenToolStripButton.Text = "Drucken";
+            this.druckenToolStripButton.Click += new System.EventHandler(this.druckenToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // printDocument
+            // 
+            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
+            // 
+            // ppDialog
+            // 
+            this.ppDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.ppDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.ppDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.ppDialog.Enabled = true;
+            this.ppDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("ppDialog.Icon")));
+            this.ppDialog.Name = "ppDialog";
+            this.ppDialog.Visible = false;
+            // 
             // personBindingSource
             // 
             this.personBindingSource.DataSource = typeof(Adressbuch.Person);
+            // 
+            // pDialog
+            // 
+            this.pDialog.UseEXDialog = true;
             // 
             // AdressForm
             // 
@@ -708,6 +735,10 @@ namespace Adressbuch
         private System.Windows.Forms.TextBox strasseTextBox;
         private System.Windows.Forms.TextBox telefonTextBox;
         private System.Windows.Forms.TextBox vornameTextBox;
+        private System.Drawing.Printing.PrintDocument printDocument;
+        private System.Windows.Forms.PageSetupDialog psDialog;
+        private System.Windows.Forms.PrintPreviewDialog ppDialog;
+        private System.Windows.Forms.PrintDialog pDialog;
     }
 }
 
