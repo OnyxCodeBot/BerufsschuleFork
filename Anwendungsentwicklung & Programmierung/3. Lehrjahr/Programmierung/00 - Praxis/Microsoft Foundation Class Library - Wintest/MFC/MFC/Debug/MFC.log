@@ -1,3 +1,1 @@
-﻿  Hello.cpp
-  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-  MFC.vcxproj -> \\172.16.1.13\21ita007$\Fächer\AP\12. Klasse\Wintest\MFC\Debug\MFC.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(439,5): error MSB8020: Die Buildtools für v143 (Plattformtoolset = "v143") wurden nicht gefunden. Installieren Sie zum Erstellen mithilfe der v143-Buildtools die v143-Buildtools. Alternativ können Sie ein Upgrade auf die aktuellen Visual Studio-Tools durchführen, indem Sie das Menü "Projekt" auswählen oder mit der rechten Maustaste auf die Projektmappe klicken und dann "Projektmappe neu zuweisen" auswählen.
